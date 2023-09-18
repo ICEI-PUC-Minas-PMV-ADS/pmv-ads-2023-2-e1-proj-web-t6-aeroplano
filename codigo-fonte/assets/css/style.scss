@@ -1,2 +1,12 @@
 @import url("main.css");
+@import url("loading.css");
 
+.bgImageContentBodyEfeito {
+  background: linear-gradient(
+    180deg,
+    #06121e 0%,
+    rgba(6, 18, 30, 0.6) 39.8%,
+    rgba(6, 18, 30, 0.83) 66.67%,
+    #06121e 100%
+  );
+}

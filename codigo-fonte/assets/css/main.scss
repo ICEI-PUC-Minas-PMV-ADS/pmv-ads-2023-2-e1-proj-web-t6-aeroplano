@@ -1,10 +1,14 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+@import url("https://fonts.googleapis.com/css?family=Staatliches:regular");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Staatliches", sans-serif;
 }
 
-html, body{
-    height: 100vh;
+html,
+body {
+  height: 100vh;
 }
