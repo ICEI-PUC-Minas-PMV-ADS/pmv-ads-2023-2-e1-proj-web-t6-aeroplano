@@ -1,26 +1,25 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/sy1vqBms)
-# Título do Projeto
+# Aeroplano - Plataforma para Escolas de Aviação
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas - PUC Minas`
 
-`DISCIPLINA`
+`Projeto Desenvolvimento de Aplicação Web Front-End`
 
-`SEMESTRE`
+`1º Semestre/2023.2`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
+A aviação desempenha um papel crucial na conectividade global e no desenvolvimento econômico. As escolas de aviação são fundamentais, porém, a gestão eficaz das agendas de voos é desafiadora. Este trabalho visa criar um software inovador para otimizar essa gestão, considerando recursos e segurança.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* André Duarte Siqueira 
+* Andryel Passos Bonfim 
+* Felipe Santos Suarez 
+* José Antônio Moreira da Silva 
+* Rafael Fernandes Mourão 
+* Robert Alexander Rodrigues 
 
 ## Orientador
 
-* Nome completo do professor
+* Marcos André Silveira Kutova
 
 # Documentação
 
