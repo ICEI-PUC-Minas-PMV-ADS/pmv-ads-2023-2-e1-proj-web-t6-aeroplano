@@ -21,6 +21,9 @@ async function fetchImages() {
     }, 2000);
   } catch (error) {
     console.error("Erro ao buscar imagens:", error);
+    setTimeout(() => {
+      loading.classList.add("hidden");
+    }, 2000);
   }
 }
 
