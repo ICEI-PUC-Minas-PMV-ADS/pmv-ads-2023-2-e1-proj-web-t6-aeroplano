@@ -13,7 +13,6 @@ As escolas de aviação enfrentam um desafio na interação entre a disponibilid
 Criar uma ferramenta fácil de usar, segura e rápida relacionando a alocação de alunos, instrutores e aeronaves e todos os demais recursos necessários para o sucesso das instruções de voo. 
 
 ## Justificativa
-
 A indústria da aviação desempenha um papel crucial na economia global, conectando pessoas e lugares de maneira eficiente. Dentro desse setor, as escolas de aviação desempenham um papel fundamental na formação de futuros pilotos e profissionais da aviação, garantindo que os mais altos padrões de segurança e habilidades sejam mantidos. No entanto, gerenciar a complexa interação entre alunos, instrutores e aeronaves para criar agendas de voos coerentes e otimizadas tem sido um desafio constante para essas instituições.  
  
 
@@ -21,15 +20,15 @@ O desenvolvimento de um projeto de software dedicado a atender às necessidades 
 
   
 
-    Otimização da alocação de recursos: A funcionalidade central do sistema, que cruza a disponibilidade de alunos, instrutores e aeronaves, permitirá uma alocação mais eficiente de recursos. Isso resultará em agendas de voos bem coordenadas, maximizando a utilização das aeronaves, otimizando o tempo dos instrutores e atendendo às necessidades individuais dos alunos. 
+Otimização da alocação de recursos: A funcionalidade central do sistema, que cruza a disponibilidade de alunos, instrutores e aeronaves, permitirá uma alocação mais eficiente de recursos. Isso resultará em agendas de voos bem coordenadas, maximizando a utilização das aeronaves, otimizando o tempo dos instrutores e atendendo às necessidades individuais dos alunos. 
 
-    Aumento da eficiência operacional: A automação proporcionada pelo software reduzirá a dependência de processos manuais e demorados, simplificando a criação, ajuste e comunicação das agendas de voos. Isso resultará em uma operação mais ágil e eficiente, com menos conflitos e sobreposições. 
+Aumento da eficiência operacional: A automação proporcionada pelo software reduzirá a dependência de processos manuais e demorados, simplificando a criação, ajuste e comunicação das agendas de voos. Isso resultará em uma operação mais ágil e eficiente, com menos conflitos e sobreposições. 
 
-    Melhoria na experiência do aluno: A capacidade de oferecer aos alunos agendas de voos mais previsíveis e personalizadas aumentará a satisfação e o engajamento. Além disso, a redução do tempo de espera devido a erros de agendamento ou alta de disponibilidade melhorará a progressão do aprendizado, ajudando os alunos a se formarem mais rapidamente. 
+Melhoria na experiência do aluno: A capacidade de oferecer aos alunos agendas de voos mais previsíveis e personalizadas aumentará a satisfação e o engajamento. Além disso, a redução do tempo de espera devido a erros de agendamento ou alta de disponibilidade melhorará a progressão do aprendizado, ajudando os alunos a se formarem mais rapidamente. 
 
-    Aumento da segurança: Agendas de voos bem planejadas garantem um ambiente de aprendizado mais seguro, minimizando a possibilidade de erros causados por super agendamento, fadiga dos instrutores ou outras preocupações de segurança. 
+Aumento da segurança: Agendas de voos bem planejadas garantem um ambiente de aprendizado mais seguro, minimizando a possibilidade de erros causados por super agendamento, fadiga dos instrutores ou outras preocupações de segurança. 
 
-    Análises e tomada de decisões embasadas: O software poderá gerar relatórios e análises que oferecem insights valiosos sobre o desempenho da escola, a utilização de recursos e o progresso dos alunos. Essas informações facilitarão a tomada de decisões informadas para aprimorar continuamente os processos de ensino e agendamento. 
+Análises e tomada de decisões embasadas: O software poderá gerar relatórios e análises que oferecem insights valiosos sobre o desempenho da escola, a utilização de recursos e o progresso dos alunos. Essas informações facilitarão a tomada de decisões informadas para aprimorar continuamente os processos de ensino e agendamento. 
 
   
 
