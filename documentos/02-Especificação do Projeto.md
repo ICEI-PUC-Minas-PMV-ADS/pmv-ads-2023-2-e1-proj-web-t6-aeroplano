@@ -93,14 +93,12 @@ Possui conhecimentos de TI suficientes para entender a integração de sistemas 
 | RF-06  | Possibilidade de alocar automaticamente, baseado na disponibilidade de cada envolvido |Média|
 | RF-07  | Possibilidade de alocar manualmente  |Alta|
 | RF-08  | Notificações devem ser enviadas manualmente ao e-mail/WhatsApp dos usuários  |Baixa|
-| RF-09  | Gerar relatório de utilização das aeronaves, instrutores e alunos |Média|
-| RF-10  | Dar acesso a informações sobre a aula  |Alta|
-| RF-11  | Gerenciar saldo de aulas |Baixa|
-| RF-12 | Possibilidade de desmarcar aulas |Média|
-| RF-13  |  Deve ter uma troca de mensagens entre instrutores e alunos para uma comunicação direta |Baixa|
-| RF-14  | Possibilidade de adicionar observações de uso sobre aeronaves  |Baixa|
-| RF-15  | Cadastro de usuários |Alta|
-| RF-16  | Cadastro de aeronaves |Alta|
+| RF-00  | Dar acesso a informações sobre a aula  |Alta|
+| RF-10  | Gerenciar saldo de aulas |Baixa|
+| RF-11 | Possibilidade de desmarcar aulas |Média|
+| RF-12  |  Deve ter uma troca de mensagens entre instrutores e alunos para uma comunicação direta |Baixa|
+| RF-13  | Cadastro de usuários |Alta|
+| RF-14  | Cadastro de aeronaves |Alta|
 
 **Prioridade: Alta / Média / Baixa. 
 
