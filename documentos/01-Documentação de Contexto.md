@@ -1,6 +1,8 @@
 # Introdução
 
-[Aqui a equipe deve criar um texto descritivo com a visão geral do problema abordado, apresentando o ambiente e as situações envolvidas no problema.]
+A indústria da aviação desempenha um papel fundamental na conectividade global e no desenvolvimento econômico, desafiando os limites do espaço e do tempo para criar uma rede de interações sem precedentes. Dentro desse cenário dinâmico, as escolas de aviação emergem como pilares essenciais, moldando as futuras gerações de pilotos e profissionais altamente qualificados. No entanto, a gestão eficiente das complexas interações entre alunos, instrutores e aeronaves para a criação de agendas de voos coerentes e otimizadas permanece um desafio contínuo que impacta diretamente a qualidade do treinamento oferecido e a segurança das operações. 
+
+O presente trabalho se dedica a explorar essa problemática e propor uma solução inovadora para as escolas de aviação. O objetivo principal é desenvolver um software de gestão de agendas de voos que possibilite uma alocação eficiente de recursos, otimizando o processo de agendamento de voos de treinamento. Esse software visa atender às necessidades específicas dessas instituições, considerando fatores como a disponibilidade de alunos, instrutores e aeronaves, bem como as preferências individuais de aprendizado e as normas de segurança rigorosas. 
 
 ## Problema
 [Aqui a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.]
