@@ -38,3 +38,11 @@ O desenvolvimento de um software de gestão de agendas de voos dedicado às esco
 
 O projeto visa como público-alvo as escolas de aviação, seus gestores/proprietários e administradores acadêmicos. 
 
+##Referencial teórico
+
+Powercubus
+o site tem funcionalidades parecidas com o Aeroplano, como: disponibilidades dos professores e o agendamento feito pelo aluno, porém o site tem um design ineficiente que confunde os usuários, além disso, não possui um calendário para visualizar os dias diponíveis para a alocação de aulas.
+O Aeroplano se diferencia pelo seu design intuitivo e pelo seu calendário.
+
+
+
