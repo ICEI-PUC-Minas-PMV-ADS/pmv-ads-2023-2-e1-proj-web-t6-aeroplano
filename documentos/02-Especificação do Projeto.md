@@ -93,7 +93,7 @@ Possui conhecimentos de TI suficientes para entender a integração de sistemas 
 | RF-06  | Possibilidade de alocar automaticamente, baseado na disponibilidade de cada envolvido |Média|
 | RF-07  | Possibilidade de alocar manualmente  |Alta|
 | RF-08  | Notificações devem ser enviadas manualmente ao e-mail/WhatsApp dos usuários  |Baixa|
-| RF-00  | Dar acesso a informações sobre a aula  |Alta|
+| RF-09  | Dar acesso a informações sobre a aula  |Alta|
 | RF-10  | Gerenciar saldo de aulas |Baixa|
 | RF-11 | Possibilidade de desmarcar aulas |Média|
 | RF-12  |  Deve ter uma troca de mensagens entre instrutores e alunos para uma comunicação direta |Baixa|
