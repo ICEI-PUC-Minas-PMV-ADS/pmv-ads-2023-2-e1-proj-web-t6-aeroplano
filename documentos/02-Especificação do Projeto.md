@@ -86,10 +86,10 @@ Possui conhecimentos de TI suficientes para entender a integração de sistemas 
 |ID    | Descrição                | Prioridade |
 |-------|---------------------------------|----|
 | RF-01 |Possibilidade de gerenciar horários das aulas (alocação aeronave/instrutor/aluno) |Alta| 
-| RF-02 |Cadastro de disponibilidade |Alta|
+| RF-02 |Cadastro de disponibilidade do aluno|Alta|
 | RF-03  | Possibilidade de ver quadro de horário por aeronave, por instrutor, por aluno |Média|
 | RF-04  | Possibilidade de ver alocações  |Média|
-| RF-05  | Possibilidade de cadastrar aulas, notas e observações  |Média|
+| RF-05  | Possibilidade de cadastrar aulas, notas e observações do professor  |Média|
 | RF-06  | Possibilidade de alocar automaticamente, baseado na disponibilidade de cada envolvido |Média|
 | RF-07  | Possibilidade de alocar manualmente  |Alta|
 | RF-08  | Notificações devem ser enviadas manualmente ao e-mail/WhatsApp dos usuários  |Baixa|
