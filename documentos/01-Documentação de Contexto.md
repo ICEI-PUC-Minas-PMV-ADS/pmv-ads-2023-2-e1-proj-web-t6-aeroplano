@@ -40,8 +40,10 @@ O projeto visa como público-alvo as escolas de aviação, seus gestores/proprie
 
 ## Referencial teórico
 
-Powercubus é o site tem funcionalidades parecidas com o Aeroplano, como: disponibilidades dos professores e o agendamento feito pelo aluno, porém o site tem um design ineficiente que confunde os usuários, além disso, não possui um calendário para visualizar os dias diponíveis para a alocação de aulas.
+Powercubus: é o site que tem funcionalidades parecidas com o Aeroplano, como: disponibilidades dos professores e o agendamento feito pelo aluno, porém o site tem um design ineficiente que confunde os usuários, além disso, não possui um calendário para visualizar os dias diponíveis para a alocação de aulas.
 O Aeroplano se diferencia pelo seu design intuitivo e pelo seu calendário.
+
+Layers Education: é uma plataforma que integra sistemas de gestão escolar com soluções educacionais digitais. Ela permite que as escolas acessem conteúdos, ferramentas e dados de diferentes provedores em um só lugar. Apesar de ser uma plataforma de para gestão escolar ela não tem a opção de gerenciamento de recursos e também depende da integração com os sistemas de gestão escolar, o que pode gerar problemas de compatibilidade ou atualização. 
 
 
 
