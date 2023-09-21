@@ -3,14 +3,40 @@
 
 ## User Flow
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de navegação do usuário na aplicação. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
-[Adicione aqui o diagrama de fluxo de usuário da sua aplicação.] 
-
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools & Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/1.%20Autenticacao%20do%20usuario.jpg"
+    <figcaption>1. Fluxo de usuário - Autenticação do usuário</figcaption>
+</figure>
+<br><br><br>
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/2.%20Esqueci%20minha%20senha.jpg"
+    <figcaption>2. Fluxo de usuário - Esqueci minha senha</figcaption>
+</figure> 
+<br><br><br>
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/3.%20Cadastro%20da%20disponibilidade.jpg"
+    <figcaption>3. Fluxo de usuário - Cadastro da disponibilidade</figcaption>
+</figure> 
+<br><br><br>
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/4.%20Alocacao%20de%20voos.jpg"
+    <figcaption>4. Fluxo de usuário - Alocação de voos</figcaption>
+</figure> 
+<br><br><br>
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/5.%20Visualizar%20voos.jpg"
+    <figcaption>5. Fluxo de usuário - Visualizar voos</figcaption>
+</figure> 
+<br><br><br>
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/6.%20Registrar%20voo%20notas%20e%20observacoes.jpg"
+    <figcaption>6. Fluxo de usuário - Registrar voo notas e observações</figcaption>
+</figure> 
+<br><br><br>
+<figure> 
+  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/7.%20Cancelar%20voos.jpg"
+    <figcaption>7. Fluxo de usuário - Cancelar voos</figcaption>
+</figure> 
 
 ## Protótipo
 
