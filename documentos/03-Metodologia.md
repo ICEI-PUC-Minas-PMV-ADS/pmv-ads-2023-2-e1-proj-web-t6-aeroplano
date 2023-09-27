@@ -32,13 +32,19 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 Para a organização e divisão das tarefas do projeto a nossa equipe utilizará o Github Project baseando nas seguintes listas:
 
-- Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
+- Product Backlog: Recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
 - To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
 - Ready for work: Tarefas que já estejam completamente descritas e livre de impedimentos para serem trabalhadas são enviadas para essa lista pelo Scrum Master
 - In progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
 - Dev Complete: As terefas que foram finalizadas são movidas para essa lista, onde passam a ser revisadas e testadas.
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
-  O quadro do Kanbam está Github Project que está disponível no Link: [Quadro Kanbam](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/649)
+
+  O quadro kanban do grupo no GitHub está disponível no link: (https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/649) e é apresentado, no estado atual, na figura abaixo:
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/57ebe2e3-5818-473d-a76c-6022f8f5f86f)
+
+
+  
 
 ### Etiquetas
 
