@@ -39,10 +39,75 @@ Para a organização e divisão das tarefas do projeto a nossa equipe utilizará
 - Dev Complete: As terefas que foram finalizadas são movidas para essa lista, onde passam a ser revisadas e testadas.
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
 
-  O quadro kanban do grupo no GitHub está disponível no link: (https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/649) e é apresentado, no estado atual, na figura abaixo:
 
-  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/57ebe2e3-5818-473d-a76c-6022f8f5f86f)
+- **Etapa 1** - **Sprint 1**
 
+Documentação de Contexto.
+
+ Especificação do Projeto.
+
+ Apresentação do Projeto.
+
+- **Etapa 2** - **Sprint 2**
+
+ Documentação de Contexto
+
+ Especificação do Projeto
+
+ Metodologia
+
+ Projeto de Interface
+
+ Referências atualizadas
+
+**Etapa 1**  (**Sprint 1**)
+
+
+- 1.1 Planejamento
+
+Aqui foram planejadas e elaboradas as ideias do projeto, avaliando e executando os requisitos pedidos no trabalho . O grupo se reuniu através das plataformas Teams e WhatsApp para discutir as ideias, fazer planejamentos e definir horários para a realização das tarefas. Várias ideias foram sugeridas antes de entrarmos em comum acordo, escolhendo assim a melhor ideia de projeto. 
+
+Nessa etapa foram feitas as partes de: Documentação do contexto e Especificação do Projeto.
+
+- 1.2 Andamento
+
+Dividimos as tarefas durante as reuniões semanais feitas quinta-feira à noite  utilizando a plataforma Teams e Trello.  Também compartilhamos documentos e fizemos etapas do trabalho simultaneamente utilizando as ferramentas do Teams, como por exemplo o compartilhamento da tela. As devidas correções e acréscimos foram feitas ao decorrer da semana, seguindo as orientações do professor nas aulas de terça. 
+
+As tarefas foram divididas entre o grupo mediante a disponibilidade e familiaridade de cada um com algumas ferramentas. Todos tiveram participação na execução do projeto e nas discussões surgidas ao longo da etapa.
+
+- 1.3 Ferramentas e Comprovações
+
+  Imagem 1 - Criação do Projeto
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/931b2b71-bdf0-4e8d-91d7-0525a244fb18)
+
+  Imagem 2 - Slide de apresentação
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/92932642-9eb5-4212-9dec-b0a9c42aa8de)
+
+  Imagem 3 - Ferramenta Trello
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/f5193044-7edf-4fe6-adf4-c5ea4b353087)
+
+Imagem 4 - Reuniões pelo Teams
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/0012df8f-f0e6-49fe-825c-66d6c04a1c18)
+
+Imagem 5 - Grupo de WhatSapp
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/5f4c0100-d217-47b0-9d84-b40f36441c64)
+
+
+
+  
+
+
+
+
+
+
+
+  
 
   
 
