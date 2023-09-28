@@ -63,19 +63,19 @@ Documentação de Contexto.
 **Etapa 1**  (**Sprint 1**)
 
 
-- 1.1 Planejamento
+- 1.1 Planejamento:
 
 Aqui foram planejadas e elaboradas as ideias do projeto, avaliando e executando os requisitos pedidos no trabalho . O grupo se reuniu através das plataformas Teams e WhatsApp para discutir as ideias, fazer planejamentos e definir horários para a realização das tarefas. Várias ideias foram sugeridas antes de entrarmos em comum acordo, escolhendo assim a melhor ideia de projeto. 
 
 Nessa etapa foram feitas as partes de: Documentação do contexto e Especificação do Projeto.
 
-- 1.2 Andamento
+- 1.2 Andamento:
 
 Dividimos as tarefas durante as reuniões semanais feitas quinta-feira à noite  utilizando a plataforma Teams e Trello.  Também compartilhamos documentos e fizemos etapas do trabalho simultaneamente utilizando as ferramentas do Teams, como por exemplo o compartilhamento da tela. As devidas correções e acréscimos foram feitas ao decorrer da semana, seguindo as orientações do professor nas aulas de terça. 
 
 As tarefas foram divididas entre o grupo mediante a disponibilidade e familiaridade de cada um com algumas ferramentas. Todos tiveram participação na execução do projeto e nas discussões surgidas ao longo da etapa.
 
-- 1.3 Ferramentas e Comprovações
+- 1.3 Ferramentas e Comprovações:
 
   Imagem 1 - Criação do Projeto
 
@@ -97,16 +97,37 @@ Imagem 5 - Grupo de WhatSapp
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/5f4c0100-d217-47b0-9d84-b40f36441c64)
 
+**Etapa 2**  (**Sprint 2**)
 
-
+- 2.1 Planejamento:
   
+   Na fase de planejamento, nosso objetivo era criar um documento que descrevesse a metodologia a ser empregada no projeto. Isso incluía a definição dos papéis de cada membro da equipe, seguindo a abordagem do SCRUM, a identificação das ferramentas a serem usadas ao longo do processo e a criação de representações visuais do Fluxo dos Usuários, bem como protótipos das interfaces que seriam desenvolvidas.  
 
+- 2.2 Andamento:
 
+Optamos pela adoção da metodologia SCRUM como nossa abordagem principal, na qual cada membro da equipe foi designado para desempenhar funções específicas e bem definidas.
 
+A equipe realizou encontros semanais e foi decidido o uso das ferramentas Figma e Miro para fazer o fluxo de usuário e prototipos da aplicação, trabalhando em cima do requisitos que foram definidos na sprint 1,
+as ferramentas eram novas para a maioria da equipe, Destacou-se uma otima colaboração entre os membros, especialmente no que diz respeito ao compartilhamento de informações nas ferramentas utilizadas.
 
+A maioria dos desenhos do fluxo de usuario foram feitos por Felipe e Andryel, com a ajuda de Rafael e acompanhamento dos demais membros do grupo, o prototipo foi feito por José com correçoes pontuais dos demais
+membros do grupo.
 
+Os textos feitos para o GitHUB foram feitos com a participação de todos os membros do grupo e a revisão geral também foi feita por todos os membros.
 
+- 2.3 Ferramentas e Comprovações:
 
+Imagem 1 - Prototipo da aplicação:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/Figma_prototipo.png)
+
+imagem 2 - Fluxo do usuario na etapa de autenticação:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/1.%20Autenticacao%20do%20usuario.jpg)
+
+imagem 3 - Kanban da segunda etapa:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/Kanban_Github.png)
   
 
   
