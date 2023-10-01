@@ -39,7 +39,7 @@ Para a organização e divisão das tarefas do projeto a nossa equipe utilizará
 - Dev Complete: As terefas que foram finalizadas são movidas para essa lista, onde passam a ser revisadas e testadas.
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
 
-- **Etapa 1** - **Sprint 1**
+#### Etapa 1
 
 A etapa 1 foi realizada entre os dias 01 de agosto de 2023 e 03 de setembro de 2023, e teve os seguintes entregáveis:
 
@@ -78,7 +78,7 @@ Imagem 4 - Reuniões pelo Teams
 ![image](/documentos/img/Grupo%20de%20WhatSapp.png)
 Imagem 5 - Grupo de WhatSapp
 
-**Etapa 2** (**Sprint 2**)
+#### Etapa 2
 
 A etapa 2 foi realizada entre os dias 04 de setembro de 2023 e 01 de outubro de 2023, e teve os seguintes entregáveis:
 
