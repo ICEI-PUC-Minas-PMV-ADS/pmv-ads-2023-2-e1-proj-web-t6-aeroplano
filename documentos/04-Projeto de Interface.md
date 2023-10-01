@@ -35,7 +35,7 @@ Imagem 6 - Fluxo de usuário - Registrar voo notas e observações
 ### Cancelar voos
 
 ![7. Fluxo de usuário - Cancelar voos](/documentos/img/7.%20Cancelar%20voos.jpg "Fluxo de usuário - Cancelar voos")
-Imagem 7 -
+Imagem 7 - Fluxo de usuário - Cancelar voos
 
 ## Protótipo
 
