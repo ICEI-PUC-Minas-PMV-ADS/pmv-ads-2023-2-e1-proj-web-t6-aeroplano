@@ -39,69 +39,58 @@ Para a organização e divisão das tarefas do projeto a nossa equipe utilizará
 - Dev Complete: As terefas que foram finalizadas são movidas para essa lista, onde passam a ser revisadas e testadas.
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
 
-
 - **Etapa 1** - **Sprint 1**
 
-Documentação de Contexto.
+A etapa 1 foi realizada entre os dias 01 de agosto de 2023 e 03 de setembro de 2023, e teve os seguintes entregáveis:
 
- Especificação do Projeto.
-
- Apresentação do Projeto.
-
-- **Etapa 2** - **Sprint 2**
-
- Documentação de Contexto
-
- Especificação do Projeto
-
- Metodologia
-
- Projeto de Interface
-
- Referências atualizadas
-
-**Etapa 1**  (**Sprint 1**)
-
+- Documentação de Contexto
+- Especificação do Projeto
+- Slide de apresentação do Projeto - Etapa 1
 
 - 1.1 Planejamento:
 
-Aqui foram planejadas e elaboradas as ideias do projeto, avaliando e executando os requisitos pedidos no trabalho . O grupo se reuniu através das plataformas Teams e WhatsApp para discutir as ideias, fazer planejamentos e definir horários para a realização das tarefas. Várias ideias foram sugeridas antes de entrarmos em comum acordo, escolhendo assim a melhor ideia de projeto. 
+Aqui foram planejadas e elaboradas as ideias do projeto, avaliando e executando os requisitos pedidos no trabalho . O grupo se reuniu através das plataformas Teams e WhatsApp para discutir as ideias, fazer planejamentos e definir horários para a realização das tarefas. Várias ideias foram sugeridas antes de entrarmos em comum acordo, escolhendo assim a melhor ideia de projeto.
 
 Nessa etapa foram feitas as partes de: Documentação do contexto e Especificação do Projeto.
 
 - 1.2 Andamento:
 
-Dividimos as tarefas durante as reuniões semanais feitas quinta-feira à noite  utilizando a plataforma Teams e Trello.  Também compartilhamos documentos e fizemos etapas do trabalho simultaneamente utilizando as ferramentas do Teams, como por exemplo o compartilhamento da tela. As devidas correções e acréscimos foram feitas ao decorrer da semana, seguindo as orientações do professor nas aulas de terça. 
+Dividimos as tarefas durante as reuniões semanais feitas quinta-feira à noite utilizando a plataforma Teams e Trello. Também compartilhamos documentos e fizemos etapas do trabalho simultaneamente utilizando as ferramentas do Teams, como por exemplo o compartilhamento da tela. As devidas correções e acréscimos foram feitas ao decorrer da semana, seguindo as orientações do professor nas aulas de terça.
 
 As tarefas foram divididas entre o grupo mediante a disponibilidade e familiaridade de cada um com algumas ferramentas. Todos tiveram participação na execução do projeto e nas discussões surgidas ao longo da etapa.
 
-- 1.3 Ferramentas e Comprovações:
+- 1.3 Ferramentas utilizadas e Comprovações:
 
-  Imagem 1 - Criação do Projeto
+![image](/documentos/img/Criacao%20do%20Projeto.png)
+Imagem 1 - Criação do Projeto
 
-  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/931b2b71-bdf0-4e8d-91d7-0525a244fb18)
+![image](/documentos/img/Slide%20de%20apresentacao.png)
+Imagem 2 - Slide de apresentação
 
-  Imagem 2 - Slide de apresentação
+A ferramenta Trello, utilizada para hospedar o quadro Kanbam foi substituído pelo quadro hospedado no GitHub, após o repositório ter sido criado. O estado do quadro, como estava no final do mês de agosto de 2023.
 
-  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/92932642-9eb5-4212-9dec-b0a9c42aa8de)
+![image](/documentos/img/Ferramenta%20Trello.png)
+Imagem 3 - Ferramenta Trello
 
-  Imagem 3 - Ferramenta Trello
-
-  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/f5193044-7edf-4fe6-adf4-c5ea4b353087)
-
+![image](/documentos/img/Reunioes%20pelo%20Teams.png)
 Imagem 4 - Reuniões pelo Teams
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/0012df8f-f0e6-49fe-825c-66d6c04a1c18)
-
+![image](/documentos/img/Grupo%20de%20WhatSapp.png)
 Imagem 5 - Grupo de WhatSapp
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/5f4c0100-d217-47b0-9d84-b40f36441c64)
+**Etapa 2** (**Sprint 2**)
 
-**Etapa 2**  (**Sprint 2**)
+A etapa 2 foi realizada entre os dias 04 de setembro de 2023 e 01 de outubro de 2023, e teve os seguintes entregáveis:
+
+- Documentação de Contexto - Revisado após avaliação
+- Especificação do Projeto - Revisado após avaliação
+- Slide de apresentação do Projeto - Etapas 1 e 2
+- Metodologia - Etapas 1 e 2
+- Projeto de Interface
 
 - 2.1 Planejamento:
-  
-   Na fase de planejamento, nosso objetivo era criar um documento que descrevesse a metodologia a ser empregada no projeto. Isso incluía a definição dos papéis de cada membro da equipe, seguindo a abordagem do SCRUM, a identificação das ferramentas a serem usadas ao longo do processo e a criação de representações visuais do Fluxo dos Usuários, bem como protótipos das interfaces que seriam desenvolvidas.  
+
+  Na fase de planejamento, nosso objetivo era criar um documento que descrevesse a metodologia a ser empregada no projeto. Isso incluía a definição dos papéis de cada membro da equipe, seguindo a abordagem do SCRUM, a identificação das ferramentas a serem usadas ao longo do processo e a criação de representações visuais do Fluxo dos Usuários, bem como protótipos das interfaces que seriam desenvolvidas.
 
 - 2.2 Andamento:
 
@@ -117,20 +106,14 @@ Os textos feitos para o GitHUB foram feitos com a participação de todos os mem
 
 - 2.3 Ferramentas e Comprovações:
 
-Imagem 1 - Prototipo da aplicação:
+![image](/documentos/img/Figma_prototipo.png)
+Imagem 6 - Prototipo da aplicação
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/Figma_prototipo.png)
+![image](/documentos/img/1.%20Autenticacao%20do%20usuario.jpg)
+Imagem 7 - Fluxo do usuario na etapa de autenticação
 
-imagem 2 - Fluxo do usuario na etapa de autenticação:
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/1.%20Autenticacao%20do%20usuario.jpg)
-
-imagem 3 - Kanban da segunda etapa:
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/Kanban_Github.png)
-  
-
-  
+![image](/documentos/img/Kanban_Github.png)
+Imagem 8 - Kanban da segunda etapa
 
 ### Etiquetas
 
@@ -164,4 +147,4 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 
 ### Estratégia de Organização de Codificação
 
-Todos os artefatos relacionados a implementação e visualização dos conteúdos do projeto do site deverão ser inseridos na pasta [codigo-fonte](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/tree/main/codigo-fonte). Consulte também a nossa sugestão referente a estratégia de organização de codificação a ser adotada pela equipe de desenvolvimento do projeto.
+Todos os artefatos relacionados a implementação e visualização dos conteúdos do projeto do site deverão ser inseridos na pasta [codigo-fonte](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/tree/main/codigo-fonte).
