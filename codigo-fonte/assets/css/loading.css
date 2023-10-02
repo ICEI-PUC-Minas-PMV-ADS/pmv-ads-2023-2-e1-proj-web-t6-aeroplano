@@ -1,48 +1,56 @@
-#loadingContent {
-  width: 100vw;
-  height: 100vh;
-  background-color: #0f172a;
+#loading {
+  display: none;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark2);
 }
 
-.loading span {
-  color: #fff;
+.loading-loader span {
+  color: var(--color-white);
   letter-spacing: 30px;
   font-size: 60px;
   animation: loading 5s ease infinite;
   opacity: 0;
+  font-family: "Staatliches", sans-serif;
 }
 
-.loading span:nth-child(1) {
+.loading-loader span:nth-child(1) {
   animation-delay: 0.5s;
 }
 
-.loading span:nth-child(2) {
+.loading-loader span:nth-child(2) {
   animation-delay: 1s;
 }
 
-.loading span:nth-child(3) {
+.loading-loader span:nth-child(3) {
   animation-delay: 1.5s;
 }
 
-.loading span:nth-child(4) {
+.loading-loader span:nth-child(4) {
   animation-delay: 2s;
 }
 
-.loading span:nth-child(5) {
+.loading-loader span:nth-child(5) {
   animation-delay: 2.5s;
 }
 
-.loading span:nth-child(6) {
+.loading-loader span:nth-child(6) {
   animation-delay: 3s;
 }
 
-.loading span:nth-child(7) {
+.loading-loader span:nth-child(7) {
   animation-delay: 3.5s;
 }
 
-@keyframes loading {
+@keyframes loading-loader {
   50% {
     opacity: 1;
   }
