@@ -1,16 +1,33 @@
 import "./main.js";
 
-const openMenu = document.querySelector('.open-menu');
-const closeMenu = document.querySelector('.close-menu');
-const menu = document.querySelector('.directories');
+const openMenu = document.querySelector(".open-menu");
+const closeMenu = document.querySelector(".close-menu");
+const menu = document.querySelector(".directories");
 
-openMenu.addEventListener('click', ()=>{
-  menu.classList.add('activeMenu')
-})
-closeMenu.addEventListener('click', ()=>{
-  menu.classList.remove('activeMenu')
-})
+openMenu.addEventListener("click", () => {
+  menu.classList.add("activeMenu");
+});
+closeMenu.addEventListener("click", () => {
+  menu.classList.remove("activeMenu");
+});
 
+document.addEventListener("DOMContentLoaded", function () {
+  const questions = document.querySelectorAll(".question");
+
+  questions.forEach(function (question) {
+    question.addEventListener("click", function () {
+      const answer = this.nextElementSibling;
+
+      if (answer.style.display === "block") {
+        this.classList.remove('open')
+        answer.style.display = "none";
+      } else {
+        this.classList.add('open')
+        answer.style.display = "block";
+      }
+    });
+  });
+});
 /*
 const loading = document.getElementById("loadingContent");
 const image = document.getElementById("bgimage");
