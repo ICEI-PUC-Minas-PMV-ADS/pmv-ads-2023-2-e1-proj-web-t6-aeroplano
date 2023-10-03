@@ -36,11 +36,19 @@ body {
   height: 100vh;
 }
 
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .mxw-1300 {
   max-width: 1300px;
   width: 100%;
   margin: auto;
   padding: 10px 20px;
+  height: auto;
 }
 
 /* -------------- CONFIG LIB SweetAlert2 ------------- */

@@ -38,12 +38,16 @@ body {
   height: 100vh;
 }
 
-
+img{
+  object-fit: cover;
+  object-position: center;
+}
 .mxw-1300 {
   max-width: 1300px;
   width: 100%;
   margin: auto;
   padding: 10px 20px;
+  height: auto;
   //overflow: hidden;
 }
 
