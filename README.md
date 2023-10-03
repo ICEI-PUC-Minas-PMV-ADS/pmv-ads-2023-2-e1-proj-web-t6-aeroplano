@@ -37,7 +37,7 @@ A aviação desempenha um papel crucial na conectividade global e no desenvolvim
 
 # Hospedagem
 
-* Para acessar o site, clique no link: [aeroplano.vercel.app](https://aeroplano.vercel.app/)
+* Para acessar o site, clique no link: [aeroplano.vercel.app](https://aeroplano.vercel.app/){:target="_blank"}
 
 # Código-Fonte
 
