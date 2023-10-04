@@ -3,11 +3,24 @@
 @import url("header.min.css");
 @import url("footer.min.css");
 
+/* ALTERAÇÃO NO CABEÇALHO */
+
+.line-header {
+  stroke-width: 1px;
+  stroke: rgba(224, 225, 226, 0);
+  width: 100%;
+  max-width: 100%;
+}
 body {
   background-color: var(--color-white);
 }
-main{
+main {
   min-height: 500px;
 }
 
+.banner_blog{
+  background-color: var(--color-dark);
+  height: 500px;
+
+}
 /* DIGITE SEU CÓDIGO AQUI PARA CRIAR A TELA DE LOGIN */

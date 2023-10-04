@@ -1,1 +1,1 @@
-@import"main.min.css";@import"loading.min.css";@import"header.min.css";@import"footer.min.css";body{background-color:var(--color-white)}main{min-height:500px}
+@import"main.min.css";@import"loading.min.css";@import"header.min.css";@import"footer.min.css";.line-header{stroke-width:1px;stroke:rgba(224,225,226,0);width:100%;max-width:100%}body{background-color:var(--color-white)}main{min-height:500px}.banner_blog{background-color:var(--color-dark);height:500px}
