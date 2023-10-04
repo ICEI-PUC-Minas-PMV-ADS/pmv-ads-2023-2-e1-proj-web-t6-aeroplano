@@ -1,0 +1,116 @@
+@import url("main.min.css");
+@import url("loading.min.css");
+@import url("header.min.css");
+@import url("footer.min.css");
+
+body {
+  background-color: var(--color-dark);
+}
+main {
+  min-height: 500px;
+
+  .title {
+    color: var(--color-white);
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+  }
+  .p-historia {
+    color: var(--color-white);
+    text-align: justify;
+    font-size: 1.12rem;
+    font-weight: 500;
+    line-height: 32px;
+    max-width: 800px;
+    padding: 1rem 20px;
+    margin: auto;
+  }
+  .equipe-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+    max-width: 1000px;
+  }
+  .equipe-box {
+    width: calc((100% / 3) - 60px);
+    margin: 30px 30px;
+    //border: 1px solid red;
+
+
+
+    img {
+      border-radius: 50%;
+      aspect-ratio: 1;
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      text-align: center;
+      padding-top: 0.8rem;
+
+      &:nth-of-type(1) {
+        color: var(--color-pastel-yellow);
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      &:nth-of-type(2) {
+        color: var(--color-white);
+        font-size: 1.1rem;
+        font-weight: 500;
+        //line-height: 32px; 
+      }
+    }
+    .network {
+      padding: 1rem 0;
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        li a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0.5rem 0.3rem;
+          border-radius: 50%;
+          width: 48px;
+          height: 48px;
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            background-color: var(--color-white);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            opacity: 0.1;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .equipe-box {
+      width: calc((100% / 2) - 60px);
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .equipe-content {
+      justify-content: center;
+    }
+    .equipe-box {
+      width: calc(100% - 60px);
+      max-width: 300px;
+    }
+  }
+}
+
+/* DIGITE SEU CÓDIGO AQUI PARA CRIAR A TELA DE LOGIN */
