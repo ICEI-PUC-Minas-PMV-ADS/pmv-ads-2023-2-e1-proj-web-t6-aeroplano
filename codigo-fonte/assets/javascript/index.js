@@ -1,5 +1,6 @@
 import "./main.js";
 import "./header.js";
+import "./footer.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const questions = document.querySelectorAll(".question");
@@ -9,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const answer = this.nextElementSibling;
 
       if (answer.style.display === "block") {
-        this.classList.remove('open')
+        this.classList.remove("open");
         answer.style.display = "none";
       } else {
-        this.classList.add('open')
+        this.classList.add("open");
         answer.style.display = "block";
       }
     });
