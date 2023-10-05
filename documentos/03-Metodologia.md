@@ -30,6 +30,8 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
+[Detalhar mais todo o processo]
+
 Para a organização e divisão das tarefas do projeto a nossa equipe utilizará o Github Project baseando nas seguintes listas:
 
 - Product Backlog: Recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
@@ -49,12 +51,13 @@ A etapa 1 foi realizada entre os dias 01 de agosto de 2023 e 03 de setembro de 2
 
 - 1.1 Planejamento:
 
-Aqui foram planejadas e elaboradas as ideias do projeto, avaliando e executando os requisitos pedidos no trabalho . O grupo se reuniu através das plataformas Teams e WhatsApp para discutir as ideias, fazer planejamentos e definir horários para a realização das tarefas. Várias ideias foram sugeridas antes de entrarmos em comum acordo, escolhendo assim a melhor ideia de projeto.
-
-Nessa etapa foram feitas as partes de: Documentação do contexto e Especificação do Projeto.
+[Colocar tarefas]
 
 - 1.2 Andamento:
 
+Aqui foram planejadas e elaboradas as ideias do projeto, avaliando e executando os requisitos pedidos no trabalho . O grupo se reuniu através das plataformas Teams e WhatsApp para discutir as ideias, fazer planejamentos e definir horários para a realização das tarefas. Várias ideias foram sugeridas antes de entrarmos em comum acordo, escolhendo assim a melhor ideia de projeto.
+
+Nessa etapa foram feitas as partes de: Documentação do contexto e Especificação do Projeto.
 Dividimos as tarefas durante as reuniões semanais feitas quinta-feira à noite utilizando a plataforma Teams e Trello. Também compartilhamos documentos e fizemos etapas do trabalho simultaneamente utilizando as ferramentas do Teams, como por exemplo o compartilhamento da tela. As devidas correções e acréscimos foram feitas ao decorrer da semana, seguindo as orientações do professor nas aulas de terça.
 
 As tarefas foram divididas entre o grupo mediante a disponibilidade e familiaridade de cada um com algumas ferramentas. Todos tiveram participação na execução do projeto e nas discussões surgidas ao longo da etapa.
@@ -90,9 +93,11 @@ A etapa 2 foi realizada entre os dias 04 de setembro de 2023 e 01 de outubro de 
 
 - 2.1 Planejamento:
 
-  Na fase de planejamento, nosso objetivo era criar um documento que descrevesse a metodologia a ser empregada no projeto. Isso incluía a definição dos papéis de cada membro da equipe, seguindo a abordagem do SCRUM, a identificação das ferramentas a serem usadas ao longo do processo e a criação de representações visuais do Fluxo dos Usuários, bem como protótipos das interfaces que seriam desenvolvidas.
+[Colocar tarefas]
 
 - 2.2 Andamento:
+
+  Na fase de planejamento, nosso objetivo era criar um documento que descrevesse a metodologia a ser empregada no projeto. Isso incluía a definição dos papéis de cada membro da equipe, seguindo a abordagem do SCRUM, a identificação das ferramentas a serem usadas ao longo do processo e a criação de representações visuais do Fluxo dos Usuários, bem como protótipos das interfaces que seriam desenvolvidas.
 
 Optamos pela adoção da metodologia SCRUM como nossa abordagem principal, na qual cada membro da equipe foi designado para desempenhar funções específicas e bem definidas.
 
