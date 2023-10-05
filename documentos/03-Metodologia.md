@@ -30,7 +30,7 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
-[Detalhar mais todo o processo]
+[Detalhar mais todo o processo feito pelo grupo]
 
 Para a organização e divisão das tarefas do projeto a nossa equipe utilizará o Github Project baseando nas seguintes listas:
 
