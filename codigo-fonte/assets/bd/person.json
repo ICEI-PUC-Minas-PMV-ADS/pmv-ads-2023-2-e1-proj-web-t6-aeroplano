@@ -1,0 +1,31 @@
+[
+    {
+        "id": 0,
+        "name": "Roberto",
+        "email": "roberto@aeroplano.com",
+        "password": "12345678",
+        "role": "Pilot",
+        "registerNumber": "00#123090",
+        "gender": "M",
+        "birthDate": "10/10/1976",
+        "lastSeen": null,
+        "lastAccess": null,
+        "status": false,
+        "schoolId": 0
+    },
+    {
+        "id": 1,
+        "name": "Cesar",
+        "email": "cesar@aeroplano.com",
+        "password": "12344678",
+        "role": "student",
+        "registerNumber": "02#123010",
+        "gender": "M",
+        "birthDate": "15/11/1990",
+        "lastSeen": null,
+        "lastAccess": null,
+        "status": false,
+        "schoolId": 0
+    }
+    
+]
