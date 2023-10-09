@@ -1,37 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aeroplano - Plataforma para Escolas de Aviação</title>
-    <link rel="stylesheet" href="./assets/css/login.min.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="./assets/css/login.min.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <header class="header mxw-1300" id="header"></header>
     <main id="main">
-        <div class="main-effects"></div>
-        <div class="main-content">
-            <div class="main banner-container">
-                <!--Coloque seu conteudo aqui-->
+      <div class="main-effects"></div>
+      <div class="main-content" style="display: grid; align-items: center">
+        <div id="credentialModal" class="main banner-container" style="display: grid; justify-content: center">
+          <!--Coloque seu conteudo aqui-->
+          <div class="frame">
+            <div class="div">
+              <p class="p">Faça login em sua conta</p>
+              <div class="email">
+                <div class="header-wrapper">E-mail</div>
+                <input id="emailInput" type="email" class="text-wrapper" placeholder="Digite seu e-mail" value="" />
+              </div>
+              <div class="password">
+                <div class="header-wrapper">Senha</div>
+                <input id="passwordInput" type="password" class="text-wrapper" placeholder="Digite sua senha" value="" />
+              </div>
+              <div class="forgotPassword">Esqueci minha senha</div>
+              <p class="signup-wrapper"><span class="span">Não tem uma conta? </span> <span class="signup-highlight">Cadastre-se</span></p>
+              <button class="button-base">
+                <div class="text">Entrar</div>
+              </button>
             </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer id="footer"></footer>
     <div id="loading">
-        <div class="loading-loader">
-            <span>l</span>
-            <span>o</span>
-            <span>a</span>
-            <span>d</span>
-            <span>i</span>
-            <span>n</span>
-            <span>g</span>
-        </div>
+      <div class="loading-loader">
+        <span>l</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+      </div>
     </div>
     <script type="module" src="./assets/javascript/login.js"></script>
     <script type="module" src="./assets/javascript/main.js"></script>
-</body>
-
+  </body>
 </html>
