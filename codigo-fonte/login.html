@@ -9,27 +9,35 @@
   </head>
 
   <body>
-    <header class="header mxw-1300" id="header"></header>
+    <section id="banner">
+      <div class="banner-effects"></div>
+      <div class="banner-content">
+          <header class="header mxw-1300" id="header"></header>
+          
+  </section>
     <main id="main">
       <div class="main-effects"></div>
       <div class="main-content" style="display: grid; align-items: center">
-        <div id="credentialModal" class="main banner-container" style="display: grid; justify-content: center">
+        <div id="credentialFrame" class="main credentialFrame-banner-container" style="display: grid; justify-content: center">
           <!--Coloque seu conteudo aqui-->
-          <div class="frame">
-            <div class="div">
-              <p class="p">Faça login em sua conta</p>
-              <div class="email">
-                <div class="header-wrapper">E-mail</div>
-                <input id="emailInput" type="email" class="text-wrapper" placeholder="Digite seu e-mail" value="" />
+          <div class="credentialFrame">
+            <div class="credentialFrame-div">
+              <p class="credentialFrame-p">Faça login em sua conta</p>
+              <div class="credentialFrame-email">
+                <div class="credentialFrame-header-wrapper">E-mail</div>
+                <input id="emailInput" type="email" class="credentialFrame-text-wrapper" placeholder="Digite seu e-mail" value="" />
               </div>
-              <div class="password">
-                <div class="header-wrapper">Senha</div>
-                <input id="passwordInput" type="password" class="text-wrapper" placeholder="Digite sua senha" value="" />
+              <div class="credentialFrame-password">
+                <div class="credentialFrame-header-wrapper">Senha</div>
+                <input id="passwordInput" type="password" class="credentialFrame-text-wrapper" placeholder="Digite sua senha" value="" />
               </div>
-              <div class="forgotPassword">Esqueci minha senha</div>
-              <p class="signup-wrapper"><span class="span">Não tem uma conta? </span> <span class="signup-highlight">Cadastre-se</span></p>
-              <button class="button-base">
-                <div class="text">Entrar</div>
+              <div class="credentialFrame-forgotPassword">Esqueci minha senha</div>
+              <p class="credentialFrame-signup-wrapper">
+                <span class="credentialFrame-span">Não tem uma conta? </span>
+                <span class="credentialFrame-signup-highlight">Cadastre-se</span>
+              </p>
+              <button class="credentialFrame-button-base">
+                <div class="credentialFrame-text">Entrar</div>
               </button>
             </div>
           </div>

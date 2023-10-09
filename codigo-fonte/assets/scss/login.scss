@@ -8,9 +8,7 @@ body {
   background-color: var(--color-dark);
 }
 
-/* DIGITE SEU CÓDIGO AQUI PARA CRIAR A TELA DE LOGIN */
-
-.frame {
+.credentialFrame {
   width: 500px;
   height: 529px;
   background-color: #ffffff;
@@ -18,7 +16,7 @@ body {
   overflow: hidden;
 }
 
-.frame .div {
+.credentialFrame .credentialFrame-div {
   position: relative;
   top: 74px;
   left: 75px;
@@ -26,7 +24,7 @@ body {
   height: 380px;
 }
 
-.frame .header-wrapper {
+.credentialFrame .credentialFrame-header-wrapper {
   position: absolute;
   top: 0;
   left: 4px;
@@ -39,7 +37,7 @@ body {
   white-space: nowrap;
 }
 
-.frame .email {
+.credentialFrame .credentialFrame-email {
   position: absolute;
   top: 66px;
   left: 0;
@@ -47,8 +45,7 @@ body {
   height: 75px;
 }
 
-input[type="email"],
-select {
+.credentialFrame input[type="email"] {
   position: absolute;
   top: 25px;
   left: 0;
@@ -64,8 +61,7 @@ select {
   border-color: var(--graygray-200);
 }
 
-input[type="password"],
-select {
+.credentialFrame input[type="password"] {
   position: absolute;
   top: 25px;
   left: 0;
@@ -81,7 +77,7 @@ select {
   border-color: var(--graygray-200);
 }
 
-.frame .password {
+.credentialFrame .credentialFrame-password {
   position: absolute;
   top: 160px;
   left: 0;
@@ -89,7 +85,7 @@ select {
   height: 75px;
 }
 
-.frame .forgotPassword {
+.credentialFrame .credentialFrame-forgotPassword {
   position: absolute;
   top: 255px;
   left: 208px;
@@ -103,7 +99,7 @@ select {
   white-space: nowrap;
 }
 
-.frame .input-fieldtext-wrapper {
+.credentialFrame .credentialFrame-input-fieldtext-wrapper {
   position: absolute;
   top: 25px;
   left: 0;
@@ -119,7 +115,7 @@ select {
   border-color: var(--graygray-200);
 }
 
-.frame .input-fieldtext {
+.credentialFrame .credentialFrame-input-fieldtext {
   display: flex;
   flex-direction: column;
   width: 311px;
@@ -130,7 +126,7 @@ select {
   overflow: hidden;
 }
 
-.frame .text-wrapper {
+.credentialFrame .credentialFrame-text-wrapper {
   position: relative;
   width: 119.5px;
   height: 19.5px;
@@ -144,7 +140,7 @@ select {
   white-space: nowrap;
 }
 
-.frame .min-width {
+.credentialFrame .credentialFrame-min-width {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -153,14 +149,14 @@ select {
   flex: 0 0 auto;
 }
 
-.frame .content {
+.credentialFrame .credentialFrame-content {
   position: relative;
   width: 1px;
   height: 1px;
   margin-right: -1px;
 }
 
-.frame .text-wrapper {
+.credentialFrame .credentialFrame-text-wrapper {
   position: relative;
   width: fit-content;
   margin-top: -0.5px;
@@ -173,7 +169,7 @@ select {
   white-space: nowrap;
 }
 
-.frame .signup-wrapper {
+.credentialFrame .credentialFrame-signup-wrapper {
   position: absolute;
   top: 359px;
   left: 64px;
@@ -188,15 +184,15 @@ select {
   white-space: nowrap;
 }
 
-.frame .span {
+.credentialFrame .credentialFrame-span {
   color: #a0aec0;
 }
 
-.frame .signup-highlight {
+.credentialFrame .credentialFrame-signup-highlight {
   color: #fbd784;
 }
 
-.frame .button-base {
+.credentialFrame .credentialFrame-button-base {
   display: flex;
   width: 350px;
   height: 50px;
@@ -206,11 +202,20 @@ select {
   position: absolute;
   top: 293px;
   left: 0;
+  border-style: hidden;
   background-color: #fbd784;
   border-radius: 12px;
 }
 
-.frame .text {
+.credentialFrame .credentialFrame-button-base:hover {
+  background-color: #fdd068;
+}
+
+.credentialFrame .credentialFrame-button-base:active {
+  background-color: #e4b854;
+}
+
+.credentialFrame .credentialFrame-text {
   position: relative;
   width: fit-content;
   font-family: "Inter-Medium", Helvetica;
@@ -223,7 +228,7 @@ select {
   white-space: nowrap;
 }
 
-.frame .p {
+.credentialFrame .credentialFrame-p {
   position: absolute;
   top: -1px;
   left: 0;
