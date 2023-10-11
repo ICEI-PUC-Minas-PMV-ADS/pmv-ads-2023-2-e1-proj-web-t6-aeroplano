@@ -2,6 +2,10 @@ import "./main.js";
 import "./header.js";
 import "./footer.js";
 
+// Adicionar animações 
+AOS.init();
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const questions = document.querySelectorAll(".question");
 
