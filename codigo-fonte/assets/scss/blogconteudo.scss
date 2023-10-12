@@ -16,11 +16,194 @@ body {
 }
 main {
   min-height: 500px;
+  //padding-bottom: 800px;
+  padding-bottom: 2rem;
 }
 
-.banner_blog{
+.banner_blog {
   background-color: var(--color-dark);
-  height: 500px;
+  height: 750px;
+  padding: 0 20px;
+  //margin-bottom: 350px;
 
+  .banner_content {
+    max-width: 800px;
+    margin: auto;
+  }
+  h1 {
+    overflow: hidden;
+    color: var(--color-white);
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    min-height: 180px;
+  }
+  .escritor {
+    .title {
+      color: var(--color-white);
+      font-size: 1.12rem;
+      font-weight: 500;
+      padding-bottom: 0.7rem;
+    }
+    .escritor-box {
+      display: flex;
+      align-items: center;
+    }
+    .escritor-img {
+      width: 50px;
+      align-items: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 0.5rem;
+      aspect-ratio: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .escritor-text p {
+      &:nth-of-type(1) {
+        color: var(--color-pastel-yellow);
+        font-size: 1.12rem;
+        font-weight: 500;
+        padding-bottom: 0.3rem;
+      }
+      &:nth-of-type(2) {
+        color: var(--color-white);
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+  .banner_bg {
+    margin-top: 5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 620px;
+    }
+  }
 }
-/* DIGITE SEU CÓDIGO AQUI PARA CRIAR A TELA DE LOGIN */
+.blog_artigo {
+  max-width: 800px;
+  padding-top: calc(min(350px, 25vw));
+
+  p {
+    color: var(--color-dark);
+    text-align: justify;
+    font-size: 1.12rem;
+    font-weight: 500;
+    line-height: 32px;
+    padding-bottom: 1.5rem;
+  }
+}
+.blog_commets {
+  max-width: 800px;
+  margin: 1rem auto;
+}
+.blog_relacionados {
+  margin-top: 3rem;
+  user-select: none;
+
+  .title {
+    display: inline-block;
+    background-color: #dadce0;
+    padding: 1rem 2rem;
+    border-radius: 2.5px;
+    color: var(--color-dark);
+    font-size: 18px;
+    font-weight: 500;
+    @media screen and (max-width: 550px) {
+      &{
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .blog_relacionados_content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+
+    @media screen and (max-width: 550px) {
+      &{
+        justify-content: center;
+      }
+    }
+  }
+  .blog_relacionados_box {
+    width: calc((100% / 4) - 20px);
+    max-width: 100%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 1100px) {
+      &{
+        width: calc((100% / 3) - 20px);
+      }
+    }
+    @media screen and (max-width: 800px) {
+      &{
+        width: calc((100% / 2) - 20px);
+      }
+    }
+    @media screen and (max-width: 550px) {
+      &{
+        width: 300px;
+        margin-right: 0;
+        margin-bottom: 5rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+    }
+
+    h2 {
+      overflow: hidden;
+      color: #0b1d26;
+      text-overflow: ellipsis;
+      whitespace: nowrap;
+      font-size: 21px;
+      font-weight: 500;
+      height: 55px;
+      flex-shrink: 0;
+      margin-top: 0.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .relacionados_escritor-box {
+      display: flex;
+      align-items: center;
+    }
+    .relacionados_escritor-img {
+      width: 50px;
+      align-items: 1;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 0.5rem;
+      aspect-ratio: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .relacionados_escritor-text p {
+      &:nth-of-type(1) {
+        color: var(--color-orange-black);
+        font-size: 1.12rem;
+        font-weight: 500;
+        padding-bottom: 0.3rem;
+      }
+      &:nth-of-type(2) {
+        color: var(--color-gray3);
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
