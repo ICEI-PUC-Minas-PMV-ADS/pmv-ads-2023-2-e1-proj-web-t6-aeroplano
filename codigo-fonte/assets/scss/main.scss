@@ -37,6 +37,11 @@
 html,
 body {
   height: 100vh;
+
+  &.overflowHidden{
+    overflow: hidden;
+    padding-right: 15px;
+  }
 }
 
 img{

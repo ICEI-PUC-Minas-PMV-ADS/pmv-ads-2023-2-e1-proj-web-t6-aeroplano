@@ -39,6 +39,12 @@ main {
     padding-bottom: 2rem;
     min-height: 180px;
   }
+  .banner_p{
+    color: var(--color-pastel-yellow);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-bottom: 0.3rem;
+  }
   .escritor {
     .title {
       color: var(--color-white);
@@ -91,13 +97,21 @@ main {
   max-width: 800px;
   padding-top: calc(min(350px, 25vw));
 
-  p {
+  h2 {
+    color: var(--color-dark);
+    text-align: justify;
+    padding-bottom: 1.5rem;
+  }
+  p, li {
     color: var(--color-dark);
     text-align: justify;
     font-size: 1.12rem;
     font-weight: 500;
     line-height: 32px;
     padding-bottom: 1.5rem;
+  }
+  li{
+    margin-left: 2rem;
   }
 }
 .blog_commets {

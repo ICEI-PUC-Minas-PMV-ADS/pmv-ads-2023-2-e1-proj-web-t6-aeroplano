@@ -1,11 +1,12 @@
 import "./main.js";
-import "./header.js";
-import "./footer.js";
 
-// Adicionar animações 
+// Adicionar animações
 AOS.init();
 
+const body = document.querySelector("body");
 
+
+//Abrir e fechar (Perguntas Frequentes)
 document.addEventListener("DOMContentLoaded", function () {
   const questions = document.querySelectorAll(".question");
 
@@ -23,34 +24,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-/*
-const loading = document.getElementById("loadingContent");
-const image = document.getElementById("bgimage");
 
-const apiKey = "mwq8fMA8XVjkukAZNIbg8Bx9Np99bC4zSTNkKgJEgbo";
 
-const searchQuery = "aviao";
+//Ações para o modal, parte do banner onde está escrito "O que fazemos"
+const btnOpenOqueFazemos = document.getElementById("click_oquefazemos");
+const modalOqueFazemos = document.getElementById("oquefazemos");
+const btnCloseBgOqueFazemos = document.getElementById("oquefazemos_closebg");
+const btnCloseOqueFazemos = document.getElementById("oquefazemos_close");
+const videoOqueFazemos = document.getElementById("oquefazemos_video");
 
-async function fetchImages() {
-  try {
-    const response = await fetch(
-      `https://api.unsplash.com/photos/random?client_id=${apiKey}&query=${searchQuery}`
-    );
-    const data = await response.json();
-
-    image.src = data.urls.regular;
-    image.alt = data.alt_description;
-    setTimeout(() => {
-      loading.classList.add("hidden");
-    }, 2000);
-  } catch (error) {
-    console.error("Erro ao buscar imagens:", error);
-    setTimeout(() => {
-      loading.classList.add("hidden");
-    }, 2000);
-  }
+function openModalOquefazemos(){
+  modalOqueFazemos.classList.add("active");
+  body.classList.add("overflowHidden");
 }
 
-window.addEventListener("load", fetchImages);
+function closeModalOquefazemos(){
+  modalOqueFazemos.classList.remove("active");
+  body.classList.remove("overflowHidden");
+  //Pausar o video
+  videoOqueFazemos.setAttribute('src', videoOqueFazemos.getAttribute('src'));
+}
 
-*/
+btnOpenOqueFazemos.addEventListener("click", openModalOquefazemos);
+btnCloseBgOqueFazemos.addEventListener("click", closeModalOquefazemos);
+btnCloseOqueFazemos.addEventListener("click", closeModalOquefazemos);
+

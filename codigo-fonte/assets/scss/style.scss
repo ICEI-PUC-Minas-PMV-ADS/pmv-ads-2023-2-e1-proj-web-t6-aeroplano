@@ -21,7 +21,13 @@ body {
     inset: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(11, 29, 38, 0.39) 0%, #0b1d26 35.42%, rgba(11, 29, 38, 0.27) 64.58%, #0b1d26 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(11, 29, 38, 0.39) 0%,
+      #0b1d26 35.42%,
+      rgba(11, 29, 38, 0.27) 64.58%,
+      #0b1d26 100%
+    );
   }
   .banner-content {
     z-index: 10;
@@ -107,6 +113,11 @@ body {
           color: var(--color-dark);
           padding: 1rem 3rem;
           border-radius: 5px;
+          transition: opacity 0.1s linear;
+          &:hover,
+          &:active {
+            opacity: 0.8;
+          }
         }
         &:last-child {
           display: inline-flex;
@@ -114,10 +125,17 @@ body {
           padding: 1rem 3rem;
           color: var(--color-pastel-yellow);
           cursor: pointer;
+          transition: opacity 0.3s linear;
+
           svg {
             margin-right: 0.5rem;
             width: 40px;
             height: 40px;
+          }
+
+          &:hover,
+          &:active {
+            opacity: 0.9;
           }
         }
         @media screen and (max-width: 700px) {
@@ -229,7 +247,7 @@ header {
 
       li a {
         padding: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: var(--color-white);
       }
     }
@@ -391,28 +409,58 @@ header {
     }
     .bg-effects-1 {
       right: 0;
-      background: linear-gradient(180deg, #0b1d26 0%, rgba(11, 29, 38, 0) 48.44%, #0b1d26 100%);
+      background: linear-gradient(
+        180deg,
+        #0b1d26 0%,
+        rgba(11, 29, 38, 0) 48.44%,
+        #0b1d26 100%
+      );
       @media screen and (max-width: 1000px) {
         & {
-          background: linear-gradient(180deg, #0b1d26 0%, rgba(11, 29, 38, 0.6) 48.44%, #0b1d26 100%);
+          background: linear-gradient(
+            180deg,
+            #0b1d26 0%,
+            rgba(11, 29, 38, 0.6) 48.44%,
+            #0b1d26 100%
+          );
         }
       }
     }
     .bg-effects-2 {
       left: 0;
-      background: linear-gradient(180deg, #0b1d26 0%, rgba(11, 29, 38, 0.15) 48.44%, #0b1d26 100%);
+      background: linear-gradient(
+        180deg,
+        #0b1d26 0%,
+        rgba(11, 29, 38, 0.15) 48.44%,
+        #0b1d26 100%
+      );
       @media screen and (max-width: 1000px) {
         & {
-          background: linear-gradient(180deg, #0b1d26 0%, rgba(11, 29, 38, 0.7) 48.44%, #0b1d26 100%);
+          background: linear-gradient(
+            180deg,
+            #0b1d26 0%,
+            rgba(11, 29, 38, 0.7) 48.44%,
+            #0b1d26 100%
+          );
         }
       }
     }
     .bg-effects-3 {
       right: 0;
-      background: linear-gradient(180deg, #0b1d26 0%, rgba(11, 29, 38, 0.15) 48.44%, #0b1d26 100%);
+      background: linear-gradient(
+        180deg,
+        #0b1d26 0%,
+        rgba(11, 29, 38, 0.15) 48.44%,
+        #0b1d26 100%
+      );
       @media screen and (max-width: 1000px) {
         & {
-          background: linear-gradient(180deg, #0b1d26 0%, rgba(11, 29, 38, 0.7) 48.44%, #0b1d26 100%);
+          background: linear-gradient(
+            180deg,
+            #0b1d26 0%,
+            rgba(11, 29, 38, 0.7) 48.44%,
+            #0b1d26 100%
+          );
         }
       }
     }
@@ -569,11 +617,21 @@ header {
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, #0b1d26 0%, rgba(11, 29, 38, 0.15) 48.44%, #0b1d26 100%);
+      background: linear-gradient(
+        180deg,
+        #0b1d26 0%,
+        rgba(11, 29, 38, 0.15) 48.44%,
+        #0b1d26 100%
+      );
 
       @media screen and (max-width: 800px) {
         & {
-          background: linear-gradient(92deg, #0b1d26 30.67%, #0b1d26 30.68%, rgba(11, 29, 38, 0.4) 98.42%);
+          background: linear-gradient(
+            92deg,
+            #0b1d26 30.67%,
+            #0b1d26 30.68%,
+            rgba(11, 29, 38, 0.4) 98.42%
+          );
         }
       }
     }
@@ -777,6 +835,7 @@ header {
     border: none;
     margin: auto;
     outline: none;
+    user-select: none;
   }
   .button {
     text-align: center;
@@ -1035,5 +1094,51 @@ header {
         }
       }
     }
+  }
+}
+
+#oquefazemos {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0b1d269a;
+  z-index: 99;
+  &.active {
+    display: flex !important;
+  }
+
+  .oquefazemos_content {
+    overflow: hidden;
+    border-radius: 2.5px;
+
+    #oquefazemos_closebg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+    }
+    iframe {
+      max-width: 100%;
+    }
+    #oquefazemos_close {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 15px;
+      right: 15px;
+      cursor: pointer;
+      fill: var(--color-white);
+    }
+  }
+
+  &.active {
+    display: flex !important;
   }
 }
