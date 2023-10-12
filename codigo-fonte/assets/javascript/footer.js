@@ -1,15 +1,5 @@
-function includeFooter() {
-  var footerPlaceholder = document.getElementById("footer");
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "footer.html", true);
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      footerPlaceholder.innerHTML = xhr.responseText;
-    }
-  };
-  console.log(xhr);
-  xhr.send();
-}
+const footerTemplate = document.getElementById("footer");
 
-// Chame a função para incluir o footer
-includeFooter();
+fetch("./footer.html")
+  .then((resp) => resp.text())
+  .then((dados) => (footerTemplate.innerHTML = dados));
