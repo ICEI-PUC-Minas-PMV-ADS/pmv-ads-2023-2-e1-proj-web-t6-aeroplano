@@ -89,12 +89,14 @@ body {
     margin-bottom: 16px;
   }
   .validationMessage {
-    position: fixed;
+    position: absolute;
     display: block;
     margin-top: 8px;
     margin-left: 20px;
     font-size: 13px;
     color: var(--color-orange-black);
+    white-space: nowrap;
+    overflow: hidden;
   }
   .inputWrapper {
     margin-top: 30px;
