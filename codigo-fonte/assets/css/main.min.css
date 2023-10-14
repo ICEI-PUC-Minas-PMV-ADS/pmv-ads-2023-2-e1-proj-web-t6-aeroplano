@@ -10,6 +10,9 @@
   --color-gray1: #b3b0b8;
   --color-gray2: #7c7a80;
   --color-gray3: #c4c4c4;
+  --gray-gray-200: #e2e8f0;
+  --gray-gray-400: #a0aec0;
+  --gray-gray-700: #2d3748;
   --color-orange-black: #bb460a;
   --color-blue: #0c41ff;
   --color-black: #000000;
@@ -43,6 +46,9 @@ img {
   padding: 10px 20px;
   height: auto;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 .swal2-popup {
   flex-direction: initial !important;
 }
@@ -60,4 +66,13 @@ img {
 }
 .swal2-title {
   color: #6c757d !important;
+}
+.margin-auto {
+  margin: auto;
+}
+.text-align-end {
+  text-align: end;
+}
+.justify-end {
+  justify-self: end;
 }
