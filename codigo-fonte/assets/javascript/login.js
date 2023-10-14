@@ -29,8 +29,10 @@ async function verifyCredentials() {
 
       if (checkPassword(passwordField.value, user.password)) {
         updateWarning("passwordWarning", false);
-        localStorage["user"] = JSON.stringify(user);
-        window.location.href = "./dashboard.html";
+        updateUserCache(user);
+        updateUserOnDatabase(user);
+
+        // window.location.href = "./dashboard.html";
       } else {
         updateWarning("passwordWarning", true, "Senha incorreta");
       }
@@ -39,6 +41,47 @@ async function verifyCredentials() {
       updateWarning("emailWarning", true, "O email que você inseriu não está conectado a uma conta");
     }
   }
+}
+
+async function updateUserCache(user) {
+  user.lastAccess = new Date();
+  user.tokenExpire = getExpirationTime(0.1);
+  localStorage["user"] = JSON.stringify(user);
+}
+
+async function updateUserOnDatabase(user) {
+  var usersArray = await getUserDatabase();
+
+  var indice = usersArray.findIndex((objeto) => objeto.email === user.email);
+  if (indice == -1) {
+    console.warn(`O objeto com email "${user.email}" não foi encontrado na array.`);
+    return;
+  } else {
+    usersArray[indice] = user;
+  }
+}
+
+function saveJsonObjToFile() {
+  const saveObj = { a: 3 }; // tmp
+
+  // file setting
+  const text = JSON.stringify(saveObj);
+  const name = "sample.json";
+  const type = "text/plain";
+
+  // create file
+  const a = document.createElement("a");
+  const file = new Blob([text], { type: type });
+  a.href = URL.createObjectURL(file);
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+function getExpirationTime(expirationInHours) {
+  const now = new Date();
+  return new Date(now.getTime() + expirationInHours * 60 * 60 * 1000);
 }
 
 function checkPassword(inputPass, databasePass) {
@@ -51,9 +94,9 @@ function checkPassword(inputPass, databasePass) {
 }
 
 async function getExistingUser(email) {
-  var userDataJson = await getUserDatabase();
+  var usersArray = await getUserDatabase();
 
-  return await search(email, "email", userDataJson);
+  return await search(email, "email", usersArray);
 }
 
 async function search(value, key, array) {
