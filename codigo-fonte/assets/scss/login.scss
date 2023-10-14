@@ -51,10 +51,9 @@ body {
     padding: 24px 20px;
     border-radius: 15px;
     overflow: hidden;
-    border: var(--inputBorderSize, 1px) var(--inputBorderType, solid) var(--gray-gray-200);
+    border: var(--inputBorderSize, 1px) var(--inputBorderType, solid) var(--inputBorderColor, var(--gray-gray-200));
     &:focus {
-      outline: 2px solid;
-      outline-color: var(--gray-gray-200);
+      outline: 3px solid var(--inputBorderColor, var(--gray-gray-200));
     }
   }
   button {
@@ -80,16 +79,25 @@ body {
   .forgotPasswordText {
     color: var(--gray-gray-400, #a0aec0);
     display: block;
-    text-align: right;
+    justify-self: flex-end;
     font-size: 14px;
+    width: fit-content;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
     margin-top: 17px;
     margin-bottom: 16px;
   }
+  .validationMessage {
+    position: fixed;
+    display: block;
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 13px;
+    color: var(--color-orange-black);
+  }
   .inputWrapper {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 5px;
   }
   .buttonText {
@@ -112,6 +120,9 @@ body {
     line-height: 140%; /* 19.6px */
     .highlight {
       color: var(--color-pastel-yellow);
+      &:hover {
+        color: #e4b854;
+      }
     }
   }
 }

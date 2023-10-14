@@ -26,16 +26,20 @@
           <div id="loginFrame">
             <div class="content">
               <h1>Faça login em sua conta</h1>
-              <form id="loginCredentials">
+              <form id="loginCredentials" novalidate>
                 <div class="inputWrapper">
                   <h2>E-mail</h2>
                   <input id="emailInput" type="email" autocomplete="username" placeholder="Digite seu e-mail" value="" />
+                  <p id="emailValidationMessage" class="validationMessage"></p>
                 </div>
                 <div class="inputWrapper">
                   <h2>Senha</h2>
                   <input id="passwordInput" type="password" autocomplete="current-password" placeholder="Digite sua senha" value="" />
+                  <p id="passwordValidationMessage" class="validationMessage"></p>
                 </div>
-                <a href="esqueceusenha.html" class="justify-end forgotPasswordText">Esqueci minha senha</a>
+                <div style="display: grid">
+                  <a class="forgotPasswordText" href="esqueceusenha.html">Esqueci minha senha</a>
+                </div>
                 <button type="submit" id="signInButton">
                   <div class="buttonText">Entrar</div>
                 </button>

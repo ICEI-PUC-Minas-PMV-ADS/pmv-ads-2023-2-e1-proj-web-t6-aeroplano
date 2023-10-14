@@ -54,6 +54,10 @@ img {
   height: auto;
   //overflow: hidden;
 }
+/* -------------- Scroll bar ------------- */
+html::-webkit-scrollbar {
+  display: none;
+}
 
 /* -------------- CONFIG LIB SweetAlert2 ------------- */
 
