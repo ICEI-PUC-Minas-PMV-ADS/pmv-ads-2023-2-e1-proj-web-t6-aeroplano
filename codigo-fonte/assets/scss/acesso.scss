@@ -11,19 +11,22 @@ main {
     inset: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      180deg,
-      #0b1d26 0%,
-      rgba(11, 29, 38, 0.8) 51.56%,
-      #0b1d26 100%
-    );
+    background: linear-gradient(180deg, #0b1d26 0%, rgba(11, 29, 38, 0.8) 51.56%, #0b1d26 100%);
   }
   .main-content {
     z-index: 10;
     position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     inset: 0;
     width: 100%;
     height: 100%;
+    @media screen and (max-width: 360px) {
+      & {
+        justify-content: start;
+      }
+    }
   }
   .main-container {
     min-height: 70%;
