@@ -73,17 +73,39 @@ body {
       display: flex;
       flex-direction: column;
       align-items: start;
-      //   margin-left: 28px;
-
-      .menu-option {
-        margin: 8px 0px 8px 21px;
-        // margin-left: 21px;
+      .activeTab {
+        background-color: #fff;
+        margin: 8px 0px 8px 13px;
+        padding-left: 8px;
+        width: 200px;
         height: 44px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .label {
+          color: black;
+        }
+        .icon-wrapper {
+          background-color: (--color-pastel-yellow);
+        }
+      }
+      .menu-option {
+        margin: 8px 0px 8px 13px;
+        padding-left: 8px;
+        width: 200px;
+        height: 44px;
+        border-radius: 5px;
         display: flex;
         flex-direction: row;
         align-items: center;
         cursor: pointer;
-        // padding: 8px 0px;
+        &:hover {
+          background-color: #0f2530;
+        }
+        &:active {
+          background-color: #fff;
+        }
       }
       .label {
         height: 18px;
@@ -92,7 +114,6 @@ body {
         font-size: 12px;
         letter-spacing: 0;
         line-height: 18px;
-        // white-space: nowrap;
         margin-left: 12px;
         margin-right: 12px;
       }

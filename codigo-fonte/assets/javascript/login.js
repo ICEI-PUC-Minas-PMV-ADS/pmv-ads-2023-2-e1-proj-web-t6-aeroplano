@@ -7,6 +7,15 @@ document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
+var lsUser = localStorage["user"];
+parseUser(lsUser);
+
+function parseUser(lsUser) {
+  if (lsUser) {
+    window.location.href = "./dashboard.html";
+  }
+}
+
 // Event listener - Botão "Entrar"
 document.getElementById("signInButton").addEventListener("click", verifyCredentials);
 
@@ -49,7 +58,8 @@ async function updateUserCache(user) {
   localStorage["user"] = JSON.stringify(user);
 }
 
-/*async function updateUserOnDatabase(user) { // Not available without backend
+async function updateUserOnDatabase(user) {
+  // Not available without backend
   var usersArray = await getUserDatabase();
 
   var indice = usersArray.findIndex((objeto) => objeto.email === user.email);
@@ -59,7 +69,7 @@ async function updateUserCache(user) {
   } else {
     usersArray[indice] = user;
   }
-}*/
+}
 
 function getExpirationTime(expirationInHours) {
   const now = new Date();
