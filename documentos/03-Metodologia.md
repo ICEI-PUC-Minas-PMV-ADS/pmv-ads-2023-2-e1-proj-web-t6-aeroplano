@@ -30,9 +30,8 @@ A equipe utiliza o Scrum como base para definição do processo de desenvolvimen
 
 ### Processo
 
-[Detalhar mais todo o processo feito pelo grupo]
 
-Para a organização e divisão das tarefas do projeto a nossa equipe utilizará o Github Project baseando nas seguintes listas:
+A equipe se organizou com reuniões semanais para discutir tarefas e ações a serem realizadas. Utilizamos as ferramentas Teams e WhatsApp para nos comunicarmos e alinharmos cada passo. Após discutirmos, escolhemos uma ferramenta para organizar, dividir e especificar cada tarefa a ser executada por cada integrante, e para isso utilizamos o Github Project baseado nas seguintes listas:
 
 - Product Backlog: Recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista.
 - To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
@@ -40,6 +39,9 @@ Para a organização e divisão das tarefas do projeto a nossa equipe utilizará
 - In progress: Quando uma tarefa tiver sido iniciada, ela é movida para cá.
 - Dev Complete: As terefas que foram finalizadas são movidas para essa lista, onde passam a ser revisadas e testadas.
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/assets/144291769/62d48e11-d69e-403d-875e-ff255b508120)
+
 
 #### Etapa 1
 
