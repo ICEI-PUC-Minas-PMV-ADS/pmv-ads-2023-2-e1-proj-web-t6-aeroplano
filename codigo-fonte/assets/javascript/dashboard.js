@@ -20,7 +20,7 @@ const menuButtons = document.querySelectorAll(".menu-option");
 
 console.log(menuButtons);
 menuButtons.forEach((elemento) => {
-  elemento.addEventListener("click", (e) => {
+  elemento.addEventListener("click", () => {
     menuButtons.forEach((elemento) => {
       elemento.classList.remove("activeTab");
     });
