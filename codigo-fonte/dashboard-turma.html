@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aeroplano - Plataforma para Escolas de Aviação</title>
+    <link rel="stylesheet" href="./assets/css/dashboard-turma.min.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script defer type="module" src="./assets/javascript/dashboard.js"></script>
+    <script defer type="module" src="./assets/javascript/main.js"></script>
+  </head>
+
+  <body>
+    <div class="dasboard">
+      <div class="side-menu">
+        <div class="menu-container">
+          <div>
+            <div class="header-dashboard">
+              <div class="logotipo-dashboard">
+                <img src="./assets/image/logotipo.png" alt="logo da aeroplano" />
+                <span>Aeroplano</span>
+              </div>
+            </div>
+            <div class="h-divider">
+              <div class="vector">
+                <svg width="234" height="1" viewBox="0 0 234 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.5 0.5H233.75" stroke="url(#paint0_linear_212_1489)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_212_1489" x1="0.5" y1="0.5" x2="231.5" y2="0.5" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E0E1E2" stop-opacity="0" />
+                      <stop offset="0.5" stop-color="#E0E1E2" />
+                      <stop offset="1" stop-color="#E0E1E2" stop-opacity="0.15625" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="menu">
+              <div id="menuMeusVoos" class="menu-option">
+                <div class="icon-wrapper">
+                  <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 3V4.5V13.5C0 14.3273 0.67275 15 1.5 15H12C12.8273 15 13.5 14.3273 13.5 13.5V4.5V3C13.5 2.17275 12.8273 1.5 12 1.5H10.5V0H9V1.5H4.5V0H3V1.5H1.5C0.67275 1.5 0 2.17275 0 3ZM12.0013 13.4999H1.49984V4.49992H11.9998L12.0013 13.4999Z"
+                      fill="#FBD784"
+                    />
+                  </svg>
+                </div>
+                <div class="label">Meus Voos</div>
+              </div>
+
+              <div id="menuTurma" class="menu-option">
+                <div class="icon-wrapper">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_212_1774)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M10.4189 8.2063C11.2752 8.78755 11.8752 9.57505 11.8752 10.625V12.5H14.3752V10.625C14.3752 9.26255 12.1439 8.4563 10.4189 8.2063Z"
+                        fill="#FBD784"
+                      />
+                      <path
+                        d="M5.625 7.5C7.00571 7.5 8.125 6.38071 8.125 5C8.125 3.61929 7.00571 2.5 5.625 2.5C4.24429 2.5 3.125 3.61929 3.125 5C3.125 6.38071 4.24429 7.5 5.625 7.5Z"
+                        fill="#FBD784"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.3752 7.5C10.7564 7.5 11.8752 6.38125 11.8752 5C11.8752 3.61875 10.7564 2.5 9.3752 2.5C9.08145 2.5 8.80645 2.5625 8.54395 2.65C9.0627 3.29375 9.3752 4.1125 9.3752 5C9.3752 5.8875 9.0627 6.70625 8.54395 7.35C8.80645 7.4375 9.08145 7.5 9.3752 7.5Z"
+                        fill="#FBD784"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.625 8.125C3.95625 8.125 0.625 8.9625 0.625 10.625V12.5H10.625V10.625C10.625 8.9625 7.29375 8.125 5.625 8.125Z"
+                        fill="#FBD784"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_212_1774">
+                        <rect width="15" height="15" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="label">Turma</div>
+              </div>
+
+              <div id="menuAvisos" class="menu-option">
+                <div class="icon-wrapper">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_208_1100)">
+                      <path
+                        d="M12.5 1.25H2.5C1.8125 1.25 1.25625 1.8125 1.25625 2.5L1.25 13.75L3.75 11.25H12.5C13.1875 11.25 13.75 10.6875 13.75 10V2.5C13.75 1.8125 13.1875 1.25 12.5 1.25ZM3.75 5.625H11.25V6.875H3.75V5.625ZM8.75 8.75H3.75V7.5H8.75V8.75ZM11.25 5H3.75V3.75H11.25V5Z"
+                        fill="#FBD784"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_208_1100">
+                        <rect width="15" height="15" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="label">Avisos</div>
+              </div>
+
+              <div id="menuPerfil" class="menu-option">
+                <div class="icon-wrapper">
+                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.74534 2.39175C9.17522 1.77622 8.37893 1.43726 7.50003 1.43726C6.61643 1.43726 5.81751 1.77417 5.25003 2.38589C4.6764 3.00435 4.3969 3.84487 4.46253 4.75249C4.59261 6.54311 5.9552 7.99975 7.50003 7.99975C9.04485 7.99975 10.4051 6.54341 10.5372 4.75307C10.6037 3.85366 10.3225 3.01489 9.74534 2.39175Z"
+                      fill="#FBD784"
+                    />
+                    <path
+                      d="M12.6564 14.5615H2.34392C2.20894 14.5633 2.07526 14.5349 1.95262 14.4785C1.82997 14.4221 1.72145 14.3391 1.63493 14.2354C1.4445 14.0078 1.36775 13.697 1.42458 13.3826C1.67185 12.0109 2.44353 10.8587 3.65642 10.0498C4.73396 9.33174 6.0989 8.93652 7.50016 8.93652C8.90143 8.93652 10.2664 9.33203 11.3439 10.0498C12.5568 10.8584 13.3285 12.0106 13.5757 13.3823C13.6326 13.6967 13.5558 14.0075 13.3654 14.2352C13.2789 14.3388 13.1704 14.4219 13.0478 14.4784C12.9251 14.5348 12.7914 14.5632 12.6564 14.5615Z"
+                      fill="#FBD784"
+                    />
+                  </svg>
+                </div>
+                <div class="label">Perfil</div>
+              </div>
+              <div id="menuLogout" class="menu-option">
+                <div class="icon-wrapper">
+                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.74534 2.39175C9.17522 1.77622 8.37893 1.43726 7.50003 1.43726C6.61643 1.43726 5.81751 1.77417 5.25003 2.38589C4.6764 3.00435 4.3969 3.84487 4.46253 4.75249C4.59261 6.54311 5.9552 7.99975 7.50003 7.99975C9.04485 7.99975 10.4051 6.54341 10.5372 4.75307C10.6037 3.85366 10.3225 3.01489 9.74534 2.39175Z"
+                      fill="#FBD784"
+                    />
+                    <path
+                      d="M12.6564 14.5615H2.34392C2.20894 14.5633 2.07526 14.5349 1.95262 14.4785C1.82997 14.4221 1.72145 14.3391 1.63493 14.2354C1.4445 14.0078 1.36775 13.697 1.42458 13.3826C1.67185 12.0109 2.44353 10.8587 3.65642 10.0498C4.73396 9.33174 6.0989 8.93652 7.50016 8.93652C8.90143 8.93652 10.2664 9.33203 11.3439 10.0498C12.5568 10.8584 13.3285 12.0106 13.5757 13.3823C13.6326 13.6967 13.5558 14.0075 13.3654 14.2352C13.2789 14.3388 13.1704 14.4219 13.0478 14.4784C12.9251 14.5348 12.7914 14.5632 12.6564 14.5615Z"
+                      fill="#FBD784"
+                    />
+                  </svg>
+                </div>
+                <div class="label">Logout</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="help-tool-wrapper">
+              <div class="help-tool-background">
+                <div class="icon-wrapper">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 3C7.03125 3 3 7.03125 3 12C3 16.9687 7.03125 21 12 21C16.9687 21 21 16.9687 21 12C21 7.03125 16.9687 3 12 3ZM11.7187 17.25C11.5333 17.25 11.3521 17.195 11.1979 17.092C11.0437 16.989 10.9236 16.8426 10.8526 16.6713C10.7817 16.5 10.7631 16.3115 10.7993 16.1296C10.8354 15.9477 10.9247 15.7807 11.0558 15.6496C11.1869 15.5185 11.354 15.4292 11.5359 15.393C11.7177 15.3568 11.9062 15.3754 12.0775 15.4464C12.2488 15.5173 12.3952 15.6375 12.4983 15.7916C12.6013 15.9458 12.6562 16.1271 12.6562 16.3125C12.6562 16.5611 12.5575 16.7996 12.3817 16.9754C12.2058 17.1512 11.9674 17.25 11.7187 17.25ZM13.2862 12.4687C12.5264 12.9787 12.4219 13.4461 12.4219 13.875C12.4219 14.049 12.3527 14.216 12.2297 14.339C12.1066 14.4621 11.9397 14.5312 11.7656 14.5312C11.5916 14.5312 11.4247 14.4621 11.3016 14.339C11.1785 14.216 11.1094 14.049 11.1094 13.875C11.1094 12.848 11.5819 12.0314 12.5541 11.3784C13.4578 10.7719 13.9687 10.3875 13.9687 9.54234C13.9687 8.96766 13.6406 8.53125 12.9614 8.20828C12.8016 8.13234 12.4458 8.05828 12.008 8.06344C11.4586 8.07047 11.032 8.20172 10.7034 8.46609C10.0837 8.96484 10.0312 9.50765 10.0312 9.51562C10.0271 9.6018 10.006 9.68632 9.96919 9.76435C9.93237 9.84238 9.88054 9.9124 9.81666 9.9704C9.75279 10.0284 9.67811 10.0732 9.5969 10.1024C9.51569 10.1315 9.42954 10.1444 9.34336 10.1402C9.25718 10.1361 9.17266 10.115 9.09463 10.0782C9.0166 10.0414 8.94659 9.98952 8.88859 9.92565C8.83059 9.86177 8.78574 9.7871 8.75659 9.70589C8.72745 9.62468 8.71459 9.53852 8.71875 9.45234C8.72391 9.33844 8.80312 8.31234 9.87984 7.44609C10.4381 6.99703 11.1483 6.76359 11.9892 6.75328C12.5845 6.74625 13.1437 6.84703 13.523 7.02609C14.6578 7.56281 15.2812 8.45766 15.2812 9.54234C15.2812 11.1281 14.2214 11.8402 13.2862 12.4687Z"
+                      fill="#FBD784"
+                    />
+                  </svg>
+                </div>
+                <div><p>Precisa de ajuda?</p></div>
+                <div><p>Por favor, verifique nossa documentação</p></div>
+
+                <button>
+                  <div class="button-text">Documentação</div>
+                </button>
+              </div>
+              <div class="elipse-container">
+                <svg class="elipse" width="176" height="170" viewBox="0 0 176 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="178.25" cy="169.75" r="177.25" stroke="#fce2a7" />
+                </svg>
+                <svg class="elipse" width="152" height="154" viewBox="0 0 152 154" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="154.25" cy="153.75" r="153.219" stroke="#fce2a7" />
+                </svg>
+                <svg class="elipse" width="125" height="127" viewBox="0 0 125 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="127.25" cy="126.75" r="125.872" stroke="#fce2a7" />
+                </svg>
+                <svg class="elipse" width="97" height="100" viewBox="0 0 97 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="99.2499" cy="99.75" r="98.5262" stroke="#fce2a7" />
+                </svg>
+                <svg class="elipse" width="71" height="73" viewBox="0 0 71 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="73.25" cy="72.75" r="72.0087" stroke="#fce2a7" />
+                </svg>
+                <svg class="elipse" width="47" height="49" viewBox="0 0 47 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="49.2497" cy="48.75" r="47.9773" stroke="#fce2a7" />
+                </svg>
+                <svg class="elipse" width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="29.25" cy="29.75" r="28.75" stroke="#fce2a7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard-main">
+        <div class="top-ribbon">
+          <div class="dashboard-header">
+            <h1>Resumo Semanal</h1>
+            <h2>Obtenha resumos semanais aqui</h2>
+          </div>
+          <div class="top-right">
+            <div class="help-tool icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17 18.43H13L8.54999 21.39C7.88999 21.83 7 21.36 7 20.56V18.43C4 18.43 2 16.43 2 13.43V7.42993C2 4.42993 4 2.42993 7 2.42993H17C20 2.42993 22 4.42993 22 7.42993V13.43C22 16.43 20 18.43 17 18.43Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.9998 11.3599V11.1499C11.9998 10.4699 12.4198 10.1099 12.8398 9.81989C13.2498 9.53989 13.6598 9.1799 13.6598 8.5199C13.6598 7.5999 12.9198 6.85986 11.9998 6.85986C11.0798 6.85986 10.3398 7.5999 10.3398 8.5199"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M11.9955 13.75H12.0045" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="notifications icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.0196 2.90991C8.7096 2.90991 6.0196 5.59991 6.0196 8.90991V11.7999C6.0196 12.4099 5.7596 13.3399 5.4496 13.8599L4.2996 15.7699C3.5896 16.9499 4.0796 18.2599 5.3796 18.6999C9.6896 20.1399 14.3396 20.1399 18.6496 18.6999C19.8596 18.2999 20.3896 16.8699 19.7296 15.7699L18.5796 13.8599C18.2796 13.3399 18.0196 12.4099 18.0196 11.7999V8.90991C18.0196 5.60991 15.3196 2.90991 12.0196 2.90991Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M13.8699 3.19994C13.5599 3.10994 13.2399 3.03994 12.9099 2.99994C11.9499 2.87994 11.0299 2.94994 10.1699 3.19994C10.4599 2.45994 11.1799 1.93994 12.0199 1.93994C12.8599 1.93994 13.5799 2.45994 13.8699 3.19994Z"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15.0195 19.0601C15.0195 20.7101 13.6695 22.0601 12.0195 22.0601C11.1995 22.0601 10.4395 21.7201 9.89953 21.1801C9.35953 20.6401 9.01953 19.8801 9.01953 19.0601"
+                  stroke="white"
+                  stroke-width="1.5"
+                  stroke-miterlimit="10"
+                />
+                <circle cx="18" cy="4" r="3" fill="#FBD784" />
+              </svg>
+            </div>
+            <div class="user-details">
+              <div class="avatar-box">
+                <img id="userAvatar" src="./assets/image/default.jpg" />
+              </div>
+              <div class="user-details-text">
+                <h1 id="ribbonUserName"></h1>
+                <h2 id="ribbonUserEmail"></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="turma" class="dashboard-main-area">
+          <h1>Turma</h1>
+          <div class="container-lista-alunos">
+            <div class="topo-lista-alunos">
+              <p>Lista de alunos do curso</p>
+              <button id="botao-add-alunos">Adicionar integrante</button>
+              </div>
+              <div class="container-procurar-alunos">
+                <input type="text" id="pesquisar-alunos" placeholder="Você está procurando por...">
+              </div>  
+              <div class="tabela-alunos">
+                <table>
+                  <thead>
+                      <tr>
+                          <th>Foto</th>
+                          <th>Nome</th>
+                          <th>Cargo</th>
+                          <th>Status</th>
+                          <th>Último Acesso</th>
+                          <th>Visto pela Última Vez</th>
+                          <th>Ação</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><img src="foto1.jpg" alt="Foto do Funcionário 1"></td>
+                          <td>João Silva</td>
+                          <td>Gerente</td>
+                          <td>Ativo</td>
+                          <td>2023-10-15</td>
+                          <td>2023-10-15</td>
+                          <td><a href="#">Editar</a> | <a href="#">Excluir</a></td>
+                      </tr>
+                      <tr>
+                          <td><img src="foto2.jpg" alt="Foto do Funcionário 2"></td>
+                          <td>Maria Santos</td>
+                          <td>Analista</td>
+                          <td>Inativo</td>
+                          <td>2023-10-14</td>
+                          <td>2023-10-14</td>
+                          <td><a href="#">Editar</a> | <a href="#">Excluir</a></td>
+                      </tr>                      
+                  </tbody>
+              </table>
+              </div>
+                      
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

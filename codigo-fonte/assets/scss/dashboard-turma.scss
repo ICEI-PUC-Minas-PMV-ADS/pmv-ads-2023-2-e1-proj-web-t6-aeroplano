@@ -1,0 +1,68 @@
+@import url("main.min.css");
+@import url("loading.min.css");
+@import url("header.min.css");
+@import url("footer.min.css");
+@import url("acesso.min.css");
+@import url("dashboard.min.css");
+
+#turma{
+  h1{
+    margin-top: 91px;
+    color: var(--color-pastel-yellow);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .container-lista-alunos{
+    margin-top: 27px;
+    width: 1511px;
+    height: 688px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--white, #FFF);
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .topo-lista-alunos{
+      display: flex;
+      width: 1423px;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  #botao-add-alunos{
+    display: flex;
+    color: white;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    background: #4763E4;
+  }
+
+  .container-procurar-alunos{
+    display: flex;
+    width: 1423px;
+    padding: 12px 20px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(71, 99, 228, 0.50);
+    background: var(--white, #FFF);
+    
+  }
+
+  #pesquisar-alunos{
+    color: var(--gray-400, #A1A1AA);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+  }
+}
