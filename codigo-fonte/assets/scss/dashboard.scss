@@ -87,7 +87,11 @@ body {
           color: black;
         }
         .icon-wrapper {
-          background-color: (--color-pastel-yellow);
+          background-color: var(--color-pastel-yellow);
+          border-radius: 3px;
+        }
+        path {
+          fill: #fff;
         }
       }
       .menu-option {
@@ -100,8 +104,11 @@ body {
         flex-direction: row;
         align-items: center;
         cursor: pointer;
+        user-select: none;
         &:hover {
-          background-color: #0f2530;
+          &:not(.activeTab) {
+            background-color: #0f2530;
+          }
         }
         &:active {
           background-color: #fff;
@@ -128,10 +135,12 @@ body {
         display: flex;
         flex-direction: column;
         padding: 16px;
+        z-index: -1;
       }
       .elipse-container {
         position: relative;
         margin-right: 16px;
+        z-index: 1;
       }
       .elipse {
         position: absolute;
@@ -146,6 +155,7 @@ body {
         font-weight: 600;
         line-height: 140%; /* 19.6px */
         margin: 5px 0px;
+        z-index: 5;
       }
       button {
         display: flex;
@@ -159,6 +169,7 @@ body {
         background: var(--black-amp-white-white, #fff);
         stroke: none;
         border: 0px;
+        z-index: 2;
         cursor: pointer;
         &:hover {
           background-color: #fdd068;
