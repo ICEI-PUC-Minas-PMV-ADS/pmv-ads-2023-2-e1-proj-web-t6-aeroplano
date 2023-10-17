@@ -53,5 +53,32 @@
         "role": "student"
       }
     ]
+  },
+  {
+    "id": 2,
+    "name": "Rafael Mourão",
+    "email": "rafael.mourao@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12346,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {},
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": 12,
+        "role": "student"
+      }
+    ],
+    "metadata": {
+      "avatar": "./assets/image/user_rafael.jpeg"
+    }
   }
 ]
