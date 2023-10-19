@@ -26,12 +26,23 @@ body {
     padding-top: 16px;
     padding-left: 26px;
     height: 100%;
+
+    @media screen and (max-width: 800px) {
+      width: 80px;
+      padding-left: 10px;
+    }
+
     .header-dashboard {
       display: flex;
       align-items: center;
       justify-content: space-between;
       min-height: 80px;
       user-select: none;
+      span {
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
+      }
       .logotipo-dashboard {
         display: flex;
         align-items: center;
@@ -50,14 +61,27 @@ body {
     .h-divider {
       width: 100%;
       margin-bottom: 20px;
+      @media screen and (max-width: 800px) {
+        width: 60px;
+      }
     }
     .vector {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100%;
-      height: 1px;
       object-fit: cover;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
+    .vector-mobile {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      object-fit: cover;
+      @media screen and (max-width: 800px) {
+        display: flex;
+      }
     }
     .icon-wrapper {
       display: grid;
@@ -69,57 +93,73 @@ body {
       justify-content: center;
       align-content: center;
     }
+    .menu-option {
+      margin: 8px 0px 8px 13px;
+      padding-left: 8px;
+      width: 200px;
+      height: 44px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      @media screen and (max-width: 800px) {
+        width: 46px;
+      }
+      &:hover {
+        &:not(.activeTab) {
+          background-color: #0f2530;
+        }
+      }
+      &:active {
+        background-color: #fff;
+      }
+    }
+    .activeTab {
+      background-color: #fff;
+      .label {
+        color: black;
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
+      }
+      .icon-wrapper {
+        background-color: var(--color-pastel-yellow);
+        border-radius: 3px;
+      }
+      path {
+        fill: #fff;
+      }
+    }
+
+    .label {
+      height: 18px;
+      font-weight: 700;
+      color: var(--gray-gray-400);
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: 18px;
+      margin-left: 12px;
+      margin-right: 12px;
+      @media screen and (max-width: 800px) {
+        display: none;
+      }
+    }
     .menu {
       display: flex;
       flex-direction: column;
       align-items: start;
-      .activeTab {
-        background-color: #fff;
-        margin: 8px 0px 8px 13px;
-        padding-left: 8px;
-        width: 200px;
-        height: 44px;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        .label {
-          color: black;
-        }
-        .icon-wrapper {
-          background-color: (--color-pastel-yellow);
-        }
-      }
-      .menu-option {
-        margin: 8px 0px 8px 13px;
-        padding-left: 8px;
-        width: 200px;
-        height: 44px;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        cursor: pointer;
-        &:hover {
-          background-color: #0f2530;
-        }
-        &:active {
-          background-color: #fff;
-        }
-      }
-      .label {
-        height: 18px;
-        font-weight: 700;
-        color: var(--gray-gray-400);
-        font-size: 12px;
-        letter-spacing: 0;
-        line-height: 18px;
-        margin-left: 12px;
-        margin-right: 12px;
+    }
+    .help-icon-wrapper {
+      display: none;
+      @media screen and (max-width: 800px) {
+        display: grid;
       }
     }
     .help-tool-wrapper {
       margin-bottom: 50px;
+
       .help-tool-background {
         border-radius: 15px;
         background: var(--color-pastel-yellow);
@@ -128,10 +168,18 @@ body {
         display: flex;
         flex-direction: column;
         padding: 16px;
+        z-index: -1;
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
       }
       .elipse-container {
         position: relative;
         margin-right: 16px;
+        z-index: 1;
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
       }
       .elipse {
         position: absolute;
@@ -146,6 +194,7 @@ body {
         font-weight: 600;
         line-height: 140%; /* 19.6px */
         margin: 5px 0px;
+        z-index: 5;
       }
       button {
         display: flex;
@@ -159,6 +208,7 @@ body {
         background: var(--black-amp-white-white, #fff);
         stroke: none;
         border: 0px;
+        z-index: 2;
         cursor: pointer;
         &:hover {
           background-color: #fdd068;
@@ -186,10 +236,16 @@ body {
       height: 120px;
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 1150px) {
+        justify-content: right;
+      }
       .dashboard-header {
         display: flex;
         flex-direction: column;
         align-items: start;
+        @media screen and (max-width: 1150px) {
+          display: none;
+        }
         h1 {
           color: #fff;
           font-family: Inter;
@@ -238,16 +294,25 @@ body {
           margin-right: 20px;
           margin-left: 20px;
           cursor: pointer;
+          @media screen and (max-width: 640px) {
+            margin-right: 40px;
+          }
         }
         .user-details {
           display: flex;
           justify-content: end;
           margin-right: 40px;
           margin-left: 20px;
+          @media screen and (max-width: 640px) {
+            display: none;
+          }
         }
         .user-details-text {
           margin-left: 20px;
           width: 200px;
+          @media screen and (max-width: 640px) {
+            display: none;
+          }
         }
         .avatar-box {
           img {
@@ -255,8 +320,6 @@ body {
             aspect-ratio: 1;
             height: 50px;
             width: 50px;
-            // width: 100%;
-            // margin-bottom: 0.5rem;
           }
         }
       }
