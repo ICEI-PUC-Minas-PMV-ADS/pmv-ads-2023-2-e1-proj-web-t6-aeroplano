@@ -1,7 +1,3 @@
-// import "./main.js";
-// import "./header.js";
-// import "./footer.js";
-
 var lsUser = localStorage["user"];
 parseUser(lsUser);
 
@@ -18,18 +14,47 @@ function parseUser(lsUser) {
 }
 const menuButtons = document.querySelectorAll(".menu-option");
 
-console.log(menuButtons);
+// Event listener - Botão "Logout"
+document.getElementById("menuLogout").addEventListener("click", () => {
+  localStorage.removeItem("user");
+  window.location.href = "./login.html";
+});
+
 menuButtons.forEach((elemento) => {
   elemento.addEventListener("click", () => {
     menuButtons.forEach((elemento) => {
       elemento.classList.remove("activeTab");
     });
     elemento.classList.add("activeTab");
+    clearMainArea();
+    if (elemento.id == "menuDisponibilidade") {
+      loadMainArea("disponibilidade");
+    }
   });
 });
 
-// Event listener - Botão "Logout"
-document.getElementById("menuLogout").addEventListener("click", () => {
-  localStorage.removeItem("user");
-  window.location.href = "./login.html";
+function loadMainArea(app) {
+  const mainAreaApp = document.getElementById("main-area");
+
+  fetch(`./${app}.html`)
+    .then((resp) => resp.text())
+    .then((dados) => {
+      mainAreaApp.innerHTML = dados;
+
+      if ((app = "disponibilidade")) {
+        const event = new Event("disponibilidadeContentLoaded");
+        document.dispatchEvent(event);
+      }
+    });
+}
+
+document.addEventListener("disponibilidadeContentLoaded", function () {
+  const script = document.createElement("script");
+  script.src = `./assets/javascript/disponibilidade.js`;
+  document.body.appendChild(script);
 });
+
+function clearMainArea() {
+  const mainAreaApp = document.getElementById("main-area");
+  mainAreaApp.innerHTML = "";
+}

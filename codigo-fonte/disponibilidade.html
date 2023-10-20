@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aeroplano - Plataforma para Escolas de Aviação</title>
+    <link rel="stylesheet" href="./assets/css/disponibilidade.min.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="availability-wrapper">
+      <div class="availability-header">
+        <h1>Sua disponibilidade</h1>
+        <p>Especifique a sua disponibilidade para voos. As escalas de cada semana são fechadas até sexta-feira da semana anterior. A disponibilidade não garante voos nos horários especificados</p>
+      </div>
+      <div class="availability-box">
+        <div class="availability-section">
+          <div class="week-chart">
+            <div class="day-chart">
+              <div class="day-entry">
+                <p>Segunda</p>
+                <div class="time-entry">
+                  <div class="time-range-box">
+                    <div class="time-selector start">
+                      <select>
+                        <option value="default">-:--</option>
+                        <option value="0">0:00</option>
+                        <option value="1">1:00</option>
+                        <option value="2">2:00</option>
+                        <option value="3">3:00</option>
+                        <option value="4">4:00</option>
+                        <option value="5">5:00</option>
+                        <option value="6">6:00</option>
+                        <option value="7">7:00</option>
+                        <option value="8">8:00</option>
+                        <option value="9">9:00</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                      </select>
+                    </div>
+                    <div class="arrow-box">
+                      <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" class="chakra-icon css-m67sjj" aria-hidden="true">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8.47979 12.3536C8.28453 12.1583 8.28453 11.8417 8.47979 11.6464L11.6262 8.5L3.16668 8.5C2.89054 8.5 2.66668 8.27614 2.66668 8C2.66668 7.72386 2.89054 7.5 3.16668 7.5L11.6262 7.5L8.47979 4.35355C8.28453 4.15829 8.28453 3.84171 8.47979 3.64645C8.67505 3.45118 8.99164 3.45118 9.1869 3.64645L13.1869 7.64645C13.3822 7.84171 13.3822 8.15829 13.1869 8.35355L9.1869 12.3536C8.99163 12.5488 8.67505 12.5488 8.47979 12.3536Z"
+                          fill="#000"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="time-selector end">
+                      <select class="dropdown selector">
+                        <option value="default">-:--</option>
+                        <option value="0">0:00</option>
+                        <option value="1">1:00</option>
+                        <option value="2">2:00</option>
+                        <option value="3">3:00</option>
+                        <option value="4">4:00</option>
+                        <option value="5">5:00</option>
+                        <option value="6">6:00</option>
+                        <option value="7">7:00</option>
+                        <option value="8">8:00</option>
+                        <option value="9">9:00</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="action-buttons">
+                    <div>
+                      <button type="button" aria-label="Add time range">
+                        <svg class="plus" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+                          <path
+                            fill-rule="evenodd"
+                            d="M12 4.75C7.99594 4.75 4.75 7.99594 4.75 12C4.75 16.0041 7.99594 19.25 12 19.25C16.0041 19.25 19.25 16.0041 19.25 12C19.25 7.99594 16.0041 4.75 12 4.75ZM3.25 12C3.25 7.16751 7.16751 3.25 12 3.25C16.8325 3.25 20.75 7.16751 20.75 12C20.75 16.8325 16.8325 20.75 12 20.75C7.16751 20.75 3.25 16.8325 3.25 12ZM12 8.05C12.4142 8.05 12.75 8.38579 12.75 8.8V11.25H15.2C15.6142 11.25 15.95 11.5858 15.95 12C15.95 12.4142 15.6142 12.75 15.2 12.75H12.75V15.2C12.75 15.6142 12.4142 15.95 12 15.95C11.5858 15.95 11.25 15.6142 11.25 15.2V12.75H8.8C8.38579 12.75 8.05 12.4142 8.05 12C8.05 11.5858 8.38579 11.25 8.8 11.25H11.25V8.8C11.25 8.38579 11.5858 8.05 12 8.05Z"
+                            fill="#000"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div>
+                      <button type="button" aria-label="Remove time range">
+                        <svg class="minus" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M12 4.75C7.99594 4.75 4.75 7.99594 4.75 12C4.75 16.0041 7.99594 19.25 12 19.25C16.0041 19.25 19.25 16.0041 19.25 12C19.25 7.99594 16.0041 4.75 12 4.75ZM3.25 12C3.25 7.16751 7.16751 3.25 12 3.25C16.8325 3.25 20.75 7.16751 20.75 12C20.75 16.8325 16.8325 20.75 12 20.75C7.16751 20.75 3.25 16.8325 3.25 12ZM8.05 12C8.05 11.5858 8.38579 11.25 8.8 11.25H15.2C15.6142 11.25 15.95 11.5858 15.95 12C15.95 12.4142 15.6142 12.75 15.2 12.75H8.8C8.38579 12.75 8.05 12.4142 8.05 12Z"
+                            fill="#000"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="timezone-wrapper"><p class="timezone-text">Seu fuso horário: GMT -3, Sao Paulo, America</p></div> -->
+          </div>
+          <div class="css-17kgv3u">
+            <div class="css-w0ze2u">
+              <p class="chakra-text css-sqw9c5">Disponibilidade</p>
+              <p class="chakra-text css-1069cn5">2 voos/semana</p>
+            </div>
+          </div>
+        </div>
+        <div class="vacation-section">
+          <h2 class="chakra-heading css-jmfygi">Modo Férias</h2>
+          <div class="css-1811skr">
+            <p class="chakra-text css-13gh0kr">Adicione datas para pausar escala para voos futuros. Voos já escalados permanecerão, como planejado</p>
+            <div class="css-2xph3x">
+              <div class="css-k008qs">
+                <button type="button" class="chakra-button css-i8y1hn">
+                  <span class="chakra-button__icon css-1wh2kri"
+                    ><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" class="chakra-icon css-m67sjj" aria-hidden="true">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12 4.75C7.99594 4.75 4.75 7.99594 4.75 12C4.75 16.0041 7.99594 19.25 12 19.25C16.0041 19.25 19.25 16.0041 19.25 12C19.25 7.99594 16.0041 4.75 12 4.75ZM3.25 12C3.25 7.16751 7.16751 3.25 12 3.25C16.8325 3.25 20.75 7.16751 20.75 12C20.75 16.8325 16.8325 20.75 12 20.75C7.16751 20.75 3.25 16.8325 3.25 12ZM12 8.05C12.4142 8.05 12.75 8.38579 12.75 8.8V11.25H15.2C15.6142 11.25 15.95 11.5858 15.95 12C15.95 12.4142 15.6142 12.75 15.2 12.75H12.75V15.2C12.75 15.6142 12.4142 15.95 12 15.95C11.5858 15.95 11.25 15.6142 11.25 15.2V12.75H8.8C8.38579 12.75 8.05 12.4142 8.05 12C8.05 11.5858 8.38579 11.25 8.8 11.25H11.25V8.8C11.25 8.38579 11.5858 8.05 12 8.05Z"
+                        fill="currentColor"
+                      ></path></svg></span
+                  >Add dates
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="save-section"><button type="button">Save</button></div>
+      </div>
+    </div>
+    <template id="right-arrow"
+      ><svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M8.47979 12.3536C8.28453 12.1583 8.28453 11.8417 8.47979 11.6464L11.6262 8.5L3.16668 8.5C2.89054 8.5 2.66668 8.27614 2.66668 8C2.66668 7.72386 2.89054 7.5 3.16668 7.5L11.6262 7.5L8.47979 4.35355C8.28453 4.15829 8.28453 3.84171 8.47979 3.64645C8.67505 3.45118 8.99164 3.45118 9.1869 3.64645L13.1869 7.64645C13.3822 7.84171 13.3822 8.15829 13.1869 8.35355L9.1869 12.3536C8.99163 12.5488 8.67505 12.5488 8.47979 12.3536Z"
+        ></path>
+      </svg>
+    </template>
+    <template id="add-time-icon">
+      <button type="button" aria-label="Add time range">
+        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 4.75C7.99594 4.75 4.75 7.99594 4.75 12C4.75 16.0041 7.99594 19.25 12 19.25C16.0041 19.25 19.25 16.0041 19.25 12C19.25 7.99594 16.0041 4.75 12 4.75ZM3.25 12C3.25 7.16751 7.16751 3.25 12 3.25C16.8325 3.25 20.75 7.16751 20.75 12C20.75 16.8325 16.8325 20.75 12 20.75C7.16751 20.75 3.25 16.8325 3.25 12ZM12 8.05C12.4142 8.05 12.75 8.38579 12.75 8.8V11.25H15.2C15.6142 11.25 15.95 11.5858 15.95 12C15.95 12.4142 15.6142 12.75 15.2 12.75H12.75V15.2C12.75 15.6142 12.4142 15.95 12 15.95C11.5858 15.95 11.25 15.6142 11.25 15.2V12.75H8.8C8.38579 12.75 8.05 12.4142 8.05 12C8.05 11.5858 8.38579 11.25 8.8 11.25H11.25V8.8C11.25 8.38579 11.5858 8.05 12 8.05Z"
+            fill="#000"
+          ></path>
+        </svg>
+      </button>
+    </template>
+    <template id="remove-time-icon"
+      ><button type="button" aria-label="Remove time range">
+        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 4.75C7.99594 4.75 4.75 7.99594 4.75 12C4.75 16.0041 7.99594 19.25 12 19.25C16.0041 19.25 19.25 16.0041 19.25 12C19.25 7.99594 16.0041 4.75 12 4.75ZM3.25 12C3.25 7.16751 7.16751 3.25 12 3.25C16.8325 3.25 20.75 7.16751 20.75 12C20.75 16.8325 16.8325 20.75 12 20.75C7.16751 20.75 3.25 16.8325 3.25 12ZM8.05 12C8.05 11.5858 8.38579 11.25 8.8 11.25H15.2C15.6142 11.25 15.95 11.5858 15.95 12C15.95 12.4142 15.6142 12.75 15.2 12.75H8.8C8.38579 12.75 8.05 12.4142 8.05 12Z"
+            fill="#000"
+          ></path>
+        </svg>
+      </button>
+    </template>
+  </body>
+</html>
