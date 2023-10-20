@@ -1,0 +1,156 @@
+@import url("main.min.css");
+
+body {
+  background-color: var(--color-dark);
+  p {
+    color: white;
+  }
+  h1 {
+    color: var(--color-pastel-yellow);
+  }
+  h2 {
+    color: white;
+  }
+}
+
+.availability-wrapper {
+  width: 100%;
+  margin-top: 50px;
+}
+.availability-header {
+  width: 100%;
+  word-wrap: normal;
+  white-space: initial;
+}
+.availability-box {
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  p {
+    color: black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  h1 {
+    color: black;
+  }
+  h2 {
+    color: black;
+  }
+  .day-entry {
+    display: flex;
+    padding-top: 5px;
+  }
+  .time-entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px;
+  }
+  .time-range-box {
+    display: flex;
+    position: relative;
+    top: -2.5px;
+  }
+  .action-buttons {
+    display: flex;
+  }
+  // .start-time-selector {
+  //   border: 1px solid var(--gray-gray-400);
+  //   border-bottom-left-radius: 8px;
+  //   border-top-left-radius: 8px;
+  //   padding: 5px;
+  // }
+
+  .end-time-selector {
+    border: 1px solid var(--gray-gray-400);
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 5px;
+  }
+  .arrow-box {
+    display: flex;
+    border-bottom: 1px solid var(--gray-gray-400);
+    border-top: 1px solid var(--gray-gray-400);
+    width: 32px;
+    background-color: var(--gray-gray-200);
+    align-items: center;
+    justify-content: center;
+  }
+  .action-buttons {
+    margin-left: 10px;
+    button {
+      background-color: white;
+      border: none;
+      margin: 3px;
+      border-radius: 2px;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--gray-gray-200);
+      }
+    }
+  }
+}
+
+.time-selector {
+  position: relative;
+  width: 80px;
+}
+
+.time-selector select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  margin: 0px 8px 0px 8px;
+}
+
+.start {
+  border: 1px solid var(--gray-gray-400);
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.end {
+  border: 1px solid var(--gray-gray-400);
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--color-black1) transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: var(--color-black);
+  font-weight: 600;
+  padding: 8px 16px 8px 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: var(--gray-gray-100);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: var(--gray-gray-200);
+}
