@@ -7,27 +7,30 @@ function parseUser(lsUser) {
     var user = JSON.parse(localStorage["user"]);
     document.getElementById("ribbonUserName").innerText = user.name;
     document.getElementById("ribbonUserEmail").innerText = user.email;
-    document.getElementById("userAvatar").src = user.metadata.avatar;
+    if (user.metadata && user.metadata.avatar) {
+      document.getElementById("userAvatar").src = user.metadata.avatar;
+    }
   } else {
     window.location.href = "./login.html";
   }
 }
-const menuButtons = document.querySelectorAll(".menu-option");
 
 // Event listener - Botão "Logout"
 document.getElementById("menuLogout").addEventListener("click", () => {
   localStorage.removeItem("user");
+  sessionStorage.removeItem("user");
   window.location.href = "./login.html";
 });
 
-menuButtons.forEach((elemento) => {
-  elemento.addEventListener("click", () => {
-    menuButtons.forEach((elemento) => {
-      elemento.classList.remove("activeTab");
+const menuButtons = document.querySelectorAll(".menu-option");
+menuButtons.forEach((element) => {
+  element.addEventListener("click", () => {
+    menuButtons.forEach((element) => {
+      element.classList.remove("activeTab");
     });
-    elemento.classList.add("activeTab");
+    element.classList.add("activeTab");
     clearMainArea();
-    if (elemento.id == "menuDisponibilidade") {
+    if (element.id == "menuDisponibilidade") {
       loadMainArea("disponibilidade");
     }
   });

@@ -55,6 +55,25 @@
     ]
   },
   {
+    "availability": {
+      "counter": 5,
+      "details": {
+        "monday": {},
+        "tuesday": {
+          "0": [8, 12],
+          "1": [14, 16.5]
+        },
+        "wednesday": {},
+        "thursday": {
+          "0": [4, 7],
+          "1": [8, 12],
+          "2": [14, 16]
+        },
+        "friday": {},
+        "saturday": {},
+        "sunday": {}
+      }
+    },
     "id": 2,
     "name": "Rafael Mourão",
     "email": "rafael.mourao@aeroplano.com",

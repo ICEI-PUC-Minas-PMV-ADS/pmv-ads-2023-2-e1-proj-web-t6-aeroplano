@@ -42,13 +42,23 @@ body {
   }
   .day-entry {
     display: flex;
-    padding-top: 5px;
+    padding: 10px 0px;
+    p {
+      width: 100px;
+    }
   }
   .time-entry {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 60px;
+    p {
+      color: var(--gray-gray-400);
+      font-size: 12px;
+      font-style: italic;
+      word-wrap: normal;
+      width: fit-content;
+    }
   }
   .time-range-box {
     display: flex;
@@ -57,19 +67,6 @@ body {
   }
   .action-buttons {
     display: flex;
-  }
-  // .start-time-selector {
-  //   border: 1px solid var(--gray-gray-400);
-  //   border-bottom-left-radius: 8px;
-  //   border-top-left-radius: 8px;
-  //   padding: 5px;
-  // }
-
-  .end-time-selector {
-    border: 1px solid var(--gray-gray-400);
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-    padding: 5px;
   }
   .arrow-box {
     display: flex;
@@ -130,7 +127,7 @@ body {
 .select-selected {
   color: var(--color-black);
   font-weight: 600;
-  padding: 8px 16px 8px 14px;
+  padding: 8px 16px 8px 10px;
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -143,6 +140,9 @@ body {
   left: 0;
   right: 0;
   z-index: 99;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+  height: 400px;
 }
 
 /* Hide the items when the select box is closed: */
