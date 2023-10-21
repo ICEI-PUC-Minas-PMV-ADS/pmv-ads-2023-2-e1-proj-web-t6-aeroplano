@@ -62,19 +62,24 @@
 .pesquisa {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  
+}
+label{
+  border-radius: 5px;
+  background: rgba(179, 176, 184, 0.35);
+  position: relative;
 }
 
 input {
   border-radius: 5px;
   background: rgba(179, 176, 184, 0.35);
   color: #454652;
-  text-align: center;
-  font-family: Inter;
-  font-size: 18px;
+  text-align: left;
   font-style: normal;
   font-weight: 500;
   line-height: 32px; /* 177.778% */
+  border:opacity 1;
+  border: 0 none;
 }
 
 .example {
@@ -122,6 +127,7 @@ input {
 .aviao {
   max-height: 60%;
   max-width: 100%;
+  cursor:pointer;
 }
 
 .nome {
