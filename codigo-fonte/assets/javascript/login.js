@@ -7,13 +7,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-var lsUser = localStorage["user"];
-parseUser(lsUser);
-
-function parseUser(lsUser) {
-  if (lsUser) {
-    window.location.href = "./dashboard.html";
-  }
+if (localStorage["user"]) {
+  window.location.href = "./dashboard.html";
 }
 
 // Event listener - Botão "Entrar"
