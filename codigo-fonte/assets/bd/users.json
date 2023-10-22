@@ -58,20 +58,20 @@
     "availability": {
       "counter": 5,
       "details": {
-        "monday": {},
-        "tuesday": {
-          "0": [8, 12],
-          "1": [14, 16.5]
-        },
-        "wednesday": {},
-        "thursday": {
-          "0": [4, 7],
-          "1": [8, 12],
-          "2": [14, 16]
-        },
-        "friday": {},
-        "saturday": {},
-        "sunday": {}
+        "monday": [],
+        "tuesday": [
+          [8, 12],
+          [14, 16.5]
+        ],
+        "wednesday": [],
+        "thursday": [
+          [4, 7],
+          [8, 12],
+          [14, 16]
+        ],
+        "friday": [],
+        "saturday": [],
+        "sunday": []
       }
     },
     "id": 2,
