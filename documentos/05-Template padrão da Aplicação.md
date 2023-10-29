@@ -1,12 +1,28 @@
 # Template padrão da Aplicação
 
-Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+## Tela Inicial
 
-[Apresente a estrutura padrão da sua aplicação.]
+A tela inicial da nossa aplicação consiste em uma landing page apresentando as principais informações da nossa aplicação, como quem faz parte do projeto, o problema que estamos tratando e etc.
+Nela também podemos acessar a pagina de Login, que inicialmente não estamos cadastrando novos usuarios por não haver Back-end, o layout foi inicialmente planejado para ser bem responsivo e esteticamente bonito.
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+*landing page*
+![1. Landing page](/documentos/img/Landing_page.png)
+Imagem 1 - Landing page
+
+*Tela de Login*
+![2. Tela de Login](/documentos/img/Tela-de-Login.png)
+Imagem 2 - Tela de Login
+
+## Layout Beta
+
+A base inicial foi pensada para ser uma tela simple e intuitiva, nas cores azul e amarela. O painel principal foi colocado a esquerda com as principais funções e o conteúdo foi centralizado na tela.
+
+*Layout padrão*
+
+![3. Layout padrão](/documentos/img/Dashboard.png)
+Imagem 3 - Layout padrão
+
+
+
+
+
