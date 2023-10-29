@@ -15,7 +15,9 @@ Imagem 2 - Tela de Login
 
 ## Layout Beta
 
-A base inicial foi pensada para ser uma tela simple e intuitiva, nas cores azul e amarela. O painel principal foi colocado a esquerda com as principais funções e o conteúdo foi centralizado na tela.
+A base da plataforma foi concebida com a ideia de oferecer aos usuários um painel simples e intuitivo. O menu principal foi estrategicamente posicionado à esquerda, proporcionando fácil acesso às principais funcionalidades da plataforma. Os usuários têm a capacidade de acessar informações sobre voos, consultar dados relevantes de sua turma, verificar avisos importantes, verificar a disponibilidade de serviços e atualizar seu perfil pessoal.
+
+Ao selecionar uma das funções no menu principal, as informações correspondentes são exibidas no centro da tela, tornando a experiência do usuário ainda mais conveniente e eficiente.
 
 *Layout padrão*
 
