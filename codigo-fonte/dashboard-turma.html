@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aeroplano - Plataforma para Escolas de Aviação</title>
+    <link rel="stylesheet" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css">
     <link rel="stylesheet" href="./assets/css/dashboard-turma.min.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <script defer type="module" src="./assets/javascript/dashboard.js"></script>
-    <script defer type="module" src="./assets/javascript/main.js"></script>
+    
   </head>
 
   <body>
@@ -247,55 +247,20 @@
             </div>
           </div>
         </div>
-        <div id="turma" class="dashboard-main-area">
+        <div id="turma">
           <h1>Turma</h1>
           <div class="container-lista-alunos">
             <div class="topo-lista-alunos">
               <p>Lista de alunos do curso</p>
               <button id="botao-add-alunos">Adicionar integrante</button>
               </div>
-              <div class="container-procurar-alunos">
-                <input type="text" id="pesquisar-alunos" placeholder="Você está procurando por...">
-              </div>  
-              <div class="tabela-alunos">
-                <table>
-                  <thead>
-                      <tr>
-                          <th>Foto</th>
-                          <th>Nome</th>
-                          <th>Cargo</th>
-                          <th>Status</th>
-                          <th>Último Acesso</th>
-                          <th>Visto pela Última Vez</th>
-                          <th>Ação</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td><img src="foto1.jpg" alt="Foto do Funcionário 1"></td>
-                          <td>João Silva</td>
-                          <td>Gerente</td>
-                          <td>Ativo</td>
-                          <td>2023-10-15</td>
-                          <td>2023-10-15</td>
-                          <td><a href="#">Editar</a> | <a href="#">Excluir</a></td>
-                      </tr>
-                      <tr>
-                          <td><img src="foto2.jpg" alt="Foto do Funcionário 2"></td>
-                          <td>Maria Santos</td>
-                          <td>Analista</td>
-                          <td>Inativo</td>
-                          <td>2023-10-14</td>
-                          <td>2023-10-14</td>
-                          <td><a href="#">Editar</a> | <a href="#">Excluir</a></td>
-                      </tr>                      
-                  </tbody>
-              </table>
-              </div>
-                      
+                 <div id="table" class="container-tabela-alunos">       
+              </div>                      
           </div>
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+   <script src="./assets/javascript/dashboardTurma.js"></script>
   </body>
 </html>

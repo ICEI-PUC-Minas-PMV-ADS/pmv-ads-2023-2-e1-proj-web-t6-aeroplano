@@ -6,8 +6,25 @@
 @import url("dashboard.min.css");
 
 #turma{
+
+  width: 1511px;
+ 
+
+  .gridjs-search {
+    width: 100%;
+    margin-bottom: 2rem;
+    input{
+        width: 100%;
+    }
+    display: flex;
+    padding: 12px 20px;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+
   h1{
-    margin-top: 91px;
+    margin-top: 30px;
     color: var(--color-pastel-yellow);
     font-size: 32px;
     font-style: normal;
@@ -16,20 +33,21 @@
   }
 
   .container-lista-alunos{
+    padding: 20px;
     margin-top: 27px;
-    width: 1511px;
+    width: 100%;
     height: 688px;
     flex-shrink: 0;
     border-radius: 12px;
     background: var(--white, #FFF);
     display: flex;
     flex-direction: column;
-
   }
 
   .topo-lista-alunos{
       display: flex;
-      width: 1423px;
+      width: 100%;
+      margin: 38.5px 20px 0 44px;
       justify-content: space-between;
       align-items: center;
   }
@@ -49,6 +67,7 @@
     display: flex;
     width: 1423px;
     padding: 12px 20px;
+    margin: 18px 44px 20px 44px;
     align-items: flex-start;
     gap: 8px;
     border-radius: 10px;
@@ -58,11 +77,78 @@
   }
 
   #pesquisar-alunos{
-    color: var(--gray-400, #A1A1AA);
+    color: var(--gray-gray-400);
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     border: none;
   }
+
+  .container-tabela-alunos{
+    width: 100%;
+  }
+
+  table{
+    
+    margin: 0px 44px;
+    width: 100%;
+  
+    table-layout: fixed;
+    text-align: center;
+
+    thead{
+        width: 100%;                     
+    }
+
+    th{
+      color: var(--gray-gray-400);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;      
+      
+    }
+
+    .tabela-foto{
+      width: 86px;
+    }
+
+    .tabela-nome{
+      width: 269px;
+    }
+
+    .tabela-cargo{
+      width: 221px;
+    }
+
+    .tabela-status{
+      width: 156px;
+    }
+
+    .tabela-ultimo-acesso{
+      width: 208px;
+    }
+    
+    .tabeça-visto-por-ultimo{
+      width: 228px;
+    }
+
+    .tabela-acao{
+      width: 238px;
+    }
+  }
+
+  .avatar-box {
+    img {
+      border-radius: 50%;
+      aspect-ratio: 1;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  
 }
+
+
