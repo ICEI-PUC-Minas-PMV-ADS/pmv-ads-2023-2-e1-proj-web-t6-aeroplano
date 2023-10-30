@@ -1,32 +1,71 @@
 # Programação de Funcionalidades
 
-Implementação da aplicação descritas por meio dos requisitos codificados.
 
-[Utilize a estrutura abaixo para cada funcionalidade entregue na etapa]
+### Tela de Login
 
-## Título da funcionalidade
+Responsável: Rafael Nascimento
 
-[Adicione imagem da funcionalidade/tela]
+O botão de login está claramente visível no cabeçalho de todas as páginas, e não é necessário que o usuário esteja autenticado no sistema para utilizá-lo. As estruturas de dados foram desenvolvidas com base em HTML, CSS e JavaScript.
 
-### Requisito atendido
+Exemplo da tela de login: 
 
-[RF-X: adicione a descrição do requisito atendido]
+![Tela de login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/Login.png)
 
-### Artefatos da funcionalidade
+#### Artefatos da funcionalidade
 
-[Adicione os nomes dos arquivos relacionados ao desenvolvimento da funcionalidade]
 
-### Estrutura de Dados
+●	login.html 
 
-[Caso exista estrutura de dados, adicione aqui]
+●	login.min.css
 
-### Instruções de acesso
+●	main.min.css
 
-[Adicione as orientações de acesso à funcionalidade]
+●	header.min.css
 
-### Responsável
+●	footer.min.css
 
-[Adicione nome do responsável pelo desenvolvimento da funcionalidade]
+●	acesso.min.css
+
+●	login.js
+
+●	main.js
+
+
+#### Instruções de acesso
+
+Abra um navegador de Internet e informe a seguinte URL: https://aeroplano.vercel.app/login.html
+
+Ao clicar no botão "Entrar" localizado no canto superior direito da tela, você será direcionado para a página de login.
+
+
+
+### Tela de Disponibilidade
+
+Responsável: Rafael Nascimento
+
+
+Exemplo da tela de disponibilidade: 
+
+![Tela de disponibilidade](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t6-aeroplano/blob/main/documentos/img/disponibilidade.png)
+
+
+#### Artefatos da funcionalidade
+
+
+●	dashboard.html 
+
+●	dashboard.min.css
+
+●	main.min.css
+
+●	dashboard.js
+
+
+#### Instruções de acesso
+
+Abra um navegador de Internet e informe a seguinte URL: https://aeroplano.vercel.app/dashboard.html
+
+Ao clicar no botão "Disponibilidade" localizado no menu lateral direito da tela, você será direcionado para a página de disponibilidade.
 
 > **Links Úteis**:
 >
