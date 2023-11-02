@@ -37,22 +37,25 @@
 
 ### Requisitos Funcionais
 
-| ID    | Descrição                                                                              | Prioridade |
-| ----- | -------------------------------------------------------------------------------------- | ---------- |
-| RF-01 | Possibilidade de gerenciar horários das aulas (alocação aeronave/instrutor/aluno)      | Alta       |
-| RF-02 | Cadastro de disponibilidade do aluno                                                   | Alta       |
-| RF-03 | Possibilidade de ver quadro de horário por aeronave, por instrutor, por aluno          | Média      |
-| RF-04 | Possibilidade de ver alocações                                                         | Média      |
-| RF-05 | Possibilidade de cadastrar aulas, notas e observações do professor                     | Média      |
-| RF-06 | Possibilidade de alocar automaticamente, baseado na disponibilidade de cada envolvido  | Média      |
-| RF-07 | Possibilidade de alocar manualmente                                                    | Alta       |
-| RF-08 | Notificações devem ser enviadas manualmente ao e-mail/WhatsApp dos usuários            | Baixa      |
-| RF-09 | Dar acesso a informações sobre a aula                                                  | Alta       |
-| RF-10 | Gerenciar saldo de aulas                                                               | Baixa      |
-| RF-11 | Possibilidade de desmarcar aulas                                                       | Média      |
-| RF-12 | Deve ter uma troca de mensagens entre instrutores e alunos para uma comunicação direta | Baixa      |
-| RF-13 | Cadastro de usuários                                                                   | Alta       |
-| RF-14 | Cadastro de aeronaves                                                                  | Alta       |
+| ID    | Descrição                                                                                | Prioridade |
+| ----- | ---------------------------------------------------------------------------------------- | ---------- |
+| RF-01 | Possibilidade de gerenciar horários das aulas (alocação aeronave/instrutor/aluno)        | Alta       |
+| RF-02 | Cadastro de disponibilidade do aluno/instrutor                                           | Alta       |
+| RF-03 | Possibilidade de ver quadro de horário por aeronave, por instrutor, por aluno            | Média      |
+| RF-04 | Possibilidade de ver alocações                                                           | Média      |
+| RF-05 | Possibilidade de cadastrar aulas, notas e observações do professor                       | Média      |
+| RF-06 | Possibilidade de alocar automaticamente, baseado na disponibilidade de cada envolvido    | Média      |
+| RF-07 | Possibilidade de alocar manualmente                                                      | Alta       |
+| RF-08 | Notificações devem ser enviadas manualmente ao e-mail/WhatsApp dos usuários              | Baixa      |
+| RF-09 | Dar acesso a informações sobre a aula                                                    | Alta       |
+| RF-10 | Gerenciar saldo de aulas                                                                 | Baixa      |
+| RF-11 | Possibilidade de desmarcar aulas                                                         | Média      |
+| RF-12 | Deve ter uma troca de mensagens entre instrutores e alunos para uma comunicação direta   | Baixa      |
+| RF-13 | Cadastro de usuários                                                                     | Alta       |
+| RF-14 | Cadastro de aeronaves                                                                    | Alta       |
+| RF-15 | Deve ter uma landing page que possibilite usuários não logados conhecer o projeto        | Alta       |
+| RF-16 | Usuários cadastrados devem ser capazes de acessar a área restrita                        | Alta       |
+| RF-17 | Na área restrita, deve haver um layout padrão de dashboard compartilhado por todas telas | Alta       |
 
 ### Requisitos não Funcionais
 
