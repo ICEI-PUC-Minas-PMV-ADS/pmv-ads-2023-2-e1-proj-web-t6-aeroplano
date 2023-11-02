@@ -51,11 +51,11 @@ A etapa 1 foi realizada entre os dias 01 de agosto de 2023 e 03 de setembro de 2
 - Especificação do Projeto
 - Slide de apresentação do Projeto - Etapa 1
 
-- 1.1 Planejamento:
+##### 1.1 Planejamento:
 
 [Colocar tarefas]
 
-- 1.2 Andamento:
+##### 1.2 Andamento:
 
 Aqui foram planejadas e elaboradas as ideias do projeto, avaliando e executando os requisitos pedidos no trabalho . O grupo se reuniu através das plataformas Teams e WhatsApp para discutir as ideias, fazer planejamentos e definir horários para a realização das tarefas. Várias ideias foram sugeridas antes de entrarmos em comum acordo, escolhendo assim a melhor ideia de projeto.
 
@@ -64,7 +64,7 @@ Dividimos as tarefas durante as reuniões semanais feitas quinta-feira à noite 
 
 As tarefas foram divididas entre o grupo mediante a disponibilidade e familiaridade de cada um com algumas ferramentas. Todos tiveram participação na execução do projeto e nas discussões surgidas ao longo da etapa.
 
-- 1.3 Ferramentas utilizadas e Comprovações:
+##### 1.3 Ferramentas utilizadas e Comprovações:
 
 ![image](/documentos/img/Criacao%20do%20Projeto.png)
 Imagem 1 - Criação do Projeto
@@ -93,11 +93,7 @@ A etapa 2 foi realizada entre os dias 04 de setembro de 2023 e 01 de outubro de 
 - Metodologia - Etapas 1 e 2
 - Projeto de Interface
 
-- 2.1 Planejamento:
-
-[Colocar tarefas]
-
-- 2.2 Andamento:
+##### 2.2 Andamento:
 
   Na fase de planejamento, nosso objetivo era criar um documento que descrevesse a metodologia a ser empregada no projeto. Isso incluía a definição dos papéis de cada membro da equipe, seguindo a abordagem do SCRUM, a identificação das ferramentas a serem usadas ao longo do processo e a criação de representações visuais do Fluxo dos Usuários, bem como protótipos das interfaces que seriam desenvolvidas.
 
@@ -111,7 +107,7 @@ membros do grupo.
 
 Os textos feitos para o GitHUB foram feitos com a participação de todos os membros do grupo e a revisão geral também foi feita por todos os membros.
 
-- 2.3 Ferramentas e Comprovações:
+##### 2.3 Ferramentas e Comprovações:
 
 ![image](/documentos/img/Figma_prototipo.png)
 Imagem 6 - Prototipo da aplicação
@@ -121,6 +117,63 @@ Imagem 7 - Fluxo do usuario na etapa de autenticação
 
 ![image](/documentos/img/Kanban_Github.png)
 Imagem 8 - Kanban da segunda etapa
+
+#### Etapa 3
+
+A etapa 3 foi realizada entre os dias 01 de outubro de 2023 e 29 de outubro de 2023, e teve os seguintes entregáveis:
+
+- Documentação de Contexto 
+- Especificação do Projeto 
+- Metodologia 
+- Projeto de Interface 
+- Template padrão da aplicação*
+- Programação de Funcionalidades*
+- Referências Bibliográficas
+
+*Novos entregáveis. Os demais foram atualizados
+
+##### 3.1 Planejamento:
+
+- Desenvolver tela landing page/Home - José
+- Desenvolver tela login - Rafael
+- Desenvolver tela dashboard - Rafael
+- Desenvolver tela disponibilidade - Rafael
+- Desenvolver tela cadastro - Felipe
+- Desenvolver tela 404 - André
+- Desenvolver tela Calendário - José
+- Desenvolver tela Turma - Robert
+- Desenvolver tela Perfil - Felipe/Rafael
+- Desenvolver tela Avisos - Andryel/André
+- Desenvolver tela "Sobre Nós" - Todos
+- Desenvolver tela Blog - Andryel
+- Atualizar documentação/entregáveis - Todos
+
+##### 3.2 Andamento:
+
+Com auxílio do software Visual Studio Code, foram desenvolvidas as telas. 
+
+Nessa etapa foram feitas as partes de: Templete padrão da Aplicação e Programação de Funcionalidade
+Dividimos as tarefas durante as reuniões semanais feitas quinta-feira à noite utilizando a plataforma Teams e GitHub Projects. Também compartilhamos documentos e fizemos etapas do trabalho simultaneamente utilizando as ferramentas do Teams, como por exemplo o compartilhamento da tela. As devidas correções e acréscimos foram feitas ao decorrer das semanas, seguindo as orientações do professor nas aulas de terça.
+
+As tarefas foram divididas entre o grupo mediante a disponibilidade e familiaridade de cada um com algumas ferramentas.
+
+##### 3.3 Ferramentas utilizadas e Comprovações:
+
+  Para desenvolvimento, foi utilizado o software Visual Studio Code com as seguintes extensões:
+
+  - GitHub Copilot
+  - GitHub Copilot Chat
+  - Live Sass Compiler
+  - Live Server
+  - markdownlint
+  - Monokai Pro
+  - Prettier
+ 
+![image](/documentos/img/vs_code.png)
+Imagem 9 - VS Code
+
+![image](/documentos/img/kanban3.png)
+Imagem 10 - Kanban da terceira etapa
 
 ### Etiquetas
 
@@ -151,6 +204,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | Gerenciamento do Projeto    | GitHub Projects | <https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/649>                                                |
 | Hospedagem                  | Vercel          | <https://aeroplano.vercel.app/>                                                                              |
 | Fluxos de usuário           | Miro            | <https://miro.com/app/board/uXjVMjZ3cU0=/?share_link_id=614431348271>                                        |
+| Desenvolvimento             | VS Code         | --                                                                                                           |
 
 ### Estratégia de Organização de Codificação
 
