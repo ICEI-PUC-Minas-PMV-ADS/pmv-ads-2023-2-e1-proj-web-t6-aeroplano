@@ -1,244 +1,337 @@
 onLoad();
 
-var saveButton = document.getElementById("save-availability");
-saveButton.addEventListener("click", () => {});
+// Falta fazer - Botão salvar
+/* let saveButton = document.getElementById("save-availability");
+saveButton.addEventListener("click", () => {});  */
 
-async function checkStorage() {
-  const lsUser = localStorage["user"];
-  const ssUser = sessionStorage["user"];
-  var parsedUser = {};
+async function onLoad() {
+  const storedAvailability = await checkStoredAvailability();
+
+  if (storedAvailability) {
+    populateStoredAvailability(storedAvailability);
+  } else {
+    appendChildElement(".time-entry-wrapper", ["#day-entry-placeholder"]);
+    appendChildElement(".action-buttons", ["#add-time-icon"]);
+  }
+
+  createTimeSelectorHtmlElements();
+  populateTimeSelectorsOptions(storedAvailability?.details);
+  updateActionButtonEventListener();
+  loadTimezone();
+  populateWeeklyAvailability();
+}
+
+function populateWeeklyAvailability() {
+  const decrementBtn = document.getElementById("decrementBtn");
+  const incrementBtn = document.getElementById("incrementBtn");
+  const integerInput = document.getElementById("integerInput");
+  // Prevent manual input of negative values
+  integerInput.addEventListener("input", () => {
+    if (parseInt(integerInput.value) < 0) {
+      integerInput.value = 0;
+    }
+    const parsedValue = parseInt(integerInput.value);
+    if (isNaN(parsedValue)) {
+      // Input is not a valid integer, reset to the nearest integer
+      integerInput.value = 0;
+    } else {
+      // Input is a valid integer
+      integerInput.value = parsedValue;
+    }
+  });
+  decrementBtn.addEventListener("click", () => {
+    // Decrease the value in the input field
+    parseInt(integerInput.value) > 0 ? (integerInput.value = parseInt(integerInput.value) - 1) : (integerInput.value = 0);
+  });
+
+  incrementBtn.addEventListener("click", () => {
+    // Increase the value in the input field
+    parseInt(integerInput.value) > 0 ? (integerInput.value = parseInt(integerInput.value) + 1) : (integerInput.value = 1);
+  });
+}
+
+function loadTimezone() {
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const timezoneOffset = new Date().getTimezoneOffset() / -60;
+  document.getElementById("timezone-name").innerText = timezone;
+  document.getElementById("timezone-offset").innerText = timezoneOffset;
+}
+
+function populateStoredAvailability(storedAvailability) {
+  let actionButtonsCounter = 0;
+  let timeEntryCounter = 0;
+
+  Object.entries(storedAvailability.details).forEach(([day, dayAvailability], dayIndex) => {
+    const availabilityKeys = Object.keys(dayAvailability);
+
+    if (availabilityKeys.length === 0) {
+      appendChildElement(".time-entry-wrapper", ["#day-entry-placeholder"], dayIndex);
+      appendChildElement(".action-buttons", ["#add-time-icon"], actionButtonsCounter++);
+    } else {
+      availabilityKeys.forEach(() => {
+        appendChildElement(".time-entry-wrapper", ["#day-entry"], dayIndex);
+        appendChildElement(".arrow-box", ["#right-arrow"], timeEntryCounter++);
+        appendChildElement(".action-buttons", ["#add-time-icon", "#remove-time-icon"], actionButtonsCounter++);
+      });
+    }
+  });
+}
+
+async function checkStoredAvailability() {
+  const ssUser = sessionStorage.getItem("user");
+  const lsUser = localStorage.getItem("user");
+
+  let parsedUser = {};
+
   if (ssUser) {
     parsedUser = JSON.parse(ssUser);
-    if (parsedUser.availability) {
+    if (parsedUser.availability?.counter > 0) {
       return parsedUser.availability;
     }
   }
+
   if (lsUser) {
     parsedUser = JSON.parse(lsUser);
-    if (parsedUser.availability && parsedUser.availability.counter > 0) {
+    if (parsedUser.availability?.counter > 0) {
       sessionStorage.setItem("user", lsUser);
       return parsedUser.availability;
     } else {
       parsedUser.availability = {
         counter: 0,
         details: {
-          monday: {},
-          tuesday: {},
-          wednesday: {},
-          thursday: {},
-          friday: {},
-          saturday: {},
-          sunday: {},
+          monday: [],
+          tuesday: [],
+          wednesday: [],
+          thursday: [],
+          friday: [],
+          saturday: [],
+          sunday: [],
         },
       };
       sessionStorage.setItem("user", JSON.stringify(parsedUser));
     }
   }
+
   return false;
 }
 
-async function onLoad() {
-  var actionButtonsCounter = 0,
-    timeEntryCounter = 0;
-  const storedAvailability = await checkStorage();
-  if (storedAvailability) {
-    const days = Object.keys(storedAvailability.details);
-    for (var i = 0; i < days.length; i++) {
-      var dayAvailability = storedAvailability.details[days[i]];
-      var availabilityKeys = Object.keys(dayAvailability);
-      if (availabilityKeys.length == 0) {
-        populate(".time-entry-wrapper", ["#day-entry-placeholder"], i);
-        populate(".action-buttons", ["#add-time-icon"], actionButtonsCounter++);
-      } else {
-        for (var j = 0; j < availabilityKeys.length; j++) {
-          populate(".time-entry-wrapper", ["#day-entry"], i);
-          populate(".arrow-box", ["#right-arrow"], timeEntryCounter++);
-          populate(".action-buttons", ["#add-time-icon", "#remove-time-icon"], actionButtonsCounter++);
-        }
-      }
-    }
-  } else {
-    populate(".time-entry-wrapper", ["#day-entry-placeholder"]);
-    populate(".action-buttons", ["#add-time-icon"]);
-  }
-  createTimeSelectorHtmlElements();
-  populateTimeSelectorsOptions(storedAvailability.details);
-  updateActionButtonEventListener();
-}
-
-function populate(divClass, templateIdArray, divPosition, relationship = null, relationIndex = 0) {
-  // If divPosition == null > template will be appended to all elements with specified class
+function appendChildElement(divClass, templateIdArray, divPosition = null, siblingPosition = "last") {
   const nodeList = document.querySelectorAll(divClass);
-  if (divPosition || divPosition === 0) {
+
+  nodeList.forEach((selectedNode, index) => {
+    if (divPosition !== null && divPosition !== index) {
+      return;
+    }
+
     templateIdArray.forEach((templateId) => {
       const template = document.querySelector(templateId);
       const content = document.importNode(template.content, true);
 
-      if (relationship === "first") {
-        nodeList[divPosition].insertBefore(content, nodeList[divPosition].firstChild);
-      } else if (relationship === "sibling" && relationIndex >= 0 && relationIndex < nodeList[divPosition].children.length) {
-        nodeList[divPosition].children[relationIndex].parentNode.insertBefore(content, nodeList[divPosition].children[relationIndex + 1]);
+      if (selectedNode.children.length > 0 && siblingPosition === "first") {
+        const firstChild = selectedNode.children[0];
+        selectedNode.insertBefore(content, firstChild);
       } else {
-        nodeList[divPosition].appendChild(content);
+        selectedNode.appendChild(content);
       }
     });
-  } else {
-    nodeList.forEach((element) => {
-      templateIdArray.forEach((templateId) => {
-        const template = document.querySelector(templateId);
-        const content = document.importNode(template.content, true);
+  });
+}
 
-        if (relationship === "first") {
-          element.insertBefore(content, element.firstChild);
-        } else {
-          element.appendChild(content);
-        }
-      });
+function appendSiblingElement(divClass, templateIdArray, divPosition = null, siblingPosition = "after") {
+  const nodeList = document.querySelectorAll(divClass);
+
+  nodeList.forEach((selectedNode, index) => {
+    if (divPosition !== null && divPosition !== index) {
+      return;
+    }
+
+    const parentNode = selectedNode.parentNode;
+    const parentNodeLength = parentNode.children.length;
+    const lastSibling = parentNode.children[parentNodeLength - 1];
+
+    templateIdArray.forEach((templateId) => {
+      const template = document.querySelector(templateId);
+      const content = document.importNode(template.content, true);
+
+      if (siblingPosition === "before") {
+        selectedNode.parentNode.insertBefore(content, selectedNode);
+      } else if (selectedNode === lastSibling) {
+        parentNode.appendChild(content);
+      } else {
+        selectedNode.parentNode.insertBefore(content, nodeList[divPosition + 1]);
+      }
     });
-  }
+  });
 }
 
 function updateEntryMapping() {
-  var timeEntryMapping = {},
-    timeEntryWrappingMapping = {},
-    counter = 0,
-    timeEntryCounterMapping = {},
-    timeEntryCounter = 0,
-    timeEntryWrapper = document.querySelectorAll(".time-entry-wrapper");
-  timeEntryWrapper.forEach((element, wrapperId) => {
-    var timeEntryElements = element.querySelectorAll(".time-entry");
-    timeEntryElements.forEach((tElement, entryId) => {
-      var arrowBoxElements = tElement.querySelectorAll(".arrow-box");
+  let timeEntryMapping = {};
+  let timeEntryWrappingMapping = {};
+  let timeEntryCounterMapping = {};
+  let counter = 0;
+  let timeEntryCounter = 0;
+
+  document.querySelectorAll(".time-entry-wrapper").forEach((element, wrapperId) => {
+    element.querySelectorAll(".time-entry").forEach((tElement, entryId) => {
+      const arrowBoxElements = tElement.querySelectorAll(".arrow-box");
       timeEntryCounterMapping[counter] = arrowBoxElements.length > 0 ? ++timeEntryCounter : timeEntryCounter;
       timeEntryWrappingMapping[counter] = wrapperId;
       timeEntryMapping[counter++] = entryId;
     });
   });
+
   return [timeEntryWrappingMapping, timeEntryMapping, timeEntryCounterMapping];
 }
 
 function updateActionButtonEventListener() {
   addEventListener();
 
-  function removePreviousEventListeners() {
-    var addButtons = document.querySelectorAll(".add-time-button");
-    addButtons.forEach((element) => {
-      element.replaceWith(element.cloneNode(true));
-    });
-    var removeButtons = document.querySelectorAll(".remove-time-button");
-    removeButtons.forEach((element) => {
-      element.replaceWith(element.cloneNode(true));
-    });
+  function updateActionButtonListeners() {
+    removePreviousEventListeners();
+    addEventListener();
   }
 
   function addEventListener() {
-    var addButtons = document.querySelectorAll(".add-time-button");
-    addButtons.forEach((element, id) => {
-      element.addEventListener("click", addButtonClick(id), true);
-    });
-    var removeButtons = document.querySelectorAll(".remove-time-button");
-    removeButtons.forEach((element, id) => {
-      element.addEventListener("click", removeButtonClick(id), true);
+    const buttonClasses = [".add-time-button", ".remove-time-button"];
+    const buttonMethods = [addButtonClick, removeButtonClick];
+
+    buttonClasses.forEach((buttonClass, ClassId) => {
+      const buttons = document.querySelectorAll(buttonClass);
+      buttons.forEach((element, id) => {
+        element.addEventListener("click", () => buttonMethods[ClassId](id), true);
+      });
     });
   }
+
+  function removePreviousEventListeners() {
+    const buttonClasses = [".add-time-button", ".remove-time-button"];
+    buttonClasses.forEach((buttonClass) => {
+      const buttons = document.querySelectorAll(buttonClass);
+      buttons.forEach((element) => {
+        element.replaceWith(element.cloneNode(true));
+      });
+    });
+  }
+
+  function addButtonClick(id) {
+    const [, , timeEntryCounterMapping] = updateEntryMapping();
+
+    const currentElement = document.querySelectorAll(".time-entry")[id];
+
+    appendSiblingElement(".time-entry", ["#day-entry"], id);
+    appendChildElement(".action-buttons", ["#add-time-icon", "#remove-time-icon"], id + 1);
+    appendChildElement(".arrow-box", ["#right-arrow"], timeEntryCounterMapping[id]);
+
+    const newElement = document.querySelectorAll(".time-entry")[id + 1];
+
+    createTimeSelectorHtmlElements(newElement);
+    populateSpecificTimeSelector(newElement, [21, 25]); // 10:00 e 12:00 - Nota: Tornar isso dinamico
+
+    // Clear "no availability" placeholder
+    if (currentElement.querySelectorAll(".time-range-box").length == 0) currentElement.remove();
+
+    updateActionButtonListeners();
+    addAvailabilityWindow(id);
+  }
+
+  function removeButtonClick(id) {
+    const parentWrapper = document.querySelectorAll(".time-range-box")[id].parentElement.parentElement;
+
+    if (parentWrapper.children.length == 1) {
+      // Add "No availability" placeholder
+
+      const dayEntryTemplate = document.querySelector("#day-entry-placeholder");
+      const dayEntryContent = document.importNode(dayEntryTemplate.content, true);
+      parentWrapper.appendChild(dayEntryContent);
+
+      const addTimeButtonTemplate = document.querySelector("#add-time-icon");
+      const addTimeButtonContent = document.importNode(addTimeButtonTemplate.content, true);
+      parentWrapper.children[1].children[1].appendChild(addTimeButtonContent);
+    }
+
+    function findIndex(parentWrapper) {
+      const actionButtonsElements = document.querySelectorAll(".action-buttons");
+      return Array.from(actionButtonsElements).findIndex((element) => element === parentWrapper.children[1].children[1]);
+    }
+
+    removeAvailabilityWindow(findIndex(parentWrapper));
+
+    document.querySelectorAll(".time-range-box")[id].parentElement.remove();
+    updateActionButtonListeners();
+  }
+}
+
+function addAvailabilityWindow(id) {
+  const [timeEntryWrappingMapping, timeEntryMapping] = updateEntryMapping();
+  const dayName = document.querySelectorAll(".day-entry")[timeEntryWrappingMapping[id]].id;
+
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  user.availability.counter++;
+  const dayAvailability = user.availability.details[dayName];
+  dayAvailability.splice(timeEntryMapping[id + 1], 0, ["10", "12"]);
+  sessionStorage.setItem("user", JSON.stringify(user));
+}
+
+function removeAvailabilityWindow(id) {
+  const [timeEntryWrappingMapping, timeEntryMapping] = updateEntryMapping();
+  const dayName = document.querySelectorAll(".day-entry")[timeEntryWrappingMapping[id]].id;
+
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  user.availability.counter--;
+  const dayAvailability = user.availability.details[dayName];
+  dayAvailability.splice(timeEntryMapping[id - 1], 1);
+  sessionStorage.setItem("user", JSON.stringify(user));
+}
+
+function createTimeSelectorHtmlElements(parentElement = null) {
+  const timeSelectorTemplate = document.querySelector("#times-to-select");
+  const timeSelectors = parentElement ? parentElement.querySelectorAll(".time-selector") : document.querySelectorAll(".time-selector");
+
+  timeSelectors.forEach((element) => {
+    const content = document.importNode(timeSelectorTemplate.content, true);
+    element.appendChild(content);
+  });
+
+  updateListeners();
 
   function updateListeners() {
     removePreviousEventListeners();
     addEventListener();
   }
 
-  function addButtonClick(id) {
-    return function () {
-      var [timeEntryWrappingMapping, timeEntryMapping, timeEntryCounterMapping] = updateEntryMapping();
+  function addEventListener() {
+    const selectorClasses = [".time-selector"];
 
-      var selectedElement = document.querySelectorAll(".time-entry")[id];
-      populate(".time-entry-wrapper", ["#day-entry"], timeEntryWrappingMapping[id], "sibling", timeEntryMapping[id]);
-      populate(".action-buttons", ["#add-time-icon", "#remove-time-icon"], id + 1);
-      populate(".arrow-box", ["#right-arrow"], timeEntryCounterMapping[id]);
-      newElement = document.querySelectorAll(".time-entry")[id + 1];
-      createTimeSelectorHtmlElements(newElement);
-      populateSpecificTimeSelector(newElement, [21, 25]); // 10:00 e 12:00
-      if (selectedElement.querySelectorAll(".time-range-box").length == 0) selectedElement.remove();
-      updateListeners();
-
-      addAvailabilityWindow(id);
-    };
-  }
-
-  function removeButtonClick(id) {
-    return function () {
-      var parentWrapper = document.querySelectorAll(".time-range-box")[id].parentElement.parentElement;
-
-      if (parentWrapper.children.length == 1) {
-        var template = document.querySelector("#day-entry-placeholder");
-        var content = document.importNode(template.content, true);
-        parentWrapper.appendChild(content);
-        template = document.querySelector("#add-time-icon");
-        content = document.importNode(template.content, true);
-        parentWrapper.children[1].children[1].appendChild(content);
-      }
-
-      function findIndex(parentWrapper) {
-        var actionButtonsElements = document.querySelectorAll(".action-buttons");
-        for (var id = 0; id < actionButtonsElements.length; id++) {
-          if (actionButtonsElements[id] === parentWrapper.children[1].children[1]) {
-            return id;
-          }
-        }
-      }
-
-      removeAvailabilityWindow(findIndex(parentWrapper));
-
-      document.querySelectorAll(".time-range-box")[id].parentElement.remove();
-      updateListeners();
-    };
-  }
-}
-
-function removeAvailabilityWindow(id) {
-  var [timeEntryWrappingMapping, timeEntryMapping] = updateEntryMapping();
-  var dayName = document.querySelectorAll(".day-entry")[timeEntryWrappingMapping[id]].id;
-  const user = JSON.parse(sessionStorage.getItem("user"));
-  user.availability.counter--;
-  user.availability.details[dayName].splice(timeEntryMapping[id - 1], 1);
-  sessionStorage.setItem("user", JSON.stringify(user));
-}
-
-function addAvailabilityWindow(id) {
-  var [timeEntryWrappingMapping, timeEntryMapping] = updateEntryMapping();
-  var dayName = document.querySelectorAll(".day-entry")[timeEntryWrappingMapping[id]].id;
-  const user = JSON.parse(sessionStorage.getItem("user"));
-  user.availability.counter++;
-  user.availability.details[dayName].splice(timeEntryMapping[id + 1], 0, ["10", "12"]);
-  sessionStorage.setItem("user", JSON.stringify(user));
-}
-
-function createTimeSelectorHtmlElements(parentElement) {
-  var timeSelectorTemplate = document.querySelector("#times-to-select");
-  if (parentElement) {
-    var timeSelectors = parentElement.querySelectorAll(".time-selector");
-  } else {
-    var timeSelectors = document.querySelectorAll(".time-selector");
-  }
-
-  timeSelectors.forEach((element, index) => {
-    const content = document.importNode(timeSelectorTemplate.content, true);
-    element.appendChild(content);
-    const selectElement = element.querySelector("select");
-    element.addEventListener("click", () => {
-      const selectedValue = selectElement.value; // Obtenha o valor da opção selecionada
-
-      selectionParse(index, selectedValue);
+    selectorClasses.forEach((selectorClass) => {
+      const selectors = document.querySelectorAll(selectorClass);
+      selectors.forEach((element, index) => {
+        const selectElement = element.querySelector("select");
+        element.addEventListener("click", () => {
+          const selectedValue = selectElement.value;
+          selectionParse(index, selectedValue);
+        });
+      });
     });
-  });
+  }
+
+  function removePreviousEventListeners() {
+    const selectorClasses = [".time-selector"];
+    selectorClasses.forEach((selectorClass) => {
+      const selectors = document.querySelectorAll(selectorClass);
+      selectors.forEach((element) => {
+        element.replaceWith(element.cloneNode(true));
+      });
+    });
+  }
 }
 
 function selectionParse(index, selectedValue) {
   const user = JSON.parse(sessionStorage.getItem("user"));
-  var availability = user.availability.details;
+  const availability = user.availability.details;
   const daysString = Object.keys(availability);
-  for (var dayIndex = 0; dayIndex < 7; dayIndex++) {
-    var availabilityWindows = Object.keys(availability[daysString[dayIndex]]).length;
+
+  for (let dayIndex = 0; dayIndex < 7; dayIndex++) {
+    let availabilityWindows = Object.keys(availability[daysString[dayIndex]]).length;
     if (index < availabilityWindows * 2) {
       user.availability.details[daysString[dayIndex]][Math.trunc(index / 2)][index % 2] = selectedValue;
       sessionStorage.setItem("user", JSON.stringify(user));
@@ -250,75 +343,72 @@ function selectionParse(index, selectedValue) {
 }
 
 function populateSpecificTimeSelector(element, selectionArray) {
-  var x, i, j, l, ll, selElmnt, a, b, c;
-  /* Look for any elements with the class "custom-select": */
-  x = element.getElementsByClassName("time-selector");
-  l = x.length;
-  for (i = 0; i < l; i++) {
-    selElmnt = x[i].getElementsByTagName("select")[0];
-    ll = selElmnt.length;
-    /* For each element, create a new DIV that will act as the selected item: */
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
-    a.innerHTML = selElmnt.options[selectionArray[i]].innerHTML;
-    x[i].appendChild(a);
-    /* For each element, create a new DIV that will contain the option list: */
-    b = document.createElement("DIV");
-    b.setAttribute("class", "select-items select-hide");
-    for (j = 1; j < ll; j++) {
-      /* For each option in the original select element,
-    create a new DIV that will act as an option item: */
-      c = document.createElement("DIV");
-      c.innerHTML = selElmnt.options[j].innerHTML;
-      c.addEventListener("click", function (e) {
-        /* When an item is clicked, update the original select box,
-        and the selected item: */
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
-        }
-        h.click();
+  const timeSelectors = element.querySelectorAll(".time-selector");
+
+  timeSelectors.forEach((timeSelector, index) => {
+    const selectElement = timeSelector.querySelector("select");
+    const selectedDiv = document.createElement("DIV");
+    selectedDiv.setAttribute("class", "select-selected");
+    selectedDiv.innerHTML = selectElement.options[selectionArray[index]].innerHTML;
+    timeSelector.appendChild(selectedDiv);
+
+    const selectItems = document.createElement("DIV");
+    selectItems.setAttribute("class", "select-items select-hide");
+
+    for (let j = 1; j < selectElement.length; j++) {
+      const option = selectElement.options[j];
+      const optionDiv = document.createElement("DIV");
+      optionDiv.innerHTML = option.innerHTML;
+      optionDiv.addEventListener("click", () => {
+        selectElement.selectedIndex = j;
+        selectedDiv.innerHTML = option.innerHTML;
+        const sameAsSelected = optionDiv.parentNode.querySelectorAll(".same-as-selected");
+        sameAsSelected.forEach((element) => {
+          element.removeAttribute("class");
+        });
+        optionDiv.setAttribute("class", "same-as-selected");
+        selectedDiv.click();
+        updateAllEventSelectors();
       });
-      b.appendChild(c);
+      selectItems.appendChild(optionDiv);
     }
-    x[i].appendChild(b);
-    a.addEventListener("click", function (e) {
-      /* When the select box is clicked, close any other select boxes,
-    and open/close the current select box: */
-      e.stopPropagation();
-      closeAllSelect(this);
-      this.nextSibling.classList.toggle("select-hide");
-      this.classList.toggle("select-arrow-active");
+
+    timeSelector.appendChild(selectItems);
+
+    selectedDiv.addEventListener("click", (event) => {
+      event.stopPropagation();
+      closeAllSelect(selectedDiv);
+      selectItems.classList.toggle("select-hide");
+      selectedDiv.classList.toggle("select-arrow-active");
     });
-  }
+  });
+}
+
+function updateAllEventSelectors() {
+  const eventSelectors = document.querySelectorAll(".event-selector");
+  eventSelectors.forEach((eventSelector) => {
+    const timeSelectors = eventSelector.querySelectorAll(".time-selector");
+    const selectedTimes = [];
+    timeSelectors.forEach((timeSelector) => {
+      const selectElement = timeSelector.querySelector("select");
+      selectedTimes.push(selectElement.selectedIndex);
+    });
+    populateSpecificTimeSelector(eventSelector, selectedTimes);
+  });
 }
 
 function populateTimeSelectorsOptions(availability) {
-  var x, i, j, l, selElmnt, a, b, c;
-  x = document.getElementsByClassName("time-selector");
-  l = x.length;
+  const timeSelectors = document.querySelectorAll(".time-selector");
+  // Remove all elements added by a previous call
 
   function findNextNonEmptySlot() {
-    for (var day in availability) {
+    for (let day in availability) {
       if (availability[day] && Object.keys(availability[day]).length > 0) {
-        for (var slotIndex in availability[day]) {
-          if (availability[day][slotIndex]) {
-            var slot = availability[day][slotIndex];
-            availability[day][slotIndex] = null;
-            return slot;
+        for (let slotIndex in availability[day]) {
+          const slot = availability[day][slotIndex];
+          if (Array.isArray(slot) && slot.length > 0) {
+            availability[day][slotIndex] = slot.slice(1);
+            return slot[0];
           }
         }
       }
@@ -326,126 +416,60 @@ function populateTimeSelectorsOptions(availability) {
     return null;
   }
 
-  for (i = 0; i < l; i++) {
-    selElmnt = x[i].getElementsByTagName("select")[0];
-    ll = selElmnt.length;
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
-
-    var nextSlot = findNextNonEmptySlot();
-    if (nextSlot) {
-      var start = nextSlot[0];
-      var end = nextSlot[1];
-      a.innerHTML = start + " - " + end;
-      x[i].appendChild(a);
-
-      // Create and populate two select elements
-      for (var k = 0; k < 2; k++) {
-        b = document.createElement("select");
-        for (j = start; j <= end; j++) {
-          var option = document.createElement("option");
-          option.text = j;
-          b.appendChild(option);
-        }
-        x[i].appendChild(b);
-      }
-    } else {
-      a.innerHTML = "--:--";
-      x[i].appendChild(a);
-    }
-  }
-}
-
-function populateTimeSelectorsOptions(availability) {
-  var x, i, j, l, ll, selElmnt, a, b, c;
-  x = document.getElementsByClassName("time-selector");
-  l = x.length;
-
-  // Função para encontrar o próximo valor não nulo em availability
-  function findNextNonEmptySlot() {
-    for (var day in availability) {
-      if (availability[day] && Object.keys(availability[day]).length > 0) {
-        for (var slotIndex in availability[day]) {
-          if (availability[day][slotIndex] && Array.isArray(availability[day][slotIndex]) && availability[day][slotIndex].length > 0) {
-            var slot = availability[day][slotIndex][0];
-            if (availability[day][slotIndex][length] > 1) {
-              availability[day][slotIndex].shift(); // Marcar como selecionado
-            } else {
-              availability[day][slotIndex] = null; // Marcar como selecionado
-            }
-            return slot;
-          }
-        }
-      }
-    }
-    return null; // Todos os slots foram selecionados
-  }
-
   function stringifyTime(time) {
-    if (Number.isInteger(time)) {
-      return `${time}:00`;
-    } else {
-      return `${Math.trunc(time)}:30`;
-    }
+    const hour = Math.trunc(time);
+    const minute = (time - hour) * 60;
+    return `${hour}:${minute < 10 ? "0" : ""}${minute}`;
   }
 
-  for (i = 0; i < l; i++) {
-    var nextSlot = findNextNonEmptySlot();
-    selElmnt = x[i].getElementsByTagName("select")[0];
-    ll = selElmnt.length;
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
+  timeSelectors.forEach((timeSelector) => {
+    const selectElement = timeSelector.querySelector("select");
+    const selectedDiv = document.createElement("DIV");
+    selectedDiv.setAttribute("class", "select-selected");
 
+    const nextSlot = findNextNonEmptySlot();
     if (nextSlot) {
-      var time = nextSlot;
-      a.innerHTML = stringifyTime(parseFloat(time));
-      selElmnt.selectedIndex = parseInt(time);
+      selectedDiv.innerHTML = stringifyTime(nextSlot);
+      selectElement.selectedIndex = Math.trunc(nextSlot);
     } else {
-      a.innerHTML = "--:--";
+      selectedDiv.innerHTML = "--:--";
     }
 
-    x[i].appendChild(a);
-    b = document.createElement("DIV");
-    b.setAttribute("class", "select-items select-hide");
-    for (j = 1; j < ll; j++) {
-      c = document.createElement("DIV");
-      c.innerHTML = selElmnt.options[j].innerHTML;
-      c.setAttribute("data-index", j);
-      c.addEventListener("click", function (e) {
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
+    timeSelector.appendChild(selectedDiv);
 
-        for (i = 0; i < sl; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
-        }
-        h.click();
+    const selectItems = document.createElement("DIV");
+    selectItems.setAttribute("class", "select-items select-hide");
+
+    for (let i = 1; i < selectElement.length; i++) {
+      const option = selectElement.options[i];
+      const optionDiv = document.createElement("DIV");
+      optionDiv.innerHTML = option.innerHTML;
+      optionDiv.setAttribute("data-index", i);
+      optionDiv.addEventListener("click", () => {
+        selectElement.selectedIndex = optionDiv.getAttribute("data-index");
+        selectedDiv.innerHTML = optionDiv.innerHTML;
+        optionDiv.parentNode.querySelectorAll(".same-as-selected").forEach((element) => {
+          element.removeAttribute("class");
+        });
+        optionDiv.setAttribute("class", "same-as-selected");
+        selectedDiv.click();
       });
-      b.appendChild(c);
+      selectItems.appendChild(optionDiv);
     }
-    x[i].appendChild(b);
-    a.addEventListener("click", function (e) {
-      e.stopPropagation();
-      closeAllSelect(this);
-      this.nextSibling.classList.toggle("select-hide");
-      this.classList.toggle("select-arrow-active");
+
+    timeSelector.appendChild(selectItems);
+
+    selectedDiv.addEventListener("click", (event) => {
+      event.stopPropagation();
+      closeAllSelect(selectedDiv);
+      selectItems.classList.toggle("select-hide");
+      selectedDiv.classList.toggle("select-arrow-active");
     });
-  }
+  });
 }
 
 function closeAllSelect(elmnt) {
-  var x,
+  let x,
     y,
     i,
     xl,
