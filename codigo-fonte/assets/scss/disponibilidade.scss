@@ -4,6 +4,7 @@ body {
   background-color: var(--color-dark);
   p {
     color: white;
+    white-space: pre-line;
   }
   h1 {
     color: var(--color-pastel-yellow);
@@ -11,22 +12,39 @@ body {
   h2 {
     color: white;
   }
+  main {
+    background: none;
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    min-width: 302px;
+  }
 }
 
-.availability-wrapper {
-  width: 100%;
-  margin-top: 50px;
-}
 .availability-header {
   width: 100%;
   word-wrap: normal;
   white-space: initial;
+  p {
+    white-space: no-wrap;
+    width: 700px;
+    @media screen and (max-width: 1080px) {
+      width: 100%;
+    }
+  }
 }
 .availability-box {
   background-color: white;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   border-radius: 8px;
+  width: 700px;
+  min-width: 302px;
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+  }
   p {
     color: black;
     font-size: 20px;
@@ -40,11 +58,133 @@ body {
   h2 {
     color: black;
   }
+
+  .availability-section {
+    display: flex;
+    width: 100%;
+    @media screen and (max-width: 1080px) {
+      flex-direction: column-reverse;
+    }
+  }
+  .max-availability-box {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin-left: 30px;
+    @media screen and (max-width: 1080px) {
+      flex-direction: row;
+      margin: 0px auto;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .header-wrapper {
+      display: flex;
+    }
+    .input-container {
+      justify-content: start;
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      @media screen and (max-width: 1080px) {
+        margin-top: 0px;
+        margin-left: 20px;
+      }
+    }
+    #decrementBtn {
+      border-bottom-left-radius: 15px;
+      border-top-left-radius: 15px;
+    }
+    #incrementBtn {
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    .btn {
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      height: 45px;
+      background-color: var(--gray-gray-400);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: var(--gray-gray-200);
+    }
+
+    #integerInput {
+      height: 45px;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      text-align: center;
+      width: 4rem;
+      border: 1px solid var(--gray-gray-400);
+    }
+    #integerInput::-webkit-inner-spin-button,
+    #integerInput::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+  }
+  .info-timezone {
+    color: var(--gray-gray-400);
+    font-size: 12px;
+    font-style: italic;
+    word-wrap: normal;
+    width: fit-content;
+    position: relative;
+    display: inline-block;
+  }
+  .info-tool {
+    color: var(--gray-gray-400);
+    font-size: 12px;
+    font-style: italic;
+    word-wrap: normal;
+    width: fit-content;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    &.text {
+      width: 200px;
+      margin-top: 10px;
+      margin-left: 10px;
+      position: absolute;
+      padding-left: 5px;
+      top: -20px;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid var(--gray-gray-400);
+      visibility: hidden;
+      @media screen and (max-width: 1500px) {
+        top: 25px;
+        left: -150px;
+      }
+      @media screen and (max-width: 1080px) {
+        top: -10px;
+        left: 20px;
+      }
+    }
+    :hover {
+      cursor: pointer;
+    }
+  }
+  .info-tool:hover .text {
+    visibility: visible;
+  }
   .day-entry {
     display: flex;
     padding: 10px 0px;
+    min-width: 262px;
+
     p {
       width: 100px;
+    }
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      p {
+        width: 100%;
+      }
     }
   }
   .time-entry {
@@ -58,6 +198,14 @@ body {
       font-style: italic;
       word-wrap: normal;
       width: fit-content;
+    }
+    @media screen and (max-width: 800px) {
+      padding-left: 0px;
+    }
+  }
+  .time-entry-wrapper {
+    @media screen and (max-width: 800px) {
+      margin-top: 10px;
     }
   }
   .time-range-box {
@@ -89,6 +237,27 @@ body {
       &:hover {
         background-color: var(--gray-gray-200);
       }
+    }
+  }
+  #save-availability {
+    display: flex;
+    width: 186px;
+    height: 35px;
+    padding: 0px 8px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: var(--black-amp-white-white, #fdd068);
+    stroke: none;
+    border: 0px;
+    z-index: 2;
+    cursor: pointer;
+    &:hover {
+      background-color: #ecbe52;
+    }
+    &:active {
+      background-color: #e4b854;
     }
   }
 }
