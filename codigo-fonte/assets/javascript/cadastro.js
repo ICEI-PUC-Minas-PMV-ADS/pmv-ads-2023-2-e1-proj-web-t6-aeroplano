@@ -10,28 +10,33 @@ document.getElementById("signUpButton").addEventListener("click", verifyCredenti
 
 async function verifyCredentials() {
   const nameField = document.getElementById("nameInput");
-  const nameValue = nameField.value;
-  if (!nameValue) {
-    // Campo invalido
-    updateWarning("nameWarning", true, "Digite seu nome");
-    nameField.style.setProperty("--inputBorderColor", "var(--color-orange-black)");
-    nameField.focus();
-  } else {
-    // Campo valido
-    updateWarning("nameWarning", false);
-    nameField.style.setProperty("--inputBorderColor", "var(--gray-gray-200)");
-  }
+  const validName = validateName(nameField);
 
   const emailField = document.getElementById("emailInput");
-  validateEmail(emailField);
+  const validEmail = validateEmail(emailField);
 
   const passwordField = document.getElementById("passwordInput");
-  validatePassword(passwordField);
+  const validPassword = validatePassword(passwordField);
 
   const confirmPasswordField = document.getElementById("confirmPasswordInput");
-  validateConfirmPassword(confirmPasswordField, passwordField);
+  const validConfirm = validateConfirmPassword(confirmPasswordField, passwordField);
+  if (validName && validEmail && validPassword && validConfirm) {
+    await signup(nameValue, emailField.value, passwordField.value);
+  }
+}
 
-  await signup(nameValue, emailField.value, passwordField.value);
+function validateName(nameField) {
+  const name = nameField.value;
+  if (name.length) {
+    updateWarning("nameWarning", false);
+    nameField.style.setProperty("--inputBorderColor", "var(--gray-gray-200)");
+    return true;
+  } else {
+    nameField.style.setProperty("--inputBorderColor", "var(--color-orange-black)");
+    nameField.focus();
+    updateWarning("nameWarning", true, "O campo nome é obrigatório");
+    return false;
+  }
 }
 
 async function signup(name, email, password) {
@@ -88,6 +93,7 @@ function validateConfirmPassword(confirmPasswordField, passwordField) {
     } else {
       updateWarning("confirmPasswordWarning", true, "O campo de confirmação de senha é obrigatório");
     }
+    return false;
   }
 }
 
@@ -116,6 +122,7 @@ function validatePassword(passwordField) {
     } else {
       updateWarning("passwordWarning", true, "A senha deve ter pelo menos um caractere especial");
     }
+    return false;
   }
 }
 
