@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aeroplano - Plataforma para Escolas de Aviação</title>
-    <link rel="stylesheet" href="./assets/css/cadastro.min.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="./assets/css/cadastro.min.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script defer type="module" src="./assets/javascript/cadastro.js"></script>
+    <script defer type="module" src="./assets/javascript/main.js"></script>
+  </head>
 
-<body>
-    <header>
-        <div class="header mxw-1300" id="header"></div>
-    </header>
+  <body>
+    <section id="banner">
+      <div class="banner-effects"></div>
+      <div class="banner-content">
+        <header>
+          <div class="header mxw-1300" id="header"></div>
+        </header>
+      </div>
+    </section>
     <main id="main">
-        <div class="main-effects"></div>
-        <div class="main-content">
+      <div class="main-effects"></div>
+      <div class="main-content">
+        <div class="main signUpFrame-banner-container">
+          <div id="signUpFrame">
+            <div class="content">
+              <h1>Crie uma nova conta</h1>
+              <form id="signUpCredentials" novalidate>
+                <div class="inputWrapper">
+                  <label>Nome</label>
+                  <input id="nameInput" type="text" autocomplete="name" placeholder="Digite seu nome completo" value="Rafael" />
+                  <p id="nameWarning" class="validationMessage"></p>
+                  <div class="inputWrapper">
+                    <label>E-mail</label>
+                    <input id="emailInput" type="email" autocomplete="username" placeholder="Digite seu e-mail" value="rafael@aeroplano.com" />
+                    <p id="emailWarning" class="validationMessage"></p>
+                  </div>
+                </div>
+                <div class="inputWrapper">
+                  <label>Senha</label>
+                  <input id="passwordInput" type="password" autocomplete="current-password" placeholder="Digite sua senha" value="Password1!" />
+                  <p id="passwordWarning" class="validationMessage"></p>
+                </div>
 
-            <div class="main banner-container">
-                <!--Coloque seu conteudo aqui-->
+                <div class="inputWrapper">
+                  <label>Repita a Senha</label>
+                  <input id="confirmPasswordInput" type="password" autocomplete="current-password" placeholder="Confirme sua senha" value="Password1!" />
+                  <p id="confirmPasswordWarning" class="validationMessage"></p>
+                </div>
+                <button type="submit" id="signUpButton">
+                  <div class="buttonText">Cadastrar</div>
+                </button>
+              </form>
+              <div class="signUpText">
+                <span>Já possui uma conta? </span>
+                <a href="login.html" class="highlight">Entrar</a>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer id="footer"></footer>
-    <div id="loading">
-        <div class="loading-loader">
-            <span>l</span>
-            <span>o</span>
-            <span>a</span>
-            <span>d</span>
-            <span>i</span>
-            <span>n</span>
-            <span>g</span>
-        </div>
-    </div>
-    <script type="module" src="./assets/javascript/cadastro.js"></script>
-</body>
-
+  </body>
 </html>

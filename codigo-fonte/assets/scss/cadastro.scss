@@ -8,4 +8,127 @@ body {
   background-color: var(--color-dark);
 }
 
-/* DIGITE SEU CÓDIGO AQUI PARA CRIAR A TELA DE LOGIN */
+#signUpFrame {
+  background-color: #ffffff;
+  display: flex;
+  width: 100vw;
+  max-width: 500px;
+  height: 650px;
+  padding: 6%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  .content {
+    width: 100%;
+    min-width: 350px;
+  }
+  #signUpCredentials {
+    width: 100%;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--color-black);
+    white-space: nowrap;
+  }
+  label {
+    margin-bottom: 5px;
+    color: var(--gray-gray-700, #2d3748);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    white-space: nowrap;
+  }
+  input {
+    display: flex;
+    background-color: var(--blackampwhitewhite);
+    width: 100%;
+    margin-top: 5px;
+    height: 50px;
+    padding: 24px 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: var(--inputBorderSize, 1px) var(--inputBorderType, solid) var(--inputBorderColor, var(--gray-gray-200));
+    &:focus {
+      outline: 3px solid var(--inputBorderColor, var(--gray-gray-200));
+    }
+  }
+  button {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 8px;
+    border-style: hidden;
+    background-color: #fbd784;
+    border-radius: 12px;
+    width: 100%;
+    align-content: center;
+    min-width: 300px;
+    cursor: pointer;
+    &:hover {
+      background-color: #fdd068;
+    }
+    &:active {
+      background-color: #e4b854;
+    }
+  }
+  .forgotPasswordText {
+    color: var(--gray-gray-400, #a0aec0);
+    display: block;
+    justify-self: flex-end;
+    font-size: 14px;
+    width: fit-content;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 17px;
+    margin-bottom: 16px;
+  }
+  .validationMessage {
+    position: absolute;
+    display: block;
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 13px;
+    color: var(--color-orange-black);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .inputWrapper {
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+  #signUpButton {
+    margin-top: 40px;
+  }
+  .buttonText {
+    color: #0b1d26;
+
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+  }
+  .signUpText {
+    margin-top: 17px;
+    color: var(--gray-gray-400);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    .highlight {
+      color: var(--color-pastel-yellow);
+      &:hover {
+        color: #e4b854;
+      }
+    }
+  }
+}
