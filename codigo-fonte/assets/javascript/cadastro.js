@@ -21,7 +21,7 @@ async function verifyCredentials() {
   const confirmPasswordField = document.getElementById("confirmPasswordInput");
   const validConfirm = validateConfirmPassword(confirmPasswordField, passwordField);
   if (validName && validEmail && validPassword && validConfirm) {
-    await signup(nameValue, emailField.value, passwordField.value);
+    await signup(nameField.value, emailField.value, passwordField.value);
   }
 }
 
