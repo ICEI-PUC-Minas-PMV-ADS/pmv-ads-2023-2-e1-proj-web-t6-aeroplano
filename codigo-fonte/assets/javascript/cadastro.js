@@ -46,15 +46,48 @@ async function signup(name, email, password) {
   } else {
     updateWarning("emailWarning", false);
     const newUser = {
+      availability: {
+        counter: 0,
+        details: {
+          monday: [],
+          tuesday: [],
+          wednesday: [],
+          thursday: [],
+          friday: [],
+          saturday: [],
+          sunday: [],
+        },
+      },
       name: name,
       email: email,
       password: password,
       lastAccess: new Date(),
       tokenExpire: getExpirationTime(0.1),
+      school: [
+        {
+          id: 0,
+          registerNumber: (Math.random() * 1e5).toFixed(0),
+          role: "student",
+        },
+      ],
     };
+    await insertUserOnDatabase(newUser);
     localStorage["user"] = JSON.stringify(newUser);
     window.location.href = "./dashboard.html";
   }
+}
+
+async function insertUserOnDatabase(user) {
+  let usersArray;
+
+  if (!localStorage["usersArray"]) {
+    usersArray = await getUserDatabase();
+  } else {
+    usersArray = JSON.parse(localStorage["usersArray"]);
+  }
+  user.id = usersArray.length;
+  usersArray.push(user);
+  localStorage["usersArray"] = JSON.stringify(usersArray);
 }
 
 function getExpirationTime(hours) {
@@ -64,7 +97,8 @@ function getExpirationTime(hours) {
 }
 
 async function getExistingUser(email) {
-  const usersArray = await getUserDatabase();
+  const usersArray = !localStorage["usersArray"] ? await getUserDatabase() : JSON.parse(localStorage["usersArray"]);
+
   const user = usersArray.find((objeto) => objeto.email === email);
   return user;
 }

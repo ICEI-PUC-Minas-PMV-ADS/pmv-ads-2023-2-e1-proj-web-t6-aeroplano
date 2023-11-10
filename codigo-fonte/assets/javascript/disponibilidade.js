@@ -1,8 +1,8 @@
 onLoad();
 
-// Falta fazer - Botão salvar
-/* let saveButton = document.getElementById("save-availability");
-saveButton.addEventListener("click", () => {});  */
+var saveButton = document.getElementById("save-availability");
+saveButton.replaceWith(saveButton.cloneNode(true));
+saveButton.addEventListener("click", saveAvailability);
 
 async function onLoad() {
   const storedAvailability = await checkStoredAvailability();
@@ -19,6 +19,14 @@ async function onLoad() {
   updateActionButtonEventListener();
   loadTimezone();
   populateWeeklyAvailability();
+}
+
+function saveAvailability() {
+  const user = JSON.parse(sessionStorage.getItem("user"));
+  const usersArray = JSON.parse(localStorage.getItem("usersArray"));
+  const userIndex = usersArray.findIndex((element) => element.email === user.email);
+  usersArray[userIndex].availability = user.availability;
+  localStorage.setItem("usersArray", JSON.stringify(usersArray));
 }
 
 function populateWeeklyAvailability() {

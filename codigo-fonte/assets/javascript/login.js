@@ -7,7 +7,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-if (localStorage["user"]) {
+if (sessionStorage["user"]) {
   window.location.href = "./dashboard.html";
 }
 
@@ -81,8 +81,9 @@ function checkPassword(inputPass, databasePass) {
 }
 
 async function getExistingUser(email) {
-  var usersArray = await getUserDatabase();
-
+  const usersArray = !localStorage["usersArray"] ? await getUserDatabase() : JSON.parse(localStorage["usersArray"]);
+  console.log(usersArray);
+  console.log(await search(email, "email", usersArray));
   return await search(email, "email", usersArray);
 }
 
