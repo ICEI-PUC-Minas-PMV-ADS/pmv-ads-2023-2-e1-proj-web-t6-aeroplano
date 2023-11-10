@@ -19,8 +19,13 @@
     display: flex;
     padding: 12px 20px;
     align-items: flex-start;
-    gap: 8px;
-  }
+   }
+
+   .gridjs-container{
+    max-height: 600px;
+    overflow-y: auto;
+    
+   }
 
 
   h1{
@@ -47,7 +52,7 @@
   .topo-lista-alunos{
       display: flex;
       width: 100%;
-      margin: 38.5px 20px 0 44px;
+      padding: 0 21px;
       justify-content: space-between;
       align-items: center;
   }
@@ -93,7 +98,8 @@
     
     margin: 0px 44px;
     width: 100%;
-  
+    max-height: 300px;
+    overflow-y: auto;  
     table-layout: fixed;
     text-align: center;
 
@@ -108,35 +114,7 @@
       font-weight: 500;
       line-height: normal;      
       
-    }
-
-    .tabela-foto{
-      width: 86px;
-    }
-
-    .tabela-nome{
-      width: 269px;
-    }
-
-    .tabela-cargo{
-      width: 221px;
-    }
-
-    .tabela-status{
-      width: 156px;
-    }
-
-    .tabela-ultimo-acesso{
-      width: 208px;
-    }
-    
-    .tabeça-visto-por-ultimo{
-      width: 228px;
-    }
-
-    .tabela-acao{
-      width: 238px;
-    }
+    } 
   }
 
   .avatar-box {

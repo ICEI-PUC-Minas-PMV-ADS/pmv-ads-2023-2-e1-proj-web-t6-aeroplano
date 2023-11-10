@@ -30,6 +30,9 @@ new gridjs.Grid({
     ["", "Fabiano Carlos Pereira", "Aluno", "On-line", "13/09/2023 10:52h", "14/09/2023 10:52h"],
     ["", "Fabiano Carlos Pereira", "Aluno", "On-line", "13/09/2023 10:52h", "14/09/2023 10:52h"],
     ["", "Fabiano Carlos Pereira", "Aluno", "On-line", "13/09/2023 10:52h", "14/09/2023 10:52h"],
+    ["", "Fabiano Carlos Pereira", "Aluno", "On-line", "13/09/2023 10:52h", "14/09/2023 10:52h"],
+    ["", "Fabiano Carlos Pereira", "Aluno", "On-line", "13/09/2023 10:52h", "14/09/2023 10:52h"],
+    ["", "Fabiano Carlos Pereira", "Aluno", "On-line", "13/09/2023 10:52h", "14/09/2023 10:52h"],
     
   ]
 }).render(gridContainer);
