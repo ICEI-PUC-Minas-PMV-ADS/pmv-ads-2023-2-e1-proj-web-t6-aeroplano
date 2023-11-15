@@ -57,7 +57,7 @@
 | RF-16 | Usuários cadastrados devem ser capazes de acessar a área restrita                        | Alta       |
 | RF-17 | Na área restrita, deve haver um layout padrão de dashboard compartilhado por todas telas | Alta       |
 | RF-18 | O sistema deve permitir que o usúario realize o login utilizando o e-mail e a senha      | Alta       |
-| RF-19 | A senha de acesso deve ter entre 8 a 15 caracteres, ter pelo menos uma letra minúscula, uma maiúscula, um caracter especial e um número.                                                                  | Alta       |
+| RF-19 | A senha de acesso deve ter entre 8 a 15 caracteres, ter pelo menos uma letra minúscula, uma maiúscula, um caractere especial e um número.                                                                  | Alta       |
 
 ### Requisitos não Funcionais
 
