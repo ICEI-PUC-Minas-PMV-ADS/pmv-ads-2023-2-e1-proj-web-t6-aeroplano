@@ -51,12 +51,13 @@
 | RF-10 | Gerenciar saldo de aulas                                                                 | Baixa      |
 | RF-11 | Possibilidade de desmarcar aulas                                                         | Média      |
 | RF-12 | Deve ter uma troca de mensagens entre instrutores e alunos para uma comunicação direta   | Baixa      |
-| RF-13 | Cadastro de usuários                                                                     | Alta       |
+| RF-13 | O sistema deve ter um campo para cadastro do usuário, onde será registrado seu nome, email e senha.| Alta       |
 | RF-14 | Cadastro de aeronaves                                                                    | Alta       |
 | RF-15 | Deve ter uma landing page que possibilite usuários não logados conhecer o projeto        | Alta       |
 | RF-16 | Usuários cadastrados devem ser capazes de acessar a área restrita                        | Alta       |
 | RF-17 | Na área restrita, deve haver um layout padrão de dashboard compartilhado por todas telas | Alta       |
-| RF-18 | O sistema deve permitir que o usúario realize o login utilizando o e-mail e a senha      | Alta       | 
+| RF-18 | O sistema deve permitir que o usúario realize o login utilizando o e-mail e a senha      | Alta       |
+| RF-19 | A senha de acesso deve ter entre 8 a 15 caracteres, ter pelo menos uma letra minúscula, uma maiúscula, um caracter especial e um número.                                                                  | Alta       |
 
 ### Requisitos não Funcionais
 
