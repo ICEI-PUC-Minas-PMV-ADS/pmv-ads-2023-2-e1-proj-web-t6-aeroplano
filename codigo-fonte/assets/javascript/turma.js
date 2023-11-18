@@ -1,0 +1,3 @@
+onLoad();
+
+async function onLoad() {}
