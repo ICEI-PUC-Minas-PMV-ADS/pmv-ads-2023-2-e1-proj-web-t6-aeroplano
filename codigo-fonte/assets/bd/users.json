@@ -1,60 +1,5 @@
 [
   {
-    "id": 0,
-    "name": "Roberto",
-    "email": "roberto@aeroplano.com",
-    "password": "Password1!",
-    "gender": "M",
-    "birthDate": "10/10/1976",
-    "canac": 12345,
-    "cma": {
-      "type": 1,
-      "expireDate": "20/10/2024"
-    },
-    "certificates": {
-      "singleEngine": true
-    },
-    "lastSeen": null,
-    "lastAccess": null,
-    "onlineStatus": false,
-    "school": [
-      {
-        "id": 0,
-        "registerNumber": 1,
-        "role": "instructor"
-      },
-      {
-        "id": 1,
-        "registerNumber": 1116876,
-        "role": "instructor"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Cesar",
-    "email": "cesar@aeroplano.com",
-    "password": "Password1!",
-    "gender": "M",
-    "birthDate": "15/11/1990",
-    "canac": 12346,
-    "cma": {
-      "type": 2,
-      "expireDate": "20/10/2024"
-    },
-    "certificates": {},
-    "lastSeen": null,
-    "lastAccess": null,
-    "onlineStatus": false,
-    "school": [
-      {
-        "id": 0,
-        "registerNumber": 12,
-        "role": "student"
-      }
-    ]
-  },
-  {
     "availability": {
       "counter": 5,
       "details": {
@@ -73,6 +18,41 @@
         "saturday": [],
         "sunday": []
       }
+    },
+    "flightSchedule": {
+      "counter": 3,
+      "flights": [
+        {
+          "id": 0,
+          "date": "2021-10-20T00:00:00.000Z",
+          "departure": "SBSP",
+          "arrival": "SBMT",
+          "aircraft": "PT-ABC",
+          "instructor": "Gabriela Silva",
+          "student": 1,
+          "status": "scheduled"
+        },
+        {
+          "id": 1,
+          "date": "2021-10-21T00:00:00.000Z",
+          "departure": "SBSP",
+          "arrival": "SBMT",
+          "aircraft": "PT-ABC",
+          "instructor": "Gabriela Silva",
+          "student": 1,
+          "status": "scheduled"
+        },
+        {
+          "id": 2,
+          "date": "2021-10-22T00:00:00.000Z",
+          "departure": "SBSP",
+          "arrival": "SBMT",
+          "aircraft": "PT-ABC",
+          "instructor": "Gabriela Silva",
+          "student": 1,
+          "status": "scheduled"
+        }
+      ]
     },
     "id": 2,
     "name": "Rafael Mourão",
@@ -99,5 +79,574 @@
     "metadata": {
       "avatar": "./assets/image/user_rafael.jpeg"
     }
+  },
+  {
+    "availability": {
+      "counter": 0,
+      "details": {
+        "monday": [],
+        "tuesday": [],
+        "wednesday": [],
+        "thursday": [],
+        "friday": [],
+        "saturday": [],
+        "sunday": []
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 3,
+    "name": "Jorge Silva",
+    "email": "jorgesilva@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12346,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {},
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": 41134,
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [9, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [8, 12],
+          [14, 16.5]
+        ],
+        "wednesday": [
+          [10, 13],
+          [15, 18]
+        ],
+        "thursday": [
+          [8, 12],
+          [14, 16]
+        ],
+        "friday": [
+          [9, 11],
+          [13, 15],
+          [16, 18]
+        ],
+        "saturday": [
+          [10, 12],
+          [14, 16],
+          [17, 19]
+        ],
+        "sunday": [
+          [11, 14],
+          [15, 18]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 4,
+      "flights": [
+        {
+          "id": 3,
+          "date": "2021-10-23T00:00:00.000Z",
+          "departure": "SBMT",
+          "arrival": "SBGR",
+          "aircraft": "PT-XYZ",
+          "instructor": 1,
+          "student": 2,
+          "status": "scheduled"
+        },
+        {
+          "id": 4,
+          "date": "2021-10-24T00:00:00.000Z",
+          "departure": "SBGR",
+          "arrival": "SBKP",
+          "aircraft": "PT-XYZ",
+          "instructor": 1,
+          "student": 2,
+          "status": "scheduled"
+        },
+        {
+          "id": 5,
+          "date": "2021-10-25T00:00:00.000Z",
+          "departure": "SBKP",
+          "arrival": "SBCF",
+          "aircraft": "PT-XYZ",
+          "instructor": 1,
+          "student": 2,
+          "status": "scheduled"
+        },
+        {
+          "id": 6,
+          "date": "2021-10-26T00:00:00.000Z",
+          "departure": "SBCF",
+          "arrival": "SBCG",
+          "aircraft": "PT-XYZ",
+          "instructor": 1,
+          "student": 2,
+          "status": "scheduled"
+        }
+      ]
+    },
+    "id": 3,
+    "name": "Gabriela Silva",
+    "email": "gabriela.silva@aeroplano.com",
+    "password": "Pass123!",
+    "gender": "F",
+    "birthDate": "20/05/1995",
+    "canac": 78901,
+    "cma": {
+      "type": 1,
+      "expireDate": "15/12/2023"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": true,
+    "school": [
+      {
+        "id": 1,
+        "registerNumber": 34,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 6,
+      "details": {
+        "monday": [
+          [8, 11],
+          [13, 16]
+        ],
+        "tuesday": [
+          [9, 12],
+          [14, 17]
+        ],
+        "wednesday": [
+          [10, 13],
+          [15, 18]
+        ],
+        "thursday": [
+          [8, 12],
+          [13, 16]
+        ],
+        "friday": [
+          [9, 11],
+          [14, 16],
+          [17, 19]
+        ],
+        "saturday": [
+          [10, 12],
+          [15, 17],
+          [18, 20]
+        ],
+        "sunday": [
+          [11, 14],
+          [16, 19]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 5,
+      "flights": [
+        {
+          "id": 7,
+          "date": "2021-11-01T00:00:00.000Z",
+          "departure": "SBGR",
+          "arrival": "SBKP",
+          "aircraft": "PT-XYZ",
+          "instructor": 2,
+          "student": 3,
+          "status": "scheduled"
+        },
+        {
+          "id": 8,
+          "date": "2021-11-02T00:00:00.000Z",
+          "departure": "SBKP",
+          "arrival": "SBCF",
+          "aircraft": "PT-XYZ",
+          "instructor": 2,
+          "student": 3,
+          "status": "scheduled"
+        },
+        {
+          "id": 9,
+          "date": "2021-11-03T00:00:00.000Z",
+          "departure": "SBCF",
+          "arrival": "SBCG",
+          "aircraft": "PT-XYZ",
+          "instructor": 2,
+          "student": 3,
+          "status": "scheduled"
+        },
+        {
+          "id": 10,
+          "date": "2021-11-04T00:00:00.000Z",
+          "departure": "SBCG",
+          "arrival": "SBGR",
+          "aircraft": "PT-XYZ",
+          "instructor": 2,
+          "student": 3,
+          "status": "scheduled"
+        },
+        {
+          "id": 11,
+          "date": "2021-11-05T00:00:00.000Z",
+          "departure": "SBGR",
+          "arrival": "SBSP",
+          "aircraft": "PT-XYZ",
+          "instructor": 2,
+          "student": 3,
+          "status": "scheduled"
+        }
+      ]
+    },
+    "id": 4,
+    "name": "Juliana Oliveira",
+    "email": "juliana.oliveira@aeroplano.com",
+    "password": "Pass456!",
+    "gender": "F",
+    "birthDate": "28/08/1985",
+    "canac": 56789,
+    "cma": {
+      "type": 1,
+      "expireDate": "10/05/2023"
+    },
+    "certificates": {
+      "pilot": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 2,
+        "registerNumber": 56,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 8,
+      "details": {
+        "monday": [
+          [8, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [9, 11],
+          [14, 16],
+          [18, 20]
+        ],
+        "wednesday": [
+          [10, 13],
+          [15, 18]
+        ],
+        "thursday": [
+          [8, 12],
+          [14, 17]
+        ],
+        "friday": [
+          [9, 11],
+          [13, 15],
+          [16, 18]
+        ],
+        "saturday": [
+          [10, 12],
+          [14, 16],
+          [17, 19]
+        ],
+        "sunday": [
+          [11, 14],
+          [15, 18]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 6,
+      "flights": [
+        {
+          "id": 12,
+          "date": "2021-11-06T00:00:00.000Z",
+          "departure": "SBSP",
+          "arrival": "SBGR",
+          "aircraft": "PT-XYZ",
+          "instructor": 3,
+          "student": 4,
+          "status": "scheduled"
+        },
+        {
+          "id": 13,
+          "date": "2021-11-07T00:00:00.000Z",
+          "departure": "SBGR",
+          "arrival": "SBKP",
+          "aircraft": "PT-XYZ",
+          "instructor": 3,
+          "student": 4,
+          "status": "scheduled"
+        },
+        {
+          "id": 14,
+          "date": "2021-11-08T00:00:00.000Z",
+          "departure": "SBKP",
+          "arrival": "SBCF",
+          "aircraft": "PT-XYZ",
+          "instructor": 3,
+          "student": 4,
+          "status": "scheduled"
+        },
+        {
+          "id": 15,
+          "date": "2021-11-09T00:00:00.000Z",
+          "departure": "SBCF",
+          "arrival": "SBCG",
+          "aircraft": "PT-XYZ",
+          "instructor": 3,
+          "student": 4,
+          "status": "scheduled"
+        },
+        {
+          "id": 16,
+          "date": "2021-11-10T00:00:00.000Z",
+          "departure": "SBCG",
+          "arrival": "SBSP",
+          "aircraft": "PT-XYZ",
+          "instructor": 3,
+          "student": 4,
+          "status": "scheduled"
+        },
+        {
+          "id": 17,
+          "date": "2021-11-11T00:00:00.000Z",
+          "departure": "SBSP",
+          "arrival": "SBMT",
+          "aircraft": "PT-XYZ",
+          "instructor": 3,
+          "student": 4,
+          "status": "scheduled"
+        }
+      ]
+    },
+    "id": 5,
+    "name": "Carlos Santos",
+    "email": "carlos.santos@aeroplano.com",
+    "password": "Pass789!",
+    "gender": "M",
+    "birthDate": "12/03/1988",
+    "canac": 34567,
+    "cma": {
+      "type": 2,
+      "expireDate": "05/08/2023"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": true,
+    "school": [
+      {
+        "id": 3,
+        "registerNumber": 78,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 5,
+      "details": {
+        "monday": [
+          [9, 13],
+          [15, 18]
+        ],
+        "tuesday": [
+          [8, 12.5],
+          [14, 17]
+        ],
+        "wednesday": [
+          [10, 12],
+          [13, 15]
+        ],
+        "thursday": [
+          [9, 12],
+          [14, 17]
+        ],
+        "friday": [
+          [8, 11],
+          [13, 16]
+        ],
+        "saturday": [],
+        "sunday": []
+      }
+    },
+    "flightSchedule": {
+      "counter": 3,
+      "flights": [
+        {
+          "id": 3,
+          "date": "2021-10-23T00:00:00.000Z",
+          "departure": "SBMT",
+          "arrival": "SBGR",
+          "aircraft": "PT-XYZ",
+          "instructor": 1,
+          "student": 2,
+          "status": "scheduled"
+        },
+        {
+          "id": 4,
+          "date": "2021-10-24T00:00:00.000Z",
+          "departure": "SBGR",
+          "arrival": "SBCF",
+          "aircraft": "PT-XYZ",
+          "instructor": 1,
+          "student": 2,
+          "status": "scheduled"
+        },
+        {
+          "id": 5,
+          "date": "2021-10-25T00:00:00.000Z",
+          "departure": "SBCF",
+          "arrival": "SBRJ",
+          "aircraft": "PT-XYZ",
+          "instructor": 1,
+          "student": 2,
+          "status": "scheduled"
+        }
+      ]
+    },
+    "id": 3,
+    "name": "Julia Silva",
+    "email": "julia.silva@aeroplano.com",
+    "password": "Pass123!",
+    "gender": "F",
+    "birthDate": "22/05/1995",
+    "canac": 78901,
+    "cma": {
+      "type": 1,
+      "expireDate": "15/12/2023"
+    },
+    "certificates": {
+      "pilotLicense": true,
+      "instrumentRating": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 1,
+        "registerNumber": 23,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 5,
+      "details": {
+        "monday": [
+          [10, 14],
+          [16, 18]
+        ],
+        "tuesday": [
+          [9, 13],
+          [15, 17.5]
+        ],
+        "wednesday": [
+          [11, 13],
+          [14, 16]
+        ],
+        "thursday": [
+          [10, 13],
+          [15, 18]
+        ],
+        "friday": [
+          [9, 12],
+          [14, 17]
+        ],
+        "saturday": [],
+        "sunday": []
+      }
+    },
+    "flightSchedule": {
+      "counter": 3,
+      "flights": [
+        {
+          "id": 6,
+          "date": "2021-10-26T00:00:00.000Z",
+          "departure": "SBGR",
+          "arrival": "SBRF",
+          "aircraft": "PT-XYZ",
+          "instructor": 2,
+          "student": 3,
+          "status": "scheduled"
+        },
+        {
+          "id": 7,
+          "date": "2021-10-27T00:00:00.000Z",
+          "departure": "SBRF",
+          "arrival": "SBCT",
+          "aircraft": "PT-XYZ",
+          "instructor": 2,
+          "student": 3,
+          "status": "scheduled"
+        },
+        {
+          "id": 8,
+          "date": "2021-10-28T00:00:00.000Z",
+          "departure": "SBCT",
+          "arrival": "SBCF",
+          "aircraft": "PT-XYZ",
+          "instructor": 2,
+          "student": 3,
+          "status": "scheduled"
+        }
+      ]
+    },
+    "id": 4,
+    "name": "Alexandre Pereira",
+    "email": "alex.pereira@aeroplano.com",
+    "password": "Pass456!",
+    "gender": "M",
+    "birthDate": "03/08/1985",
+    "canac": 56789,
+    "cma": {
+      "type": 1,
+      "expireDate": "18/11/2023"
+    },
+    "certificates": {
+      "pilotLicense": true,
+      "multiEngineRating": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 2,
+        "registerNumber": 34,
+        "role": "instructor"
+      }
+    ]
   }
 ]

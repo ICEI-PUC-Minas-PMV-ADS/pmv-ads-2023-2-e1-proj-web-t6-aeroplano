@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "type": "C152",
+    "registration": "PT-ABC"
+  },
+  {
+    "id": 1,
+    "type": "C152",
+    "registration": "PT-DEF"
+  },
+  {
+    "id": 2,
+    "type": "PA28",
+    "registration": "PT-GHI"
+  },
+  {
+    "id": 3,
+    "type": "SR22",
+    "registration": "PT-JKL"
+  },
+  {
+    "id": 4,
+    "type": "C182",
+    "registration": "PT-MNO"
+  },
+  {
+    "id": 5,
+    "type": "PA34",
+    "registration": "PT-PQR"
+  },
+  {
+    "id": 6,
+    "type": "BE36",
+    "registration": "PT-STU"
+  },
+  {
+    "id": 7,
+    "type": "C206",
+    "registration": "PT-VWX"
+  },
+  {
+    "id": 8,
+    "type": "C208",
+    "registration": "PT-YZA"
+  },
+  {
+    "id": 9,
+    "type": "C152",
+    "registration": "PT-123"
+  }
+]

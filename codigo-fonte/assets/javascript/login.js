@@ -54,7 +54,6 @@ async function updateUserCache(user) {
 }
 
 async function updateUserOnDatabase(user) {
-  // Not available without backend
   var usersArray = await getUserDatabase();
 
   var indice = usersArray.findIndex((objeto) => objeto.email === user.email);
@@ -82,8 +81,7 @@ function checkPassword(inputPass, databasePass) {
 
 async function getExistingUser(email) {
   const usersArray = !localStorage["usersArray"] ? await getUserDatabase() : JSON.parse(localStorage["usersArray"]);
-  console.log(usersArray);
-  console.log(await search(email, "email", usersArray));
+  localStorage["usersArray"] = JSON.stringify(usersArray);
   return await search(email, "email", usersArray);
 }
 
