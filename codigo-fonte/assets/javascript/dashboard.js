@@ -13,12 +13,6 @@ document.addEventListener("meusvoosContentLoaded", function () {
   document.body.appendChild(script);
 });
 
-document.addEventListener("turmaContentLoaded", function () {
-  const script = document.createElement("script");
-  script.src = `./assets/javascript/turma.js`;
-  document.body.appendChild(script);
-});
-
 // Event listener - Botão "Logout"
 document.getElementById("menuLogout").addEventListener("click", () => {
   localStorage.removeItem("user");
@@ -39,12 +33,12 @@ menuButtons.forEach((element) => {
     } else if (element.id == "menuMeusVoos") {
       loadMainArea("meusvoos");
     } else if (element.id == "menuTurma") {
-      loadMainArea("turma");
+      window.location.href = "./turma.html";
     }
   });
 });
 
-menuButtons[1].click();
+menuButtons[0].click();
 
 function parseUser(lsUser) {
   if (lsUser) {
@@ -73,6 +67,9 @@ function loadMainArea(app) {
         document.dispatchEvent(event);
       } else if (app == "meusvoos") {
         const event = new Event("meusvoosContentLoaded");
+        document.dispatchEvent(event);
+      } else if (app == "turma") {
+        const event = new Event("turmaContentLoaded");
         document.dispatchEvent(event);
       }
     });
