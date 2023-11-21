@@ -41,6 +41,8 @@ function validateName(nameField) {
 
 async function signup(name, email, password) {
   const user = await getExistingUser(email);
+
+  await getExistingAircraft();
   if (user) {
     updateWarning("emailWarning", true, "O email que você inseriu já está conectado a uma conta");
   } else {
@@ -105,6 +107,18 @@ async function getExistingUser(email) {
 
 async function getUserDatabase() {
   return fetch("./assets/bd/users.json")
+    .then((response) => response.json())
+    .then((responseJson) => {
+      return responseJson;
+    });
+}
+
+async function getExistingAircraft() {
+  const aircraftsArray = !localStorage["aircraftsArray"] ? await getAircraftDatabase() : JSON.parse(localStorage["aircraftsArray"]);
+  localStorage["aircraftsArray"] = JSON.stringify(aircraftsArray);
+}
+async function getAircraftDatabase() {
+  return fetch("./assets/bd/aircrafts.json")
     .then((response) => response.json())
     .then((responseJson) => {
       return responseJson;

@@ -27,6 +27,7 @@ async function verifyCredentials() {
     passwordField.focus();
   } else {
     const user = await getExistingUser(emailField.value);
+
     if (user) {
       emailField.style.setProperty("--inputBorderColor", "var(--gray-gray-200)");
       updateWarning("emailWarning", false);
@@ -35,7 +36,7 @@ async function verifyCredentials() {
         updateWarning("passwordWarning", false);
         updateUserCache(user);
         // updateUserOnDatabase(user);
-
+        await getExistingAircraft();
         window.location.href = "./dashboard.html";
       } else {
         updateWarning("passwordWarning", true, "Senha incorreta");
@@ -51,18 +52,6 @@ async function updateUserCache(user) {
   user.lastAccess = new Date();
   user.tokenExpire = getExpirationTime(0.1);
   localStorage["user"] = JSON.stringify(user);
-}
-
-async function updateUserOnDatabase(user) {
-  var usersArray = await getUserDatabase();
-
-  var indice = usersArray.findIndex((objeto) => objeto.email === user.email);
-  if (indice == -1) {
-    console.warn(`O objeto com email "${user.email}" não foi encontrado na array.`);
-    return;
-  } else {
-    usersArray[indice] = user;
-  }
 }
 
 function getExpirationTime(expirationInHours) {
@@ -85,20 +74,33 @@ async function getExistingUser(email) {
   return await search(email, "email", usersArray);
 }
 
-async function search(value, key, array) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i][key] === value) {
-      return array[i];
-    }
-  }
-}
-
 async function getUserDatabase() {
   return fetch("./assets/bd/users.json")
     .then((response) => response.json())
     .then((responseJson) => {
       return responseJson;
     });
+}
+
+async function getExistingAircraft() {
+  console.log("getExistingAircraft");
+  const aircraftsArray = !localStorage["aircraftsArray"] ? await getAircraftDatabase() : JSON.parse(localStorage["aircraftsArray"]);
+  localStorage["aircraftsArray"] = JSON.stringify(aircraftsArray);
+}
+async function getAircraftDatabase() {
+  console.log("getAircraftDatabase");
+  return fetch("./assets/bd/aircrafts.json")
+    .then((response) => response.json())
+    .then((responseJson) => {
+      return responseJson;
+    });
+}
+async function search(value, key, array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i][key] === value) {
+      return array[i];
+    }
+  }
 }
 
 function validateEmail(emailField) {
