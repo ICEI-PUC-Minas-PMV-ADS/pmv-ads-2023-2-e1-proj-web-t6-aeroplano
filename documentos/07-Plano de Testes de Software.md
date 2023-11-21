@@ -82,7 +82,7 @@
 | Passos                                     | 1. Clicar em “Disponibilidade”;<br>2. Escolher quantidade de voos por semana;<br>3. Escolher os horários dos voos nos dias de sua preferência;<br>4. Clicar no botão “Salvar”. |
 | Critérios de êxito                         | Os horários cadastrados devem ser disponibilizados para o usuário/instrutor na Tela “Meus Voos”.                                                                               |
 | Responsável pela elaborar do caso de Teste | 
-                               
+
 | **Caso de Teste 07b**                      | CT 07b – Cadastro de disponibilidade                                                                                                                                           |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Requisitos Associados                      | RF-02 Cadastro de disponibilidade Aluno/Instrutor.                                                                                                                             |
@@ -162,4 +162,4 @@
 | Passos                                     | 1. Selecione o botão “Entrar”<br>2. Selecione o botão “Cadastre-se”<br>3. Insira um nome válido no campo “Nome”<br>4. Insira um e-mail válido (ex. teste@teste.com)<br>5. Insira uma senha com tamanho entre 8 e 15 caracteres composta por letras minúsculas, maiúsculas, números e caracteres especiais (ex. @.#$!%\*?&) no campo “Senha”<br>6. Insira uma senha diferente no campo “Repita a Senha”<br>7. Selecione o botão “Cadastrar” |
 | Critérios de êxito                         | Mensagem “As senhas não coincidem” é mostrada abaixo do campo “Repita a senha”                                                                                                                                                                                                                                                                                                                                                             |
 | Responsável pela elaborar do caso de Teste |                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-                                                                            |
+                                                                            |.
