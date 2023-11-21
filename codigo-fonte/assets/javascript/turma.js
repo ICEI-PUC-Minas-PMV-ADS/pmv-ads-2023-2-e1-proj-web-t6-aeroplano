@@ -1,3 +1,5 @@
+onLoad();
+
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
   var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -383,54 +385,60 @@ function removeListener(elementsId) {
 }
 
 function onLoad() {
-  let users = JSON.parse(localStorage.getItem("usersArray"));
-  let flightsArray = [];
-
-  if (users) {
-    users.forEach((user) => {
-      if (user.flightSchedule && user.flightSchedule.flights) {
-        flightsArray = flightsArray.concat(user.flightSchedule.flights);
-      }
-    });
-
-    // Filter out duplicates
-    flightsArray = flightsArray.filter((flight, index, self) => index === self.findIndex((f) => f.id === flight.id));
-
-    // Save to sessionStorage
-    sessionStorage.setItem("flightsArray", JSON.stringify(flightsArray));
+  let flightsArray = localStorage.getItem("flightsArray");
+  if (flightsArray) {
+    sessionStorage.setItem("flightsArray", flightsArray);
   }
+}
+
+function createFlight(event) {
+  return {
+    id: event.id,
+    start: event.start,
+    end: event.end,
+    student: event.student,
+    instructor: event.instructor,
+    aircraft: event.aircraft,
+    description: event.description,
+  };
+}
+
+function addFlightToSchedule(schedule, flight) {
+  schedule.flights.push(flight);
 }
 
 function handleSaveBtnClick() {
   const events = JSON.parse(sessionStorage.getItem("flightsArray"));
   let users = JSON.parse(localStorage.getItem("usersArray"));
+  let aircrafts = JSON.parse(localStorage.getItem("aircraftsArray"));
 
-  if (events && users) {
+  if (events && users && aircrafts) {
     users.forEach((user) => {
-      user.flightSchedule = { flights: [], counter: 0 };
+      user.flightSchedule = { flights: [] };
+    });
+    aircrafts.forEach((aircraft) => {
+      aircraft.flightSchedule = { flights: [] };
     });
     events.forEach((event) => {
+      const flight = createFlight(event);
       users.forEach((user) => {
         if (user.name === event.student || user.name === event.instructor) {
-          // Add the flight to the user's flights object
-          user.flightSchedule.flights.push({
-            id: event.id,
-            start: event.start,
-            end: event.end,
-            student: event.student,
-            instructor: event.instructor,
-            aircraft: event.aircraft,
-            description: event.description,
-          });
+          addFlightToSchedule(user.flightSchedule, flight);
+        }
+      });
+      aircrafts.forEach((aircraft) => {
+        if (aircraft.registration === event.aircraft) {
+          addFlightToSchedule(aircraft.flightSchedule, flight);
         }
       });
     });
 
-    // Save the updated users array back to localStorage
     localStorage.setItem("usersArray", JSON.stringify(users));
+    localStorage.setItem("aircraftsArray", JSON.stringify(aircrafts));
     let currentUser = JSON.parse(localStorage.getItem("user"));
     let user = users.find((user) => user.id === currentUser.id);
     localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("flightsArray", JSON.stringify(events));
   }
 }
 
