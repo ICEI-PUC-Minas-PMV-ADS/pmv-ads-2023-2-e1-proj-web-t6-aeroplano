@@ -66,8 +66,8 @@ function sortTable(n) {
     rows = table.rows;
     for (i = 1; i < rows.length - 1; i++) {
       shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
+      x = rows[i].getElementsByTagName("td")[n];
+      y = rows[i + 1].getElementsByTagName("td")[n];
       if (dir == "asc") {
         if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
           shouldSwitch = true;
@@ -81,6 +81,8 @@ function sortTable(n) {
       }
     }
     if (shouldSwitch) {
+      addArrowIndicator(document.getElementsByTagName("th")[n], dir);
+
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       switchcount++;
@@ -88,7 +90,22 @@ function sortTable(n) {
       if (switchcount == 0 && dir == "asc") {
         dir = "desc";
         switching = true;
+      } else {
+        // removeArrowIndicators();
       }
     }
   }
+}
+
+function addArrowIndicator(th, direction) {
+  removeArrowIndicators();
+  const arrow = document.createElement("span");
+  arrow.className = direction === "asc" ? "arrow-up" : "arrow-down";
+  arrow.innerText = direction === "asc" ? "▲" : "▼";
+  th.appendChild(arrow);
+}
+
+function removeArrowIndicators() {
+  const arrows = document.querySelectorAll(".arrow-up, .arrow-down");
+  arrows.forEach((arrow) => arrow.remove());
 }

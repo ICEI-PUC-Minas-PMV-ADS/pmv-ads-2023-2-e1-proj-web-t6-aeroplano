@@ -72,11 +72,25 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     border-spacing: 0;
+
     th {
       background-color: var(--color-dark);
       color: white;
       padding: 10px;
       text-align: left;
+      button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+      .arrow-up,
+      .arrow-down {
+        margin-left: 5px;
+      }
     }
 
     tr {
