@@ -1,60 +1,5 @@
 [
   {
-    "id": 0,
-    "name": "Roberto",
-    "email": "roberto@aeroplano.com",
-    "password": "Password1!",
-    "gender": "M",
-    "birthDate": "10/10/1976",
-    "canac": 12345,
-    "cma": {
-      "type": 1,
-      "expireDate": "20/10/2024"
-    },
-    "certificates": {
-      "singleEngine": true
-    },
-    "lastSeen": null,
-    "lastAccess": null,
-    "onlineStatus": false,
-    "school": [
-      {
-        "id": 0,
-        "registerNumber": 1,
-        "role": "instructor"
-      },
-      {
-        "id": 1,
-        "registerNumber": 1116876,
-        "role": "instructor"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Cesar",
-    "email": "cesar@aeroplano.com",
-    "password": "Password1!",
-    "gender": "M",
-    "birthDate": "15/11/1990",
-    "canac": 12346,
-    "cma": {
-      "type": 2,
-      "expireDate": "20/10/2024"
-    },
-    "certificates": {},
-    "lastSeen": null,
-    "lastAccess": null,
-    "onlineStatus": false,
-    "school": [
-      {
-        "id": 0,
-        "registerNumber": 12,
-        "role": "student"
-      }
-    ]
-  },
-  {
     "availability": {
       "counter": 5,
       "details": {
@@ -74,7 +19,11 @@
         "sunday": []
       }
     },
-    "id": 2,
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 0,
     "name": "Rafael Mourão",
     "email": "rafael.mourao@aeroplano.com",
     "password": "Password1!",
@@ -85,7 +34,13 @@
       "type": 2,
       "expireDate": "20/10/2024"
     },
-    "certificates": {},
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": false,
+      "multiEngineRating": true
+    },
     "lastSeen": null,
     "lastAccess": null,
     "onlineStatus": false,
@@ -99,5 +54,1432 @@
     "metadata": {
       "avatar": "./assets/image/user_rafael.jpeg"
     }
+  },
+  {
+    "availability": {
+      "counter": 0,
+      "details": {
+        "monday": [],
+        "tuesday": [],
+        "wednesday": [],
+        "thursday": [],
+        "friday": [],
+        "saturday": [],
+        "sunday": []
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 1,
+    "name": "Jorge Silva",
+    "email": "jorgesilva@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": 41134,
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 16,
+      "details": {
+        "monday": [
+          [9, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [8, 12],
+          [14, 16.5]
+        ],
+        "wednesday": [
+          [10, 13],
+          [15, 18]
+        ],
+        "thursday": [
+          [8, 12],
+          [14, 16]
+        ],
+        "friday": [
+          [9, 11],
+          [13, 15],
+          [16, 18]
+        ],
+        "saturday": [
+          [10, 12],
+          [14, 16],
+          [17, 19]
+        ],
+        "sunday": [
+          [11, 14],
+          [15, 18]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 2,
+    "name": "Gabriela Silva",
+    "email": "gabriela.silva@aeroplano.com",
+    "password": "Password1!",
+    "gender": "F",
+    "birthDate": "20/05/1995",
+    "canac": 78901,
+    "cma": {
+      "type": 1,
+      "expireDate": "15/12/2023"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": true,
+      "pilotLicense": true,
+      "instrumentRating": true,
+      "multiEngineRating": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": 34,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 16,
+      "details": {
+        "monday": [
+          [8, 11],
+          [13, 16]
+        ],
+        "tuesday": [
+          [9, 12],
+          [14, 17]
+        ],
+        "wednesday": [
+          [10, 13],
+          [15, 18]
+        ],
+        "thursday": [
+          [8, 12],
+          [13, 16]
+        ],
+        "friday": [
+          [9, 11],
+          [14, 16],
+          [17, 19]
+        ],
+        "saturday": [
+          [10, 12],
+          [15, 17],
+          [18, 20]
+        ],
+        "sunday": [
+          [11, 14],
+          [16, 19]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 3,
+    "name": "Juliana Oliveira",
+    "email": "juliana.oliveira@aeroplano.com",
+    "password": "Password1!",
+    "gender": "F",
+    "birthDate": "28/08/1985",
+    "canac": 56789,
+    "cma": {
+      "type": 1,
+      "expireDate": "10/05/2023"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": true,
+      "pilotLicense": true,
+      "instrumentRating": true,
+      "multiEngineRating": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": 56,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 17,
+      "details": {
+        "monday": [
+          [8, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [9, 11],
+          [14, 16],
+          [18, 20]
+        ],
+        "wednesday": [
+          [10, 13],
+          [15, 18]
+        ],
+        "thursday": [
+          [8, 12],
+          [14, 17]
+        ],
+        "friday": [
+          [9, 11],
+          [13, 15],
+          [16, 18]
+        ],
+        "saturday": [
+          [10, 12],
+          [14, 16],
+          [17, 19]
+        ],
+        "sunday": [
+          [11, 14],
+          [15, 18]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 4,
+    "name": "Carlos Santos",
+    "email": "carlos.santos@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "12/03/1988",
+    "canac": 34567,
+    "cma": {
+      "type": 2,
+      "expireDate": "05/08/2023"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": true,
+      "pilotLicense": true,
+      "instrumentRating": true,
+      "multiEngineRating": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": 78,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 10,
+      "details": {
+        "monday": [
+          [9, 13],
+          [15, 18]
+        ],
+        "tuesday": [
+          [8, 12.5],
+          [14, 17]
+        ],
+        "wednesday": [
+          [10, 12],
+          [13, 15]
+        ],
+        "thursday": [
+          [9, 12],
+          [14, 17]
+        ],
+        "friday": [
+          [8, 11],
+          [13, 16]
+        ],
+        "saturday": [],
+        "sunday": []
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 5,
+    "name": "Julia Silva",
+    "email": "julia.silva@aeroplano.com",
+    "password": "Password1!",
+    "gender": "F",
+    "birthDate": "22/05/1995",
+    "canac": 78901,
+    "cma": {
+      "type": 1,
+      "expireDate": "15/12/2023"
+    },
+    "certificates": {
+      "pilotLicense": true,
+      "instrumentRating": true,
+      "instructor": true,
+      "pilot": true,
+      "multiEngineRating": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": 23,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 10,
+      "details": {
+        "monday": [
+          [10, 14],
+          [16, 18]
+        ],
+        "tuesday": [
+          [9, 13],
+          [15, 17.5]
+        ],
+        "wednesday": [
+          [11, 13],
+          [14, 16]
+        ],
+        "thursday": [
+          [10, 13],
+          [15, 18]
+        ],
+        "friday": [
+          [9, 12],
+          [14, 17]
+        ],
+        "saturday": [],
+        "sunday": []
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 6,
+    "name": "Alexandre Pereira",
+    "email": "alex.pereira@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "03/08/1985",
+    "canac": 56789,
+    "cma": {
+      "type": 1,
+      "expireDate": "18/11/2023"
+    },
+    "certificates": {
+      "pilotLicense": true,
+      "multiEngineRating": true,
+      "instructor": true,
+      "pilot": true,
+      "instrumentRating": true
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": 34,
+        "role": "instructor"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 7,
+    "name": "Estudante 1",
+    "email": "estudante1@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "001",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 8,
+    "name": "Estudante 2",
+    "email": "estudante2@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "002",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 9,
+    "name": "Estudante 3",
+    "email": "estudante3@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "003",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 10,
+    "name": "Estudante 4",
+    "email": "estudante4@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "004",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 11,
+    "name": "Estudante 5",
+    "email": "estudante5@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "005",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 12,
+    "name": "Estudante 6",
+    "email": "estudante6@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "006",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 13,
+    "name": "Estudante 7",
+    "email": "estudante7@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "007",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 14,
+    "name": "Estudante 8",
+    "email": "estudante8@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "008",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 15,
+    "name": "Estudante 9",
+    "email": "estudante9@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "009",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 16,
+    "name": "Estudante 10",
+    "email": "estudante10@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "0010",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 17,
+    "name": "Estudante 11",
+    "email": "estudante11@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "0011",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 18,
+    "name": "Estudante 12",
+    "email": "estudante12@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "0012",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 19,
+    "name": "Estudante 13",
+    "email": "estudante13@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "0013",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 20,
+    "name": "Estudante 14",
+    "email": "estudante14@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "0014",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 7,
+      "details": {
+        "monday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "tuesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "wednesday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "thursday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "friday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "saturday": [
+          [6, 12],
+          [13, 17]
+        ],
+        "sunday": [
+          [6, 12],
+          [13, 17]
+        ]
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 21,
+    "name": "Estudante 15",
+    "email": "estudante15@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 12542,
+    "cma": {
+      "type": 2,
+      "expireDate": "20/10/2024"
+    },
+    "certificates": {
+      "pilot": true,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": true,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "0015",
+        "role": "student"
+      }
+    ]
+  },
+  {
+    "availability": {
+      "counter": 0,
+      "details": {
+        "monday": [],
+        "tuesday": [],
+        "wednesday": [],
+        "thursday": [],
+        "friday": [],
+        "saturday": [],
+        "sunday": []
+      }
+    },
+    "flightSchedule": {
+      "counter": 0,
+      "flights": []
+    },
+    "id": 22,
+    "name": "Gestor 1",
+    "email": "gestor1@aeroplano.com",
+    "password": "Password1!",
+    "gender": "M",
+    "birthDate": "15/11/1990",
+    "canac": 0,
+    "cma": {
+      "type": 0,
+      "expireDate": null
+    },
+    "certificates": {
+      "pilot": false,
+      "instructor": false,
+      "pilotLicense": false,
+      "instrumentRating": false,
+      "multiEngineRating": false
+    },
+    "lastSeen": null,
+    "lastAccess": null,
+    "onlineStatus": false,
+    "school": [
+      {
+        "id": 0,
+        "registerNumber": "0000",
+        "role": "manager"
+      }
+    ]
   }
 ]

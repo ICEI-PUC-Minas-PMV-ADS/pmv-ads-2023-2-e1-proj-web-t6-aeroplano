@@ -1,11 +1,10 @@
-# Plano de Testes de Software
-
+Plano de Teste de Software
 
 | **Caso de Teste 01**                       | CT01 – Cadastro de Usuário                                                                                                                                                       |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Requisitos Associados                      | RF-13. O sistema deve ter o campo para cadastro do usuário, onde será registrado o seu nome, e-mail e senha                                                                      |
 | Objetivo do Teste                          | Validar possibilidade de criar usuários                                                                                                                                          |
-| Pré-requisitos                             | Usuário não está logado                                                                                                                                                         |
+| Pré-requisitos                             | Usuário não estar logado                                                                                                                                                         |
 | Passos                                     | 1. Clicar no botão “Entrar”;<br>2. Selecionar o botão “Cadastre-se”;<br>3. Preencher todos os campos da tela de cadastro de forma correta;<br>4. Selecionar o botão “Cadastrar”. |
 | Critérios de êxito                         | O sistema será direcionado para a homepage logada com as informações do usuário.                                                                                                 |
 | Responsável pela elaborar do caso de Teste |                                                                                                                                                                                  |
@@ -36,7 +35,6 @@
 | Passos                                     | 1. Clicar no menu “Turma” (FALTA FAZER XXXXX)                                                                                                              |
 | Critérios de êxito                         | O sistema será direcionado para a área restrita do usuário e aparecerá a tela “Calendário”;<br>O sistema permite filtrar, por aeronave, instrutor e aluno. |
 | Responsável pela elaborar do caso de Teste |                                                                                                                                                            |
-
 
 | **Caso de Teste 05a**                      | CT05a – Manipulação de Aulas                                                                                                                                                                                                                                                                  |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,7 +79,7 @@
 | Pré-requisito                              | Estar logado como Instrutor;                                                                                                                                                   |
 | Passos                                     | 1. Clicar em “Disponibilidade”;<br>2. Escolher quantidade de voos por semana;<br>3. Escolher os horários dos voos nos dias de sua preferência;<br>4. Clicar no botão “Salvar”. |
 | Critérios de êxito                         | Os horários cadastrados devem ser disponibilizados para o usuário/instrutor na Tela “Meus Voos”.                                                                               |
-| Responsável pela elaborar do caso de Teste | 
+| Responsável pela elaborar do caso de Teste |                                                                                                                                                                                |
 
 | **Caso de Teste 07b**                      | CT 07b – Cadastro de disponibilidade                                                                                                                                           |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -90,7 +88,8 @@
 | Pré-requisito                              | Estar logado como aluno;                                                                                                                                                       |
 | Passos                                     | 1. Clicar em “Disponibilidade”;<br>2. Escolher quantidade de voos por semana;<br>3. Escolher os horários dos voos nos dias de sua preferência;<br>4. Clicar no botão “Salvar”. |
 | Critérios de êxito                         | Os horários cadastrados devem ser disponibilizados para o usuário/instrutor na Tela “Meus Voos”.                                                                               |
-| Responsável pela elaborar do caso de Teste                                                      
+| Responsável pela elaborar do caso de Teste |                                                                                                                                                                                |
+
 | **Caso de Teste 08a**                      | CT 08a – Tela de Cadastro - Cenários negativos – Campos em branco                                                                          |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | Requisitos Associados                      |                                                                                                                                            |
@@ -102,7 +101,7 @@
 
 | **Caso de Teste 08b**                      | CT 08b – Tela de Cadastro - Cenários negativos – Email inválido                                                                                                                                                 |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Requisitos Associados                      |                                                              |
+| Requisitos Associados                      | RF-19 - A senha de acesso deve ter entre 8 a 15 caracteres, ter pelo menos uma letra minúscula, uma maiúscula, um caractere especial e um número.                                                               |
 | Objetivo do Teste                          | Verificar que o sistema é capaz de reconhecer informações erradas durante o processo de cadastro de usuário                                                                                                     |
 | Pré-requisito                              | Usuário não está logado                                                                                                                                                                                         |
 | Passos                                     | 1. Selecione o botão “Entrar”<br>2. Selecione o botão “Cadastre-se”<br>3. Insira um nome válido no campo “Nome”<br>4. Insira um e-mail invalido (ex. “a”) no campo “e-mail”<br>5. Selecione o botão “Cadastrar” |
@@ -162,4 +161,3 @@
 | Passos                                     | 1. Selecione o botão “Entrar”<br>2. Selecione o botão “Cadastre-se”<br>3. Insira um nome válido no campo “Nome”<br>4. Insira um e-mail válido (ex. teste@teste.com)<br>5. Insira uma senha com tamanho entre 8 e 15 caracteres composta por letras minúsculas, maiúsculas, números e caracteres especiais (ex. @.#$!%\*?&) no campo “Senha”<br>6. Insira uma senha diferente no campo “Repita a Senha”<br>7. Selecione o botão “Cadastrar” |
 | Critérios de êxito                         | Mensagem “As senhas não coincidem” é mostrada abaixo do campo “Repita a senha”                                                                                                                                                                                                                                                                                                                                                             |
 | Responsável pela elaborar do caso de Teste |                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-                                                                            |.

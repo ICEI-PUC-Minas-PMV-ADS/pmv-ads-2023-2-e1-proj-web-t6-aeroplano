@@ -1,0 +1,89 @@
+@import url("main.min.css");
+
+body {
+  background-color: var(--color-dark);
+  p {
+    color: white;
+    white-space: pre-line;
+  }
+  h1 {
+    color: var(--color-pastel-yellow);
+  }
+  h2 {
+    color: white;
+  }
+  main {
+    background: none;
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    min-width: 302px;
+  }
+}
+
+.schedule-header {
+  width: 100%;
+  word-wrap: normal;
+  white-space: initial;
+  p {
+    white-space: no-wrap;
+    width: 700px;
+    @media screen and (max-width: 1080px) {
+      width: 100%;
+    }
+  }
+}
+#schedule-box {
+  background-color: white;
+  display: grid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  width: 900px;
+  min-width: 302px;
+  @media screen and (max-width: 1080px) {
+    width: 100%;
+  }
+  p {
+    color: black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  h1 {
+    color: black;
+  }
+  h2 {
+    color: black;
+  }
+  h3 {
+    color: var(--color-dark2);
+    margin-bottom: 15px;
+  }
+  p {
+    color: var(--color-dark2);
+  }
+
+  table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    th {
+      background-color: var(--color-dark);
+      color: white;
+      padding: 10px;
+      text-align: left;
+    }
+
+    tr {
+      td {
+        padding: 10px;
+        border-bottom: 1px solid var(--gray-gray-400);
+      }
+    }
+  }
+}

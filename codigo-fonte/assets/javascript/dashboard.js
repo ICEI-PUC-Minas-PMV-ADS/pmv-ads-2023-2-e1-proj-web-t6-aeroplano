@@ -1,19 +1,17 @@
 var lsUser = localStorage["user"];
 parseUser(lsUser);
 
-function parseUser(lsUser) {
-  if (lsUser) {
-    // Se "user" existe no local storage, iniciar parse. Se não, carregar login
-    var user = JSON.parse(localStorage["user"]);
-    document.getElementById("ribbonUserName").innerText = user.name;
-    document.getElementById("ribbonUserEmail").innerText = user.email;
-    if (user.metadata && user.metadata.avatar) {
-      document.getElementById("userAvatar").src = user.metadata.avatar;
-    }
-  } else {
-    window.location.href = "./login.html";
-  }
-}
+document.addEventListener("disponibilidadeContentLoaded", function () {
+  const script = document.createElement("script");
+  script.src = `./assets/javascript/disponibilidade.js`;
+  document.body.appendChild(script);
+});
+
+document.addEventListener("meusvoosContentLoaded", function () {
+  const script = document.createElement("script");
+  script.src = `./assets/javascript/meusvoos.js`;
+  document.body.appendChild(script);
+});
 
 // Event listener - Botão "Logout"
 document.getElementById("menuLogout").addEventListener("click", () => {
@@ -32,9 +30,29 @@ menuButtons.forEach((element) => {
     clearMainArea();
     if (element.id == "menuDisponibilidade") {
       loadMainArea("disponibilidade");
+    } else if (element.id == "menuMeusVoos") {
+      loadMainArea("meusvoos");
+    } else if (element.id == "menuTurma") {
+      window.location.href = "./turma.html";
     }
   });
 });
+
+menuButtons[0].click();
+
+function parseUser(lsUser) {
+  if (lsUser) {
+    // Se "user" existe no local storage, iniciar parse. Se não, carregar login
+    var user = JSON.parse(localStorage["user"]);
+    document.getElementById("ribbonUserName").innerText = user.name;
+    document.getElementById("ribbonUserEmail").innerText = user.email;
+    if (user.metadata && user.metadata.avatar) {
+      document.getElementById("userAvatar").src = user.metadata.avatar;
+    }
+  } else {
+    window.location.href = "./login.html";
+  }
+}
 
 function loadMainArea(app) {
   const mainAreaApp = document.getElementById("main-area");
@@ -44,18 +62,18 @@ function loadMainArea(app) {
     .then((dados) => {
       mainAreaApp.innerHTML = dados;
 
-      if ((app = "disponibilidade")) {
+      if (app == "disponibilidade") {
         const event = new Event("disponibilidadeContentLoaded");
+        document.dispatchEvent(event);
+      } else if (app == "meusvoos") {
+        const event = new Event("meusvoosContentLoaded");
+        document.dispatchEvent(event);
+      } else if (app == "turma") {
+        const event = new Event("turmaContentLoaded");
         document.dispatchEvent(event);
       }
     });
 }
-
-document.addEventListener("disponibilidadeContentLoaded", function () {
-  const script = document.createElement("script");
-  script.src = `./assets/javascript/disponibilidade.js`;
-  document.body.appendChild(script);
-});
 
 function clearMainArea() {
   const mainAreaApp = document.getElementById("main-area");

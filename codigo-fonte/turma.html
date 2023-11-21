@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aeroplano - Plataforma para Escolas de Aviação</title>
+    <link rel="stylesheet" href="./assets/css/turma.min.css" />
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/locales/pt-br.js"></script>
+    <script defer src="./assets/javascript/turma.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="class-header">
+        <button onclick="history.back()">Voltar ao Dashboard</button>
+        <h1>Escala de voo</h1>
+      </div>
+      <div id="class-box">
+        <div id="calendar"></div>
+      </div>
+    </div>
+    <div class="eventModalOverlay" id="overlay1">
+      <div id="modalBackground">
+        <h2>Editar escala</h2>
+        <form id="eventForm">
+          <label for="start">Início:</label><br />
+          <input type="time" id="start" /><br />
+          <label for="end">Término:</label><br />
+          <input type="time" id="end" /><br />
+          <div id="warning-time" class="validationWarning">Horário inválido</div>
+          <label for="edit-student">Aluno:</label><br />
+          <select id="edit-student">
+            <option value="default"></option></select
+          ><br />
+          <div id="warning-student" class="validationWarning">Campo obrigatório</div>
+          <label for="edit-instructor">Instrutor:</label><br />
+          <select id="edit-instructor">
+            <option value="default"></option></select
+          ><br />
+          <div id="warning-instructor" class="validationWarning">Campo obrigatório</div>
+          <label for="edit-aircraft">Aeronave:</label><br />
+          <select id="edit-aircraft">
+            <option value="default"></option></select
+          ><br />
+          <div id="warning-aircraft" class="validationWarning">Campo obrigatório</div>
+          <label for="edit-description">Informações adicionais:</label><br />
+          <textarea id="edit-description"></textarea><br />
+        </form>
+        <button id="saveButton1">Salvar</button>
+        <button id="closeButton1">Descartar mudanças</button>
+        <button id="deleteButton1">Remover</button>
+      </div>
+    </div>
+    <div class="eventModalOverlay" id="overlay2">
+      <div id="modalBackground">
+        <h2>Filtrar</h2>
+        <form id="eventForm">
+          <label for="filter-type">Filtrar por</label><br />
+          <select id="filter-type">
+            <option value="default"></option>
+            <option value="student">Aluno</option>
+            <option value="instructor">Instrutor</option>
+            <option value="aircraft">Aeronave</option></select
+          ><br />
+          <label for="filter-value">Valor</label><br />
+          <select id="filter-value">
+            <option value="default">-</option></select
+          ><br />
+        </form>
+        <button id="saveButton2">Salvar</button>
+        <button id="resetButton2">Limpar</button>
+        <button id="closeButton2">Fechar</button>
+      </div>
+    </div>
+  </body>
+</html>
