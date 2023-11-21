@@ -211,16 +211,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     },
     select: (info) => {
-      const filterType = document.getElementById("filter-type").value;
-      const filterValue = document.getElementById("filter-value").value;
-      info = setDefaultEventProperties(info, calendar.getEvents().length);
-      info = setFilterProperties(info, filterType, filterValue);
-      info = adjustEventDuration(info);
+      if (info.allDay) {
+        return; // Current limitation - Will not allow selecting an all-day slot
+      } else {
+        const filterType = document.getElementById("filter-type").value;
+        const filterValue = document.getElementById("filter-value").value;
+        info = setDefaultEventProperties(info, calendar.getEvents().length);
+        info = setFilterProperties(info, filterType, filterValue);
+        info = adjustEventDuration(info);
 
-      calendar.addEvent(info);
+        calendar.addEvent(info);
 
-      const event = calendar.getEvents().find((event) => event.startStr === info.startStr);
-      editEvent(event);
+        const event = calendar.getEvents().find((event) => event.startStr === info.startStr);
+        editEvent(event);
+      }
     },
   });
   calendar.render();
