@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
         click: () => {
           var customButtonsOption = calendar.getOption("customButtons");
 
-          document.getElementById("overlay2").style.display = "block";
-          document.getElementById("saveButton2").addEventListener("click", function () {
+          document.getElementById("overlayFilter").style.display = "block";
+          document.getElementById("saveFilterButton").addEventListener("click", function () {
             const filterValue = document.getElementById("filter-value").value;
             const filterType = document.getElementById("filter-type").value;
             if (filterValue === "default") {
@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
                   });
                 });
               }
-              console.log(businessHours);
               calendar.setOption("businessHours", businessHours);
             }
             calendar.addEventSource((fetchInfo, successCallback, failureCallback) => {
@@ -94,10 +93,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 successCallback([]);
               }
             });
-            hideElement("overlay2");
-            removeListener(["saveButton1", "closeButton1", "deleteButton1"]);
+            hideElement("overlayFilter");
+            removeListener(["saveFlightButton", "closeFlightButton", "deleteFlightButton"]);
           });
-          document.getElementById("resetButton2").addEventListener("click", function () {
+          document.getElementById("resetFilterButton").addEventListener("click", function () {
             document.getElementById("filter-type").value = "default";
             document.getElementById("filter-value").innerHTML = `<option value="default">-</option>`;
             calendar.setOption("customButtons", {
@@ -107,8 +106,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 text: `Filtrar`,
               },
             });
-            hideElement("overlay2");
-            removeListener(["saveButton1", "closeButton1", "deleteButton1"]);
+            hideElement("overlayFilter");
+            calendar.setOption("businessHours", [
+              {
+                daysOfWeek: [0, 1, 2, 3, 4, 5, 6],
+                startTime: "0:00",
+                endTime: "24:00",
+              },
+            ]);
+            removeListener(["saveFlightButton", "closeFlightButton", "deleteFlightButton"]);
             calendar.removeAllEvents();
             calendar.addEventSource((fetchInfo, successCallback, failureCallback) => {
               const events = JSON.parse(sessionStorage.getItem("flightsArray"));
@@ -136,9 +142,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
           });
 
-          document.getElementById("closeButton2").addEventListener("click", function () {
-            hideElement("overlay2");
-            removeListener(["saveButton1", "closeButton1", "deleteButton1"]);
+          document.getElementById("closeFilterButton").addEventListener("click", function () {
+            hideElement("overlayFilter");
+            removeListener(["saveFlightButton", "closeFlightButton", "deleteFlightButton"]);
           });
         },
       },
@@ -314,17 +320,17 @@ function addOptionToSelect(selectElement, value, text) {
 
 function editEvent(event) {
   setEventTime(event);
-  displayElement("overlay1");
+  displayElement("overlayFlightEdit");
 
   loadDropdowns();
   setFields(event);
 
-  document.getElementById("saveButton1").addEventListener("click", () => updateEvent(event));
-  document.getElementById("closeButton1").addEventListener("click", () => {
-    hideElement("overlay1");
-    removeListener(["saveButton1", "closeButton1", "deleteButton1"]);
+  document.getElementById("saveFlightButton").addEventListener("click", () => updateEvent(event));
+  document.getElementById("closeFlightButton").addEventListener("click", () => {
+    hideElement("overlayFlightEdit");
+    removeListener(["saveFlightButton", "closeFlightButton", "deleteFlightButton"]);
   });
-  document.getElementById("deleteButton1").addEventListener("click", () => deleteEvent(event));
+  document.getElementById("deleteFlightButton").addEventListener("click", () => deleteEvent(event));
 }
 
 function loadDropdowns() {
@@ -445,8 +451,8 @@ function updateEvent(event) {
     no ${event._def.extendedProps.aircraft} ${description}`
     );
     updateSessionStorage(event);
-    hideElement("overlay1");
-    removeListener(["saveButton1", "closeButton1", "deleteButton1"]);
+    hideElement("overlayFlightEdit");
+    removeListener(["saveFlightButton", "closeFlightButton", "deleteFlightButton"]);
   }
 }
 
@@ -536,8 +542,8 @@ function deleteEvent(event) {
     removeFlight(event.id);
   }
   event.remove();
-  hideElement("overlay1");
-  removeListener(["saveButton1", "closeButton1", "deleteButton1"]);
+  hideElement("overlayFlightEdit");
+  removeListener(["saveFlightButton", "closeFlightButton", "deleteFlightButton"]);
 }
 
 function searchFlight(flightId) {

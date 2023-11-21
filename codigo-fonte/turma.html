@@ -20,8 +20,8 @@
         <div id="calendar"></div>
       </div>
     </div>
-    <div class="eventModalOverlay" id="overlay1">
-      <div id="modalBackground">
+    <div class="eventModalOverlay" id="overlayFlightEdit">
+      <div class="modalBackground">
         <h2>Editar escala</h2>
         <form id="eventForm">
           <label for="start">Início:</label><br />
@@ -47,13 +47,13 @@
           <label for="edit-description">Informações adicionais:</label><br />
           <textarea id="edit-description"></textarea><br />
         </form>
-        <button id="saveButton1">Salvar</button>
-        <button id="closeButton1">Descartar mudanças</button>
-        <button id="deleteButton1">Remover</button>
+        <button id="saveFlightButton">Salvar</button>
+        <button id="closeFlightButton">Descartar mudanças</button>
+        <button id="deleteFlightButton">Remover</button>
       </div>
     </div>
-    <div class="eventModalOverlay" id="overlay2">
-      <div id="modalBackground">
+    <div class="eventModalOverlay" id="overlayFilter">
+      <div class="modalBackground">
         <h2>Filtrar</h2>
         <form id="eventForm">
           <label for="filter-type">Filtrar por</label><br />
@@ -68,9 +68,9 @@
             <option value="default">-</option></select
           ><br />
         </form>
-        <button id="saveButton2">Salvar</button>
-        <button id="resetButton2">Limpar</button>
-        <button id="closeButton2">Fechar</button>
+        <button id="saveFilterButton">Salvar</button>
+        <button id="resetFilterButton">Limpar</button>
+        <button id="closeFilterButton">Fechar</button>
       </div>
     </div>
   </body>
