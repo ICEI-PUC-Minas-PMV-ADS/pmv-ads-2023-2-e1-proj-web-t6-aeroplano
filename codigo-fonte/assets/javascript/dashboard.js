@@ -1,6 +1,27 @@
 var lsUser = localStorage["user"];
 parseUser(lsUser);
 
+var lsUserObject = JSON.parse(localStorage["user"]);
+var userRole = lsUserObject.school[0].role;
+
+document.getElementById("menuAvisos").remove();
+document.getElementById("menuPerfil").remove();
+// Remover botões de acordo com o papel do usuário
+switch (userRole) {
+  case "admin":
+    break;
+  case "manager":
+    document.getElementById("menuDisponibilidade").remove();
+    break;
+  case "instructor":
+    break;
+  case "student":
+    document.getElementById("menuTurma").remove();
+    break;
+  default:
+    break;
+}
+
 document.addEventListener("disponibilidadeContentLoaded", function () {
   const script = document.createElement("script");
   script.src = `./assets/javascript/disponibilidade.js`;
