@@ -24,7 +24,7 @@ Plano de Teste de Software
 | Objetivo do Teste                          | Verificar dashboard e suas subpáginas.                                                             |
 | Pré-requisitos                             | Estar logado como “Aluno”.                                                                         |
 | Passos                                     | 1. Clicar em “Meus Voos”;<br>2. Clicar em “Avisos”;<br>3. Clicar em “Disponibilidade”.             |
-| Critérios de êxito                         | O usuário será direcionado para as respectivas páginas: “Meus Voos”, “Avisos” e “Disponibilidade”. |
+| Critérios de êxito                         | O usuário será direcionado para as respectivas páginas: “Meus Voos” e “Disponibilidade”. |
 | Responsável pela elaborar do caso de Teste | Felipe                                                                                                   |
 
 | **Caso de Teste 04**                       | CT04 – Área do instrutor (Turma)                                                                                                                           |
@@ -42,7 +42,7 @@ Plano de Teste de Software
 | Objetivo do Teste                          | Verificar se as funcionalidades foram atendidas.                                                                                                                                                                                                                                              |
 | Pré-requisitos                             | Estar logado como “Instrutor”.                                                                                                                                                                                                                                                                |
 | Passos                                     | 1. Clicar em “Turma”;<br>2. No calendário clique em algum “slot”;<br>3. Adicione aluno;<br>4. No campo “instrutor” selecione o usuário atual<br>5. Selecione uma aeronave;<br>6. Selecionar botão “Salvar”;<br>7. Clicar em “Salvar Alterações”;<br>8. Selecione o botão voltar ao dashboard. |
-| Critérios de êxito                         | O sistema será direcionado para tela de “Disponibilidade”.                                                                                                                                                                                                                                    |
+| Critérios de êxito                         | O sistema será direcionado para tela de “Dashboard”.                                                                                                                                                                                                                                    |
 | Responsável pela elaborar do caso de Teste | Felipe                                                                                                                                                                                                                                                                                              |
 
 | **Caso de Teste 05b**                      | CT05b – Manipulação de Aulas – Verificação do aluno                                                                    |
@@ -77,7 +77,7 @@ Plano de Teste de Software
 | Requisitos Associados                      | RF-02 Cadastro de disponibilidade Aluno/Instrutor.                                                                                                                             |
 | Objetivo do Teste                          | Verificar se o Aluno/Instrutor tem disponibilidade de horário para a aula.                                                                                                     |
 | Pré-requisito                              | Estar logado como Instrutor;                                                                                                                                                   |
-| Passos                                     | 1. Clicar em “Disponibilidade”;<br>2. Escolher quantidade de voos por semana;<br>3. Escolher os horários dos voos nos dias de sua preferência;<br>4. Clicar no botão “Salvar”. |
+| Passos                                     | 1. Clicar em “Turma”;<br>2. Clicar no "Slot";<br>3. Escolher quantidade de voos por semana;<br>4. Escolher os horários dos voos nos dias de sua preferência;<br>5. Clicar no botão “Salvar”. |
 | Critérios de êxito                         | Os horários cadastrados devem ser disponibilizados para o usuário/instrutor na Tela “Meus Voos”.                                                                               |
 | Responsável pela elaborar do caso de Teste |Felipe                                                                                                                                                                                |
 
