@@ -175,6 +175,49 @@ Imagem 9 - VS Code
 ![image](/documentos/img/kanban3.png)
 Imagem 10 - Kanban da terceira etapa
 
+#### Etapa 4
+
+A etapa 4 foi realizada entre os dias 30 de outubro de 2023 e 26 de novembro de 2023, e teve os seguintes entregáveis:
+
+  - Metodologia
+  - Plano de Testes de Software.
+  - Registro de Testes de Software.
+  - Especificação de projeto
+
+#### 4.1 Planejamento
+
+- Atualizar documentação/entregáveis - Todos
+
+##### 4.2 Andamento:
+
+Com auxílio do software Visual Studio Code, foi escrito a documentação.
+
+Nessa etapa foram feitas as partes de: Plano de testes de software e o Registro de testes de software.
+Dividimos as tarefas durante as reuniões semanais feitas quinta-feira à noite utilizando a plataforma Teams e GitHub Projects. Também compartilhamos documentos e fizemos etapas do trabalho simultaneamente utilizando as ferramentas do Teams, como por exemplo o compartilhamento da tela. As devidas correções e acréscimos foram feitas ao decorrer das semanas, seguindo as orientações do professor nas aulas de terça.
+
+As tarefas foram divididas entre o grupo mediante a disponibilidade e familiaridade de cada um com algumas ferramentas.
+
+##### 4.3 Ferramentas utilizadas e Comprovações:
+
+  Para desenvolvimento, foi utilizado o software Visual Studio Code com as seguintes extensões:
+
+  - GitHub Copilot
+  - GitHub Copilot Chat
+  - Live Sass Compiler
+  - Live Server
+  - markdownlint
+  - Monokai Pro
+  - Prettier
+
+ ![image](/documentos/img/GitHubkanban.png)
+ Imagem 11 - Kanban da quarta etapa
+
+ ![image](/documentos/img/planodetestesdesoftware.png)
+ Imagem 12 - VS Code
+
+ ![image](/documentos/img/Registrodetestesdesoftware.png)
+ Imagem 13 - VS Code
+ 
 ### Etiquetas
 
 > **As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias:**
