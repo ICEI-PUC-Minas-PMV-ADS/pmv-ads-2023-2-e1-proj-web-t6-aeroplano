@@ -183,10 +183,12 @@ A etapa 4 foi realizada entre os dias 30 de outubro de 2023 e 26 de novembro de 
   - Plano de Testes de Software.
   - Registro de Testes de Software.
   - Especificação de projeto
+  - Programação de funcionalidades
 
 #### 4.1 Planejamento
 
 - Atualizar documentação/entregáveis - Todos
+- Desenvolvimento da tela turma
 
 ##### 4.2 Andamento:
 
@@ -217,7 +219,13 @@ As tarefas foram divididas entre o grupo mediante a disponibilidade e familiarid
 
  ![image](/documentos/img/Registrodetestesdesoftware.png)
  Imagem 13 - VS Code
- 
+
+  ![image](/documentos/img/turma1.png)
+  Imagem 14 - VS Code
+
+  ![image](/documentos/img/turma2.png)
+  Imagem 15 - VS Code
+  
 ### Etiquetas
 
 > **As tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores/categorias:**
