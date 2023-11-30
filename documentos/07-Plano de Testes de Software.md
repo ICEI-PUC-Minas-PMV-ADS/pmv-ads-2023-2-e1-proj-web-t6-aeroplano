@@ -6,7 +6,7 @@ Plano de Teste de Software
 | Objetivo do Teste                          | Validar possibilidade de criar usuários                                                                                                                                          |
 | Pré-requisitos                             | Usuário não estar logado                                                                                                                                                         |
 | Passos                                     | 1. Clicar no botão “Entrar”;<br>2. Selecionar o botão “Cadastre-se”;<br>3. Preencher todos os campos da tela de cadastro de forma correta;<br>4. Selecionar o botão “Cadastrar”. |
-| Critérios de êxito                         | O sistema será direcionado para a homepage logada com as informações do usuário.                                                                                                 |
+| Critérios de êxito                         | O sistema será direcionado para a homepage logada .                                                                                                 |
 | Responsável pela elaborar do caso de Teste | Felipe                                                                                                                                                                                 |
 
 | **Caso de Teste 02**                       | CT02 – Efetuar Login do Usuário                                                                      |
@@ -23,7 +23,7 @@ Plano de Teste de Software
 | Requisitos Associados                      | RF-17. Na área restrita deve haver um layout padrão de dashboard compartilhado por todas as telas. |
 | Objetivo do Teste                          | Verificar dashboard e suas subpáginas.                                                             |
 | Pré-requisitos                             | Estar logado como “Aluno”.                                                                         |
-| Passos                                     | 1. Clicar em “Meus Voos”;<br>2. Clicar em “Avisos”;<br>3. Clicar em “Disponibilidade”.             |
+| Passos                                     | 1. Clicar em “Meus Voos”;<br>3. Clicar em “Disponibilidade”.             |
 | Critérios de êxito                         | O usuário será direcionado para as respectivas páginas: “Meus Voos” e “Disponibilidade”. |
 | Responsável pela elaborar do caso de Teste | Felipe                                                                                                   |
 
@@ -32,7 +32,7 @@ Plano de Teste de Software
 | Requisitos Associados                      | RF-03. Possibilidade de ver quadro horário por aeronave, por instrutor e por aluno                                                                         |
 | Objetivo do Teste                          | Verificar se o quadro de horário do instrutor e do aluno está funcionando.<br>Verificar a possibilidade de desmarcação de aula.                            |
 | Pré-requisito                              | Estar logado como “Instrutor”.                                                                                                                             |
-| Passos                                     | 1. Clicar no menu “Turma” (FALTA FAZER XXXXX)                                                                                                              |
+| Passos                                     | 1. Clicar no menu “Turma”                                                                                                              |
 | Critérios de êxito                         | O sistema será direcionado para a área restrita do usuário e aparecerá a tela “Calendário”;<br>O sistema permite filtrar, por aeronave, instrutor e aluno. |
 | Responsável pela elaborar do caso de Teste | Felipe                                                                                                                                                           |
 
@@ -42,7 +42,7 @@ Plano de Teste de Software
 | Objetivo do Teste                          | Verificar se as funcionalidades foram atendidas.                                                                                                                                                                                                                                              |
 | Pré-requisitos                             | Estar logado como “Instrutor”.                                                                                                                                                                                                                                                                |
 | Passos                                     | 1. Clicar em “Turma”;<br>2. No calendário clique em algum “slot”;<br>3. Adicione aluno;<br>4. No campo “instrutor” selecione o usuário atual<br>5. Selecione uma aeronave;<br>6. Selecionar botão “Salvar”;<br>7. Clicar em “Salvar Alterações”;<br>8. Selecione o botão voltar ao dashboard. |
-| Critérios de êxito                         | O sistema será direcionado para tela de “Dashboard”.                                                                                                                                                                                                                                    |
+| Critérios de êxito                         | O sistema será direcionado para tela de “Dashboard” e as informações serão gravadas no banco de dados.                                                                                                                                                                                                                                    |
 | Responsável pela elaborar do caso de Teste | Felipe                                                                                                                                                                                                                                                                                              |
 
 | **Caso de Teste 05b**                      | CT05b – Manipulação de Aulas – Verificação do aluno                                                                    |
@@ -51,7 +51,7 @@ Plano de Teste de Software
 | Objetivo do Teste                          | Verificar se as aulas foram marcadas corretamente.                                                                     |
 | Pré-requisitos                             | Ter completado o “Caso de Teste 05ª”                                                                                   |
 | Passos                                     | 1. Fazer o login como o aluno selecionado no CT-5a passo 3.                                                            |
-| Critérios de êxito                         | O aluno será direcionado para a página “Meus Voos”;<br>O voo criado durante o CT-05ª é mostrado na tabela “Meus Voos”. |
+| Critérios de êxito                         | O aluno será direcionado para a página “Meus Voos”;<br>O voo criado durante o CT-05ª é mostrado na tabela “Meus Voos” com os dados cadastrados. |
 | Responsável pela elaborar do caso de Teste | Felipe                                                                                                                        |
 
 | **Caso de Teste 06a**                      | CT 06a – Desmarcação de aulas                                                                                                       |
